@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Akvia Gems & Jewellery</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akvia Gems - Premium Jewelry Store</title>
+    <meta name="description" content="Akvia Gems offers beautiful and premium jewelry collections. Coming Soon.">
+    <meta name="keywords" content="Akvia Gems, jewelry, gems, online jewelry store">
+    <meta name="author" content="Akvia Gems">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -76,10 +78,11 @@ h2 {
     font-size: 17px;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .product-card {
@@ -87,6 +90,8 @@ h2 {
     padding: 25px;
     border-radius: 15px;
     border: 1px solid gold;
+    width: 220px;
+    text-align: center;
     transition: 0.3s;
 }
 
@@ -94,18 +99,27 @@ h2 {
     transform: scale(1.05);
 }
 
-.product-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+.product-card h3 {
+    margin-bottom: 10px;
 }
 
 .price {
     color: gold;
     font-weight: bold;
-    margin-top: 10px;
-    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: gold;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: white;
 }
 
 .coming {
@@ -128,11 +142,15 @@ footer {
     border-top: 1px solid gold;
     background: rgba(0,0,0,0.9);
 }
-
 </style>
 </head>
 
 <body>
+
+<!-- Cart Display -->
+<div style="position:fixed; top:20px; right:30px; font-size:18px; z-index:1000;">
+🛒 Cart: <span id="cart-count">0</span>
+</div>
 
 <header>
     <h1>AKVIA GEMS & JEWELLERY</h1>
@@ -150,58 +168,70 @@ footer {
     <div class="about-text">
         <p>
         Welcome to <strong>Akvia Gems & Jewellery</strong>, where elegance meets affordability.
-        We specialize in premium quality gemstones and beautifully crafted jewellery designed 
-        to add sparkle to every special moment of your life.
+        We specialize in premium quality gemstones and beautifully crafted jewellery.
         </p>
-
         <p>
-        Our collections are carefully selected to reflect luxury, sophistication, and timeless beauty. 
-        Whether you are looking for a stunning ruby ring, a graceful emerald pendant, 
-        or a sparkling diamond necklace, Akvia brings you the finest pieces at honest prices.
+        Our collections reflect luxury, sophistication, and timeless beauty at honest prices.
         </p>
-
         <p>
-        At Akvia, we believe jewellery is not just an accessory — it is a symbol of confidence, 
-        love, and success. Our mission is to make luxury accessible to everyone while maintaining 
-        trust, quality, and authenticity.
+        Jewellery is not just an accessory — it is confidence, love, and success.
         </p>
     </div>
 
     <div class="coming">
         <h3>✨ Exclusive Designer Collection Coming Soon ✨</h3>
-        <p>Launching new luxury handcrafted jewellery collection very soon.</p>
+        <p>Launching new handcrafted jewellery collection very soon.</p>
     </div>
 </section>
 
 <section id="products">
-    <h2>Our Featured Collection</h2>
+    <h2>Our Collection</h2>
 
-    <div class="products">
+    <div class="products-container">
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
-            <h3>Ruby Ring</h3>
-            <p class="price">₹1,999</p>
+            <h3>Amethyst Gemstone</h3>
+            <div class="price">$7</div>
+            <button onclick="addToCart('Amethyst Gemstone', 7)">Add to Cart</button>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1588444650733-d5f3bdbac3b1">
-            <h3>Emerald Pendant</h3>
-            <p class="price">₹1,499</p>
+            <h3>Friendship Bracelet</h3>
+            <div class="price">$2</div>
+            <button onclick="addToCart('Friendship Bracelet', 2)">Add to Cart</button>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
-            <h3>Diamond Necklace</h3>
-            <p class="price">₹3,999</p>
+            <h3>Pure Silver Ring</h3>
+            <div class="price">$1.7</div>
+            <button onclick="addToCart('Pure Silver Ring', 1.7)">Add to Cart</button>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e">
-            <h3>Sapphire Bracelet</h3>
-            <p class="price">₹1,799</p>
+            <h3>Silver Chain</h3>
+            <div class="price">$3</div>
+            <button onclick="addToCart('Silver Chain', 3)">Add to Cart</button>
         </div>
 
+        <div class="product-card">
+            <h3>Silver Bracelet</h3>
+            <div class="price">$3</div>
+            <button onclick="addToCart('Silver Bracelet', 3)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Ear Pearls</h3>
+            <div class="price">$8</div>
+            <button onclick="addToCart('Ear Pearls', 8)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <br><br>
+    <div style="text-align:center;">
+        <button onclick="checkout()" style="padding:10px 20px; font-size:16px;">
+            Proceed to Checkout
+        </button>
     </div>
 </section>
 
@@ -215,6 +245,38 @@ footer {
 <footer>
     © 2026 Akvia Gems & Jewellery | Designed with Luxury & Trust
 </footer>
+
+<script>
+let cart = [];
+let count = 0;
+
+function addToCart(product, price) {
+    cart.push({ product, price });
+    count++;
+    document.getElementById("cart-count").innerText = count;
+    alert(product + " added to cart!");
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    let phoneNumber = "919742789800";
+    let message = "Hello Akvia Gems,%0A%0AI would like to order:%0A";
+    let total = 0;
+
+    cart.forEach(item => {
+        message += "- " + item.product + " ($" + item.price + ")%0A";
+        total += item.price;
+    });
+
+    message += "%0ATotal: $" + total + "%0A%0APlease confirm availability.";
+
+    window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
+}
+</script>
 
 </body>
 </html>
