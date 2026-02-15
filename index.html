@@ -5,19 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akvia Gems and Jewellery</title>
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#111; }
-header { background:#000; color:#fff; padding:20px; text-align:center; }
-header h1 { margin:0; font-size:2em; }
-nav ul { list-style:none; padding:0; display:flex; justify-content:center; gap:30px; }
-nav a { color:#fff; text-decoration:none; font-weight:bold; }
-section { padding:60px 20px; text-align:center; }
-.products-container { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:40px; }
-.product-card { border:1px solid #ccc; padding:20px; width:180px; border-radius:10px; }
+/* BODY AND BACKGROUND */
+body {
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background: url('https://images.unsplash.com/photo-1585386959984-a415522b1a8f?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #f8e7c1; /* soft gold */
+}
+
+/* HEADER AND NAV */
+header {
+  background: rgba(0,0,0,0.85);
+  color: gold;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin:0;
+  font-size:2.2em;
+  letter-spacing: 2px;
+}
+nav ul {
+  list-style:none;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:10px;
+}
+nav a {
+  color: gold;
+  text-decoration:none;
+  font-weight:bold;
+  font-size: 1.1em;
+}
+nav a:hover { color: #fff; }
+
+/* SECTIONS */
+section {
+  padding:60px 20px;
+  text-align:center;
+  background: rgba(0,0,0,0.7);
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+/* PRODUCTS */
+.products-container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
+}
+.product-card {
+  border:1px solid gold;
+  padding:20px;
+  width:180px;
+  border-radius:10px;
+  background: rgba(0,0,0,0.75);
+  color: gold;
+}
 .product-card h3 { margin:10px 0; }
-.product-card button { padding:10px 15px; background:#000; color:#fff; border:none; cursor:pointer; border-radius:5px; }
-.product-card button:hover { background:#444; }
-button.checkout { padding:10px 20px; font-size:16px; background:#000; color:#fff; border:none; border-radius:5px; cursor:pointer; }
-button.checkout:hover { background:#444; }
+.product-card button {
+  padding:10px 15px;
+  background: gold;
+  color: black;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+  font-weight:bold;
+}
+.product-card button:hover {
+  background: #fff;
+  color: black;
+}
+
+/* CHECKOUT BUTTON */
+button.checkout {
+  padding:10px 20px;
+  font-size:16px;
+  background: gold;
+  color:black;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
+}
+button.checkout:hover {
+  background: #fff;
+  color:black;
+}
+
+/* HEADINGS */
+h2 { font-size:2em; margin-bottom:20px; }
+p { font-size:1em; line-height:1.6em; }
 </style>
 </head>
 <body>
@@ -36,23 +120,27 @@ button.checkout:hover { background:#444; }
 </nav>
 </header>
 
-<!-- Hero / Coming Soon -->
+<!-- HERO -->
 <section id="hero">
 <h2>Beauty that doesn't come at the expense of the earth</h2>
 <p>Welcome to Akvia Gems and Jewellery — Sophistication meets artistry.</p>
 </section>
 
-<!-- About Section -->
+<!-- ABOUT (CANVA MERGED) -->
 <section id="about">
 <h2>About Us</h2>
-<p>Welcome to Akvia Gems and Jewellery — where sophistication meets artistry. We specialize in creating exquisite, timeless jewelry designed for those who appreciate the finer things in life. Each piece in our collection is a celebration of elegance, craftsmanship, and exceptional beauty. At Akvia Gems, we believe luxury is not just a statement — it’s an experience. Our commitment to unparalleled quality ensures that every jewel you wear reflects brilliance, prestige, and grace.</p>
+<p>Welcome to Akvia Gems and Jewellery — where sophistication meets artistry. We specialize in creating exquisite, timeless jewelry designed for those who appreciate the finer things in life. Each piece in our collection is a celebration of elegance, craftsmanship, and exceptional beauty. At Akvia Gems, we believe luxury is not just a statement — it’s an experience. Our commitment to unparalleled quality ensures that every jewel you wear reflects brilliance, prestige, and grace. Indulge in the extraordinary — because you deserve nothing less.</p>
 </section>
 
-<!-- Upcoming Collection / Canva Content -->
+<!-- UPCOMING COLLECTION (CANVA MERGED) -->
 <section id="collection">
 <h2>Upcoming Collection - 02.05.2025</h2>
 <p>Discover the timeless beauty of our Pure Silver Rings, crafted with 92.5% sterling silver or 99.9% fine silver for unmatched purity and shine.</p>
+</section>
 
+<!-- PRODUCTS -->
+<section id="products">
+<h2>Our Collection</h2>
 <div class="products-container">
     <div class="product-card">
         <h3>Amethyst Gemstone</h3>
@@ -105,22 +193,21 @@ button.checkout:hover { background:#444; }
         <button onclick="addToCart('Hakik Ring',5)">Add to Cart</button>
     </div>
 </div>
-
 <br><br>
 <button class="checkout" onclick="checkout()">Proceed to Checkout</button>
 </section>
 
-<!-- Sustainability / Canva Section -->
+<!-- SUSTAINABILITY / CANVA -->
 <section id="sustainability">
 <h2>Our Promise</h2>
-<p>Environmental impact matters to us. Mining silver can be destructive, so we use recycled or responsibly mined silver under ethical standards. Our materials are sustainably sourced and ethically crafted.</p>
+<p>Environmental impact matters to us. Mining silver can be destructive to ecosystems. We use recycled or responsibly mined silver under Fairmined or Fairtrade standards. Our materials are sustainably sourced and ethically crafted.</p>
 <p>✔ Free worldwide shipping & returns</p>
 <p>✔ Ethically sourced and crafted</p>
 <p>✔ Recycled post-consumer gold</p>
 <p>✔ Sustainable lab-grown diamonds</p>
 </section>
 
-<!-- Contact Section -->
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
 <p>Phone: +91 9742789800</p>
@@ -128,6 +215,7 @@ button.checkout:hover { background:#444; }
 <p>Instagram: @akviagemsandjewellery</p>
 </section>
 
+<!-- ADD TO CART + WHATSAPP SCRIPT -->
 <script>
 let cart = [];
 
