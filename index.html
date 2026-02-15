@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Akvia Gems & Jewellery</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akvia Gems & Jewellery</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Georgia', serif;
+}
 
 body{
-font-family:'Segoe UI',sans-serif;
-background:linear-gradient(rgba(0,40,30,0.95),rgba(0,40,30,0.95)),
-url('https://images.unsplash.com/photo-1605100804763-247f67b3557e');
+background: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1603569283847-aa295f0d016a');
 background-size:cover;
 background-attachment:fixed;
 color:white;
@@ -18,112 +23,53 @@ color:white;
 
 /* HEADER */
 header{
-background:rgba(0,30,25,0.95);
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-border-bottom:2px solid gold;
+text-align:center;
+padding:60px 20px;
+background:rgba(0,0,0,0.85);
 }
 
 /* BIG PREMIUM LOGO */
 .logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo-icon{
-width:55px;
-height:55px;
-background:gold;
-color:#003d2f;
-display:flex;
-align-items:center;
-justify-content:center;
+font-size:75px;
 font-weight:bold;
-border-radius:50%;
-font-size:22px;
-box-shadow:0 0 15px gold;
-}
-
-.logo-text{
 color:gold;
-font-size:32px;
-font-weight:bold;
-letter-spacing:3px;
-text-shadow:0 0 10px gold;
+letter-spacing:8px;
+text-shadow:0 0 10px gold, 0 0 20px #b8860b;
 }
 
-nav a{
-color:white;
-margin:0 12px;
-text-decoration:none;
-font-size:14px;
+.logo span{
+display:block;
+font-size:28px;
+letter-spacing:6px;
+color:#f5deb3;
+margin-top:15px;
 }
 
-nav a:hover{color:gold;}
-
-.cart-btn{
-background:gold;
-color:black;
-padding:8px 18px;
-border-radius:20px;
-cursor:pointer;
-font-weight:bold;
-}
-
-/* HERO */
-.hero{
-height:85vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:55px;
-color:gold;
-margin-bottom:20px;
-}
-
-.hero p{
-width:60%;
-}
-
-/* SECTION */
-section{
-padding:90px 10%;
-margin:50px 0;
-background:rgba(0,50,40,0.85);
-border-radius:20px;
-text-align:center;
+header p{
+margin-top:15px;
+font-size:18px;
+color:#ddd;
 }
 
 /* PRODUCTS */
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-margin-top:50px;
+gap:25px;
+padding:40px;
 }
 
 .card{
-background:#062f27;
+background:#111;
 padding:20px;
 border-radius:15px;
-transition:0.4s;
-position:relative;
+text-align:center;
+transition:0.3s;
 }
 
 .card:hover{
 transform:scale(1.05);
-box-shadow:0 0 25px gold;
+box-shadow:0 0 20px gold;
 }
 
 .card img{
@@ -131,95 +77,80 @@ width:100%;
 height:220px;
 object-fit:cover;
 border-radius:10px;
-transition:0.4s;
 }
 
-.card:hover img{transform:scale(1.1);}
-
-.badge{
-position:absolute;
-top:10px;
-left:10px;
-background:gold;
-color:black;
-padding:5px 10px;
-font-size:12px;
-border-radius:12px;
-font-weight:bold;
+.card h3{
+margin:15px 0;
+color:gold;
 }
 
-.card h3{margin:15px 0;color:gold;}
-
-.rating{color:gold;margin-bottom:6px;}
-
-button{
-background:gold;
-border:none;
-padding:8px 15px;
-border-radius:20px;
-cursor:pointer;
-font-weight:bold;
-}
-
-/* CART PANEL */
-.cart-panel{
-position:fixed;
-right:-400px;
-top:0;
-width:350px;
-height:100%;
-background:#021d18;
-padding:20px;
-transition:0.4s;
-overflow:auto;
-z-index:2000;
-}
-
-.cart-panel.active{right:0;}
-
-.cart-item{
-display:flex;
-justify-content:space-between;
+.price{
+font-size:18px;
 margin-bottom:10px;
 }
 
-.cart-item button{
-background:red;
-color:white;
+button{
+padding:10px 20px;
+margin:5px;
 border:none;
-padding:3px 8px;
-cursor:pointer;
-}
-
-.total{margin-top:20px;font-weight:bold;}
-
-.checkout{
-margin-top:15px;
-width:100%;
-padding:10px;
-background:gold;
-border:none;
+border-radius:25px;
 cursor:pointer;
 font-weight:bold;
+}
+
+.cart-btn{
+background:gold;
+color:black;
+}
+
+.buy-btn{
+background:white;
+color:black;
+}
+
+/* FEATURES */
+.features{
+background:black;
+padding:40px;
+text-align:center;
+}
+
+.features div{
+margin:10px;
+color:gold;
+font-size:18px;
+}
+
+/* COMING SOON */
+.coming{
+text-align:center;
+padding:50px 20px;
+background:#111;
+}
+
+.coming h2{
+color:gold;
+margin-bottom:15px;
 }
 
 /* FOOTER */
 footer{
-background:#001a14;
-padding:40px;
+background:black;
+padding:30px;
 text-align:center;
-margin-top:50px;
-border-top:1px solid gold;
+font-size:14px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-.logo-text{
-font-size:22px;
+footer a{
+color:gold;
+text-decoration:none;
 }
-.logo-icon{
-width:45px;
-height:45px;
+
+@media(max-width:768px){
+.logo{
+font-size:40px;
+}
+.logo span{
 font-size:18px;
 }
 }
@@ -230,19 +161,81 @@ font-size:18px;
 
 <header>
 <div class="logo">
-<div class="logo-icon">AG</div>
-<div class="logo-text">AKVIA GEMS & JEWELLERY</div>
+AKVIA
+<span>GEMS & JEWELLERY</span>
 </div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#reviews">Reviews</a>
-<a href="#coming">Coming Soon</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="cart-btn" onclick="toggleCart()">
-Cart (<span id="count">0</span>)
-</div>
+<p>Luxury Crafted Gemstones & Elegant Jewellery</p>
 </header>
+
+<section class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
+<h3>Ruby Ring</h3>
+<p class="price">₹4,999</p>
+<button class="cart-btn">Add to Cart</button>
+<a href="https://wa.me/919742789800"><button class="buy-btn">Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e">
+<h3>Emerald Pendant</h3>
+<p class="price">₹3,499</p>
+<button class="cart-btn">Add to Cart</button>
+<a href="https://wa.me/919742789800"><button class="buy-btn">Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
+<h3>Diamond Necklace</h3>
+<p class="price">₹12,999</p>
+<button class="cart-btn">Add to Cart</button>
+<a href="https://wa.me/919742789800"><button class="buy-btn">Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611599537845-1c7aca0091c0">
+<h3>Sapphire Bracelet</h3>
+<p class="price">₹5,499</p>
+<button class="cart-btn">Add to Cart</button>
+<a href="https://wa.me/919742789800"><button class="buy-btn">Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1586878341523-7b33e7bdecd1">
+<h3>Gold Bangle</h3>
+<p class="price">₹6,999</p>
+<button class="cart-btn">Add to Cart</button>
+<a href="https://wa.me/919742789800"><button class="buy-btn">Buy Now</button></a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a">
+<h3>Custom Gemstone Ring</h3>
+<p class="price">Starting ₹2,999</p>
+<button class="cart-btn">Add to Cart</button>
+<a href="https://wa.me/919742789800"><button class="buy-btn">Buy Now</button></a>
+</div>
+
+</section>
+
+<section class="features">
+<div>✔ Certified Natural Gemstones</div>
+<div>✔ Affordable Luxury Pricing</div>
+<div>✔ PAN India Shipping</div>
+<div>✔ Custom Jewellery Orders Available</div>
+</section>
+
+<section class="coming">
+<h2>Coming Soon Collection</h2>
+<p>Exclusive Bridal Jewellery Collection Launching Soon.</p>
+<p>Follow us on Instagram: <a href="https://instagram.com/akvia_gems">@akvia_gems</a></p>
+</section>
+
+<footer>
+<p>📞 9742789800 | 📧 akviagemsandjewellery@gmail.com</p>
+<p>© 2026 AKVIA GEMS & JEWELLERY. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
