@@ -1,279 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Akvia Gems - Premium Jewelry Store</title>
-    <meta name="description" content="Akvia Gems offers beautiful and premium jewelry collections. Coming Soon.">
-    <meta name="keywords" content="Akvia Gems, jewelry, gems, online jewelry store">
-    <meta name="author" content="Akvia Gems">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akvia Gems and Jewellery</title>
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-    url('https://images.unsplash.com/photo-1605100804763-247f67b3557e');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: white;
-}
-
-header {
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 1px solid gold;
-}
-
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    color: gold;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-nav {
-    text-align: center;
-    padding: 20px;
-}
-
-nav a {
-    color: gold;
-    text-decoration: none;
-    margin: 20px;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: white;
-}
-
-section {
-    padding: 80px 10%;
-}
-
-h2 {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: gold;
-    font-size: 35px;
-    margin-bottom: 40px;
-}
-
-.about-text {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-    line-height: 1.8;
-    font-size: 17px;
-}
-
-.products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.product-card {
-    background: rgba(0,0,0,0.7);
-    padding: 25px;
-    border-radius: 15px;
-    border: 1px solid gold;
-    width: 220px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-}
-
-.product-card h3 {
-    margin-bottom: 10px;
-}
-
-.price {
-    color: gold;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-button {
-    background: gold;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: white;
-}
-
-.coming {
-    margin-top: 60px;
-    padding: 30px;
-    text-align: center;
-    border: 1px dashed gold;
-    background: rgba(255,215,0,0.08);
-}
-
-.contact {
-    text-align: center;
-    font-size: 17px;
-    line-height: 2;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    border-top: 1px solid gold;
-    background: rgba(0,0,0,0.9);
-}
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#111; }
+header { background:#000; color:#fff; padding:20px; text-align:center; }
+header h1 { margin:0; font-size:2em; }
+nav ul { list-style:none; padding:0; display:flex; justify-content:center; gap:30px; }
+nav a { color:#fff; text-decoration:none; font-weight:bold; }
+section { padding:60px 20px; text-align:center; }
+.products-container { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:40px; }
+.product-card { border:1px solid #ccc; padding:20px; width:180px; border-radius:10px; }
+.product-card h3 { margin:10px 0; }
+.product-card button { padding:10px 15px; background:#000; color:#fff; border:none; cursor:pointer; border-radius:5px; }
+.product-card button:hover { background:#444; }
+button.checkout { padding:10px 20px; font-size:16px; background:#000; color:#fff; border:none; border-radius:5px; cursor:pointer; }
+button.checkout:hover { background:#444; }
 </style>
 </head>
-
 <body>
 
-<!-- Cart Display -->
-<div style="position:fixed; top:20px; right:30px; font-size:18px; z-index:1000;">
-🛒 Cart: <span id="cart-count">0</span>
-</div>
-
 <header>
-    <h1>AKVIA GEMS & JEWELLERY</h1>
-    <p>Luxury • Elegance • Timeless Beauty</p>
+<h1>Akvia Gems and Jewellery</h1>
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#" onclick="checkout()">🛒 Cart</a></li>
+</ul>
+</nav>
 </header>
 
-<nav>
-    <a href="#about">About Us</a>
-    <a href="#products">Collections</a>
-    <a href="#contact">Contact</a>
-</nav>
+<!-- Hero / Coming Soon -->
+<section id="hero">
+<h2>Beauty that doesn't come at the expense of the earth</h2>
+<p>Welcome to Akvia Gems and Jewellery — Sophistication meets artistry.</p>
+</section>
 
+<!-- About Section -->
 <section id="about">
-    <h2>About Us</h2>
-    <div class="about-text">
-        <p>
-        Welcome to <strong>Akvia Gems & Jewellery</strong>, where elegance meets affordability.
-        We specialize in premium quality gemstones and beautifully crafted jewellery.
-        </p>
-        <p>
-        Our collections reflect luxury, sophistication, and timeless beauty at honest prices.
-        </p>
-        <p>
-        Jewellery is not just an accessory — it is confidence, love, and success.
-        </p>
-    </div>
-
-    <div class="coming">
-        <h3>✨ Exclusive Designer Collection Coming Soon ✨</h3>
-        <p>Launching new handcrafted jewellery collection very soon.</p>
-    </div>
+<h2>About Us</h2>
+<p>Welcome to Akvia Gems and Jewellery — where sophistication meets artistry. We specialize in creating exquisite, timeless jewelry designed for those who appreciate the finer things in life. Each piece in our collection is a celebration of elegance, craftsmanship, and exceptional beauty. At Akvia Gems, we believe luxury is not just a statement — it’s an experience. Our commitment to unparalleled quality ensures that every jewel you wear reflects brilliance, prestige, and grace.</p>
 </section>
 
+<!-- Upcoming Collection -->
+<section id="upcoming">
+<h2>Upcoming Collection - 02.05.2025</h2>
+<p>Discover the timeless beauty of our Pure Silver Rings, crafted with 92.5% sterling silver or 99.9% fine silver for unmatched purity and shine.</p>
+</section>
+
+<!-- Products Section -->
 <section id="products">
-    <h2>Our Collection</h2>
-
-    <div class="products-container">
-
-        <div class="product-card">
-            <h3>Amethyst Gemstone</h3>
-            <div class="price">$7</div>
-            <button onclick="addToCart('Amethyst Gemstone', 7)">Add to Cart</button>
-        </div>
-
-        <div class="product-card">
-            <h3>Friendship Bracelet</h3>
-            <div class="price">$2</div>
-            <button onclick="addToCart('Friendship Bracelet', 2)">Add to Cart</button>
-        </div>
-
-        <div class="product-card">
-            <h3>Pure Silver Ring</h3>
-            <div class="price">$1.7</div>
-            <button onclick="addToCart('Pure Silver Ring', 1.7)">Add to Cart</button>
-        </div>
-
-        <div class="product-card">
-            <h3>Silver Chain</h3>
-            <div class="price">$3</div>
-            <button onclick="addToCart('Silver Chain', 3)">Add to Cart</button>
-        </div>
-
-        <div class="product-card">
-            <h3>Silver Bracelet</h3>
-            <div class="price">$3</div>
-            <button onclick="addToCart('Silver Bracelet', 3)">Add to Cart</button>
-        </div>
-
-        <div class="product-card">
-            <h3>Ear Pearls</h3>
-            <div class="price">$8</div>
-            <button onclick="addToCart('Ear Pearls', 8)">Add to Cart</button>
-        </div>
-
+<h2>Our Collection</h2>
+<div class="products-container">
+    <div class="product-card">
+        <h3>Amethyst Gemstone</h3>
+        <p>$7</p>
+        <button onclick="addToCart('Amethyst Gemstone',7)">Add to Cart</button>
     </div>
-
-    <br><br>
-    <div style="text-align:center;">
-        <button onclick="checkout()" style="padding:10px 20px; font-size:16px;">
-            Proceed to Checkout
-        </button>
+    <div class="product-card">
+        <h3>Friendship Bracelet</h3>
+        <p>$2</p>
+        <button onclick="addToCart('Friendship Bracelet',2)">Add to Cart</button>
     </div>
+    <div class="product-card">
+        <h3>Pure Silver Ring</h3>
+        <p>$1.7</p>
+        <button onclick="addToCart('Pure Silver Ring',1.7)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <h3>Silver Chain</h3>
+        <p>$3</p>
+        <button onclick="addToCart('Silver Chain',3)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <h3>Silver Bracelet</h3>
+        <p>$3</p>
+        <button onclick="addToCart('Silver Bracelet',3)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <h3>Ear Pearls</h3>
+        <p>$8</p>
+        <button onclick="addToCart('Ear Pearls',8)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <h3>Irani Feroza</h3>
+        <p>$1.8</p>
+        <button onclick="addToCart('Irani Feroza',1.8)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <h3>Yellow Sapphire</h3>
+        <p>$2</p>
+        <button onclick="addToCart('Yellow Sapphire',2)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <h3>Yemeni Hakik</h3>
+        <p>$4</p>
+        <button onclick="addToCart('Yemeni Hakik',4)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <h3>Hakik Ring</h3>
+        <p>$5</p>
+        <button onclick="addToCart('Hakik Ring',5)">Add to Cart</button>
+    </div>
+</div>
+<br><br>
+<button class="checkout" onclick="checkout()">Proceed to Checkout</button>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 9742789800</p>
-    <p>📧 akviagemsandjewellery@gmail.com</p>
-    <p>📸 Instagram: @akvia_gems</p>
+<!-- Sustainability / Promise -->
+<section id="sustainability">
+<h2>Our Promise</h2>
+<p>Environmental impact matters to us. Mining silver can be destructive, so we use recycled or responsibly mined silver under ethical standards. Our materials are sustainably sourced and ethically crafted.</p>
+<p>✔ Free worldwide shipping & returns</p>
+<p>✔ Ethically sourced and crafted</p>
+<p>✔ Recycled post-consumer gold</p>
+<p>✔ Sustainable lab-grown diamonds</p>
 </section>
 
-<footer>
-    © 2026 Akvia Gems & Jewellery | Designed with Luxury & Trust
-</footer>
+<!-- Contact Section -->
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Phone: +91 9742789800</p>
+<p>Email: akviagemsandjewellery@gmail.com</p>
+<p>Instagram: @akviagemsandjewellery</p>
+</section>
 
 <script>
 let cart = [];
-let count = 0;
 
 function addToCart(product, price) {
     cart.push({ product, price });
-    count++;
-    document.getElementById("cart-count").innerText = count;
     alert(product + " added to cart!");
 }
 
 function checkout() {
-    if (cart.length === 0) {
+    if(cart.length === 0) {
         alert("Your cart is empty!");
         return;
     }
-
     let phoneNumber = "919742789800";
     let message = "Hello Akvia Gems,%0A%0AI would like to order:%0A";
     let total = 0;
-
     cart.forEach(item => {
         message += "- " + item.product + " ($" + item.price + ")%0A";
         total += item.price;
     });
-
     message += "%0ATotal: $" + total + "%0A%0APlease confirm availability.";
-
     window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
 }
 </script>
