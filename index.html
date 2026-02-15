@@ -8,60 +8,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Poppins',sans-serif;
 background:#0b0b0b;
 color:#f5e6c5;
-line-height:1.7;
 }
 
-/* HEADER */
 header{
-background:rgba(0,0,0,0.9);
+background:#000;
 padding:25px 8%;
 position:sticky;
 top:0;
 z-index:1000;
-backdrop-filter:blur(8px);
 }
 
 header h1{
 font-family:'Playfair Display',serif;
 color:#d4af37;
-font-size:30px;
-letter-spacing:3px;
 text-align:center;
+letter-spacing:3px;
 }
 
 nav ul{
 list-style:none;
 display:flex;
 justify-content:center;
-gap:35px;
-margin-top:18px;
+gap:30px;
+margin-top:15px;
 flex-wrap:wrap;
 }
 
 nav a{
 color:#d4af37;
 text-decoration:none;
-font-weight:500;
-transition:0.3s;
 }
 
-nav a:hover{
-color:white;
-}
+nav a:hover{color:white;}
 
-/* HERO — LUXURY JEWELLERY BACKGROUND */
 #hero{
 height:100vh;
 display:flex;
@@ -69,7 +54,6 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:white;
 background:
 linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
 url('https://images.unsplash.com/photo-1617038260897-41a1f14a1c9b?auto=format&fit=crop&w=1950&q=80');
@@ -81,233 +65,51 @@ padding:0 10%;
 #hero h2{
 font-size:42px;
 font-family:'Playfair Display',serif;
-margin-bottom:20px;
 color:#f8e7c1;
+margin-bottom:20px;
 }
 
-#hero p{
-max-width:700px;
-font-size:18px;
-opacity:0.9;
-}
-
-/* SECTIONS */
 section{
-padding:120px 10%;
+padding:100px 10%;
 margin:60px auto;
-max-width:1200px;
-background:linear-gradient(145deg,#111,#1a1a1a);
+max-width:1300px;
+background:#111;
 border-radius:20px;
-box-shadow:0 0 40px rgba(212,175,55,0.1);
 }
 
 h2{
-font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:40px;
-color:#d4af37;
 text-align:center;
-letter-spacing:1px;
+font-family:'Playfair Display',serif;
+color:#d4af37;
+margin-bottom:40px;
 }
 
-/* PRODUCTS */
 .products-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:50px;
-margin-top:40px;
-}
-
-.product-card{
-background:linear-gradient(145deg,#1a1a1a,#141414);
-border:1px solid rgba(212,175,55,0.2);
-padding:30px;
-border-radius:18px;
-text-align:center;
-transition:0.4s;
-position:relative;
-}
-
-.product-card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(212,175,55,0.4);
-border:1px solid #d4af37;
-}
-
-.product-card h3{
-margin-bottom:15px;
-font-size:18px;
-}
-
-.product-card p{
-color:#d4af37;
-margin-bottom:20px;
-font-weight:600;
-font-size:17px;
-}
-
-.product-card button{
-padding:12px 20px;
-background:#d4af37;
-color:black;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-weight:600;
-transition:0.3s;
-}
-
-.product-card button:hover{
-background:white;
-}
-
-/* CHECKOUT BUTTON */
-.checkout{
-margin-top:60px;
-padding:14px 40px;
-font-size:17px;
-background:#d4af37;
-color:black;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-weight:600;
-display:block;
-margin-left:auto;
-margin-right:auto;
-transition:0.3s;
-}
-
-.checkout:hover{
-background:white;
-}
-
-/* CONTACT */
-#contact p{
-text-align:center;
-margin-bottom:12px;
-font-size:16px;
-}
-
-/* CART COUNT */
-.cart-count{
-background:#d4af37;
-color:black;
-padding:4px 9px;
-border-radius:50%;
-font-size:12px;
-margin-left:6px;
-font-weight:bold;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-section{
-padding:70px 6%;
-margin:40px 10px;
-}
-#hero h2{
-font-size:28px;
-}
-}
-
-</style>
-/* HEADER */
-header{
-background:#111;
-padding:25px 8%;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-header h1{
-font-family:'Playfair Display',serif;
-color:#d4af37;
-font-size:28px;
-letter-spacing:2px;
-text-align:center;
-}
-
-nav ul{
-list-style:none;
-display:flex;
-justify-content:center;
-gap:35px;
-margin-top:15px;
-flex-wrap:wrap;
-}
-
-nav a{
-color:#d4af37;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:white;
-}
-
-/* SECTIONS */
-section{
-padding:100px 10%;
-margin:40px auto;
-max-width:1200px;
-background:#111;
-border-radius:15px;
-box-shadow:0 0 25px rgba(212,175,55,0.1);
-}
-
-h2{
-font-family:'Playfair Display',serif;
-font-size:32px;
-margin-bottom:30px;
-color:#d4af37;
-text-align:center;
-}
-
-/* HERO */
-#hero{
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1600185365483-26d7d4c6e0c2');
-background-size:cover;
-background-position:center;
-color:white;
-text-align:center;
-padding:150px 10%;
-}
-
-/* PRODUCTS */
-.products-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:40px;
-margin-top:40px;
 }
 
 .product-card{
 background:#1a1a1a;
-border:1px solid rgba(212,175,55,0.3);
-padding:25px;
-border-radius:12px;
+padding:30px;
+border-radius:15px;
 text-align:center;
+border:1px solid rgba(212,175,55,0.3);
 transition:0.3s;
 }
 
 .product-card:hover{
 transform:translateY(-8px);
-box-shadow:0 0 20px rgba(212,175,55,0.3);
+box-shadow:0 0 20px rgba(212,175,55,0.5);
 }
 
-.product-card h3{
-margin-bottom:10px;
-}
+.product-card h3{margin-bottom:10px;}
 
 .product-card p{
 color:#d4af37;
 margin-bottom:15px;
-font-weight:500;
+font-weight:600;
 }
 
 .product-card button{
@@ -315,43 +117,26 @@ padding:10px 18px;
 background:#d4af37;
 color:black;
 border:none;
-border-radius:6px;
 cursor:pointer;
-font-weight:600;
-transition:0.3s;
+border-radius:6px;
 }
 
-.product-card button:hover{
-background:white;
-}
+.product-card button:hover{background:white;}
 
-/* CHECKOUT BUTTON */
 .checkout{
-margin-top:40px;
-padding:12px 30px;
-font-size:16px;
+margin-top:50px;
+padding:14px 35px;
 background:#d4af37;
 color:black;
 border:none;
-border-radius:8px;
 cursor:pointer;
-font-weight:600;
+border-radius:8px;
 display:block;
 margin-left:auto;
 margin-right:auto;
+font-weight:600;
 }
 
-.checkout:hover{
-background:white;
-}
-
-/* CONTACT */
-#contact p{
-text-align:center;
-margin-bottom:10px;
-}
-
-/* CART COUNT */
 .cart-count{
 background:#d4af37;
 color:black;
@@ -360,18 +145,9 @@ border-radius:50%;
 font-size:12px;
 margin-left:5px;
 }
-
-@media(max-width:768px){
-section{
-padding:60px 6%;
-}
-#hero{
-padding:100px 6%;
-}
-}
-
 </style>
 </head>
+
 <body>
 
 <header>
@@ -379,36 +155,28 @@ padding:100px 6%;
 <nav>
 <ul>
 <li><a href="#about">About</a></li>
-<li><a href="#collection">Collection</a></li>
 <li><a href="#products">Products</a></li>
-<li><a href="#sustainability">Sustainability</a></li>
 <li><a href="#contact">Contact</a></li>
 <li>
-<a href="#" onclick="checkout()">
-🛒 Cart <span class="cart-count" id="cartCount">0</span>
-</a>
+<a href="#" onclick="checkout()">🛒 Cart 
+<span class="cart-count" id="cartCount">0</span></a>
 </li>
 </ul>
 </nav>
 </header>
 
 <section id="hero">
-<h2>Beauty that doesn't come at the expense of the earth</h2>
-<p>Welcome to Akvia Gems and Jewellery — Sophistication meets artistry.</p>
+<h2>Timeless Luxury. Pure Elegance.</h2>
+<p>Discover premium gemstones, silver jewellery and handcrafted designs.</p>
 </section>
 
 <section id="about">
 <h2>About Us</h2>
-<p>Welcome to Akvia Gems and Jewellery — where sophistication meets artistry. We specialize in creating exquisite, timeless jewelry designed for those who appreciate the finer things in life. Each piece in our collection is a celebration of elegance, craftsmanship, and exceptional beauty. At Akvia Gems, we believe luxury is not just a statement — it’s an experience.</p>
-</section>
-
-<section id="collection">
-<h2>Upcoming Collection - 02.05.2025</h2>
-<p>Discover the timeless beauty of our Pure Silver Rings, crafted with 92.5% sterling silver or 99.9% fine silver for unmatched purity and shine.</p>
+<p>Akvia Gems and Jewellery offers premium gemstones, bracelets, silver rings and handcrafted pieces crafted with passion and elegance.</p>
 </section>
 
 <section id="products">
-<h2>Our Collection</h2>
+<h2>Our Complete Collection</h2>
 
 <div class="products-container">
 
@@ -419,9 +187,33 @@ padding:100px 6%;
 </div>
 
 <div class="product-card">
+<h3>Ruby Gemstone</h3>
+<p>$9</p>
+<button onclick="addToCart('Ruby Gemstone',9)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<h3>Emerald Gemstone</h3>
+<p>$8</p>
+<button onclick="addToCart('Emerald Gemstone',8)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<h3>Sapphire Gemstone</h3>
+<p>$10</p>
+<button onclick="addToCart('Sapphire Gemstone',10)">Add to Cart</button>
+</div>
+
+<div class="product-card">
 <h3>Friendship Bracelet</h3>
 <p>$2</p>
 <button onclick="addToCart('Friendship Bracelet',2)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<h3>Silver Bracelet</h3>
+<p>$5</p>
+<button onclick="addToCart('Silver Bracelet',5)">Add to Cart</button>
 </div>
 
 <div class="product-card">
@@ -431,94 +223,50 @@ padding:100px 6%;
 </div>
 
 <div class="product-card">
-<h3>Silver Chain</h3>
-<p>$3</p>
-<button onclick="addToCart('Silver Chain',3)">Add to Cart</button>
-</div>
-
-<div class="product-card">
-<h3>Silver Bracelet</h3>
-<p>$3</p>
-<button onclick="addToCart('Silver Bracelet',3)">Add to Cart</button>
-</div>
-
-<div class="product-card">
-<h3>Ear Pearls</h3>
-<p>$8</p>
-<button onclick="addToCart('Ear Pearls',8)">Add to Cart</button>
-</div>
-
-<div class="product-card">
-<h3>Irani Feroza</h3>
-<p>$1.8</p>
-<button onclick="addToCart('Irani Feroza',1.8)">Add to Cart</button>
-</div>
-
-<div class="product-card">
-<h3>Yellow Sapphire</h3>
-<p>$2</p>
-<button onclick="addToCart('Yellow Sapphire',2)">Add to Cart</button>
-</div>
-
-<div class="product-card">
-<h3>Yemeni Hakik</h3>
-<p>$4</p>
-<button onclick="addToCart('Yemeni Hakik',4)">Add to Cart</button>
-</div>
-
-<div class="product-card">
-<h3>Hakik Ring</h3>
-<p>$5</p>
-<button onclick="addToCart('Hakik Ring',5)">Add to Cart</button>
+<h3>Diamond Style Ring</h3>
+<p>$15</p>
+<button onclick="addToCart('Diamond Style Ring',15)">Add to Cart</button>
 </div>
 
 </div>
 
 <button class="checkout" onclick="checkout()">Proceed to Checkout</button>
-
-</section>
-
-<section id="sustainability">
-<h2>Our Promise</h2>
-<p>✔ Free worldwide shipping & returns</p>
-<p>✔ Ethically sourced and crafted</p>
-<p>✔ Recycled post-consumer gold</p>
-<p>✔ Sustainable lab-grown diamonds</p>
 </section>
 
 <section id="contact">
 <h2>Contact Us</h2>
-<p>Phone: +91 9742789800</p>
-<p>Email: akviagemsandjewellery@gmail.com</p>
-<p>Instagram: @akviagemsandjellery</p>
+<p>📞 +91 9742789800</p>
+<p>📧 akviagemsandjewellery@gmail.com</p>
+<p>📸 Instagram: @akvia_gems</p>
 </section>
 
 <script>
 let cart = [];
 
-function addToCart(product, price) {
-cart.push({ product, price });
+function addToCart(product, price){
+cart.push({product,price});
 document.getElementById("cartCount").innerText = cart.length;
-alert(product + " added to cart!");
+alert(product+" added to cart!");
 }
 
-function checkout() {
-if(cart.length === 0) {
+function checkout(){
+if(cart.length===0){
 alert("Your cart is empty!");
 return;
 }
-let phoneNumber = "919742789800";
-let message = "Hello Akvia Gems,%0A%0AI would like to order:%0A";
-let total = 0;
-cart.forEach(item => {
-message += "- " + item.product + " ($" + item.price + ")%0A";
-total += item.price;
+let phone="919742789800";
+let message="Hello Akvia Gems,%0A%0AI would like to order:%0A";
+let total=0;
+
+cart.forEach(item=>{
+message+="- "+item.product+" ($"+item.price+")%0A";
+total+=item.price;
 });
-message += "%0ATotal: $" + total + "%0A%0APlease confirm availability.";
-window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
+
+message+="%0ATotal: $"+total;
+window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
 </script>
 
 </body>
 </html>
-
