@@ -4,52 +4,128 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akvia Gems and Jewellery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
 <style>
-/* BODY AND BACKGROUND */
+
+/* BODY */
 body {
-  font-family: Arial, sans-serif;
   margin:0;
   padding:0;
-  background: url('https://images.unsplash.com/photo-1585386959984-a415522b1a8f?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  font-family:'Playfair Display', serif;
+  background:
+  linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.88)),
+  url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=2100&q=100')
+  no-repeat center center fixed;
   background-size: cover;
-  color: #f8e7c1; /* soft gold */
+  color: #f5e6c8;
 }
 
-/* HEADER AND NAV */
+/* LOADER */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  animation: fadeOut 1.5s ease forwards;
+  animation-delay:3.5s;
+}
+
+.loader-content {
+  text-align:center;
+  color:gold;
+  animation: glow 2s infinite alternate;
+}
+
+.loader-content h1 {
+  font-size:3em;
+  letter-spacing:5px;
+}
+
+.loader-content p {
+  margin-top:15px;
+  letter-spacing:2px;
+}
+
+@keyframes glow {
+  from { text-shadow:0 0 10px gold; }
+  to { text-shadow:0 0 30px gold; }
+}
+
+@keyframes fadeOut {
+  to { opacity:0; visibility:hidden; }
+}
+
+/* HEADER */
 header {
-  background: rgba(0,0,0,0.85);
-  color: gold;
-  padding: 20px;
-  text-align: center;
+  background:rgba(0,0,0,0.95);
+  padding:25px;
+  text-align:center;
+  border-bottom:1px solid gold;
 }
+
 header h1 {
-  margin:0;
-  font-size:2.2em;
-  letter-spacing: 2px;
+  font-size:3em;
+  color:gold;
+  letter-spacing:3px;
 }
+
 nav ul {
   list-style:none;
   padding:0;
   display:flex;
   justify-content:center;
-  gap:30px;
-  margin-top:10px;
+  gap:35px;
+  margin-top:15px;
 }
+
 nav a {
-  color: gold;
+  color:gold;
   text-decoration:none;
   font-weight:bold;
-  font-size: 1.1em;
+  transition:0.3s;
 }
-nav a:hover { color: #fff; }
+
+nav a:hover {
+  color:white;
+  text-shadow:0 0 10px gold;
+}
 
 /* SECTIONS */
 section {
-  padding:60px 20px;
+  padding:80px 20px;
   text-align:center;
-  background: rgba(0,0,0,0.7);
-  margin: 20px auto;
-  border-radius: 15px;
+  background:rgba(0,0,0,0.75);
+  margin:40px auto;
+  border-radius:20px;
+  width:90%;
+  max-width:1200px;
+  box-shadow:0 0 25px rgba(255,215,0,0.2);
+}
+
+h2 {
+  font-size:2.5em;
+  color:gold;
+}
+
+p {
+  line-height:1.8em;
+  font-size:1.1em;
+}
+
+/* COMING SOON SECTION */
+.coming-soon {
+  background:
+  linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+  url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1600&q=100');
+  background-size:cover;
+  background-position:center;
+  color:gold;
 }
 
 /* PRODUCTS */
@@ -57,188 +133,172 @@ section {
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:30px;
-  margin-top:40px;
+  gap:35px;
+  margin-top:50px;
 }
+
 .product-card {
+  width:220px;
   border:1px solid gold;
   padding:20px;
-  width:180px;
-  border-radius:10px;
-  background: rgba(0,0,0,0.75);
-  color: gold;
+  border-radius:15px;
+  background:rgba(0,0,0,0.85);
+  transition:0.4s;
 }
-.product-card h3 { margin:10px 0; }
+
+.product-card:hover {
+  transform:scale(1.07);
+  box-shadow:0 0 25px gold;
+}
+
+.product-card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
 .product-card button {
   padding:10px 15px;
-  background: gold;
-  color: black;
+  background:gold;
   border:none;
-  cursor:pointer;
   border-radius:5px;
+  cursor:pointer;
   font-weight:bold;
 }
-.product-card button:hover {
-  background: #fff;
-  color: black;
-}
 
-/* CHECKOUT BUTTON */
 button.checkout {
-  padding:10px 20px;
-  font-size:16px;
-  background: gold;
-  color:black;
+  padding:14px 28px;
+  font-size:18px;
+  background:gold;
   border:none;
-  border-radius:5px;
+  border-radius:8px;
   cursor:pointer;
   font-weight:bold;
-}
-button.checkout:hover {
-  background: #fff;
-  color:black;
+  margin-top:30px;
 }
 
-/* HEADINGS */
-h2 { font-size:2em; margin-bottom:20px; }
-p { font-size:1em; line-height:1.6em; }
+/* FOOTER */
+footer {
+  background:black;
+  padding:30px;
+  text-align:center;
+  color:gold;
+  border-top:1px solid gold;
+}
+
 </style>
 </head>
+
 <body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-content">
+    <h1>Akvia Gems</h1>
+    <p>Jewellery with Timeless Elegance</p>
+  </div>
+</div>
 
 <header>
 <h1>Akvia Gems and Jewellery</h1>
 <nav>
 <ul>
 <li><a href="#about">About</a></li>
-<li><a href="#collection">Collection</a></li>
+<li><a href="#collection">Upcoming</a></li>
+<li><a href="#coming">Coming Soon</a></li>
 <li><a href="#products">Products</a></li>
-<li><a href="#sustainability">Sustainability</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="#" onclick="checkout()">🛒 Cart</a></li>
 </ul>
 </nav>
 </header>
 
-<!-- HERO -->
 <section id="hero">
-<h2>Beauty that doesn't come at the expense of the earth</h2>
-<p>Welcome to Akvia Gems and Jewellery — Sophistication meets artistry.</p>
+<h2>Beauty That Never Fades</h2>
+<p>Luxury crafted with brilliance, purity, and timeless elegance.</p>
 </section>
 
-<!-- ABOUT (CANVA MERGED) -->
 <section id="about">
 <h2>About Us</h2>
-<p>Welcome to Akvia Gems and Jewellery — where sophistication meets artistry. We specialize in creating exquisite, timeless jewelry designed for those who appreciate the finer things in life. Each piece in our collection is a celebration of elegance, craftsmanship, and exceptional beauty. At Akvia Gems, we believe luxury is not just a statement — it’s an experience. Our commitment to unparalleled quality ensures that every jewel you wear reflects brilliance, prestige, and grace. Indulge in the extraordinary — because you deserve nothing less.</p>
+<p>At Akvia Gems and Jewellery, we create timeless pieces crafted with passion and precision.</p>
 </section>
 
-<!-- UPCOMING COLLECTION (CANVA MERGED) -->
 <section id="collection">
 <h2>Upcoming Collection - 02.05.2025</h2>
-<p>Discover the timeless beauty of our Pure Silver Rings, crafted with 92.5% sterling silver or 99.9% fine silver for unmatched purity and shine.</p>
+<p>Premium 92.5 Sterling Silver Rings & Fine Gemstone Jewellery.</p>
 </section>
 
-<!-- PRODUCTS -->
+<section id="coming" class="coming-soon">
+<h2 style="font-size:3em; letter-spacing:4px;">COMING SOON</h2>
+<p style="font-size:1.3em; margin-top:20px;">Launching 02.05.2025</p>
+<p style="max-width:700px; margin:30px auto;">
+Our exclusive Pure Silver & Signature Gemstone Collection is arriving soon.
+</p>
+<div style="padding:12px 30px; border:2px solid gold; display:inline-block;">
+02 • 05 • 2025
+</div>
+</section>
+
 <section id="products">
 <h2>Our Collection</h2>
 <div class="products-container">
-    <div class="product-card">
-        <h3>Amethyst Gemstone</h3>
-        <p>$7</p>
-        <button onclick="addToCart('Amethyst Gemstone',7)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Friendship Bracelet</h3>
-        <p>$2</p>
-        <button onclick="addToCart('Friendship Bracelet',2)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Pure Silver Ring</h3>
-        <p>$1.7</p>
-        <button onclick="addToCart('Pure Silver Ring',1.7)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Silver Chain</h3>
-        <p>$3</p>
-        <button onclick="addToCart('Silver Chain',3)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Silver Bracelet</h3>
-        <p>$3</p>
-        <button onclick="addToCart('Silver Bracelet',3)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Ear Pearls</h3>
-        <p>$8</p>
-        <button onclick="addToCart('Ear Pearls',8)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Irani Feroza</h3>
-        <p>$1.8</p>
-        <button onclick="addToCart('Irani Feroza',1.8)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Yellow Sapphire</h3>
-        <p>$2</p>
-        <button onclick="addToCart('Yellow Sapphire',2)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Yemeni Hakik</h3>
-        <p>$4</p>
-        <button onclick="addToCart('Yemeni Hakik',4)">Add to Cart</button>
-    </div>
-    <div class="product-card">
-        <h3>Hakik Ring</h3>
-        <p>$5</p>
-        <button onclick="addToCart('Hakik Ring',5)">Add to Cart</button>
-    </div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=400&q=80">
+<h3>Amethyst Gemstone</h3>
+<p>$7</p>
+<button onclick="addToCart('Amethyst Gemstone',7)">Add to Cart</button>
 </div>
-<br><br>
-<button class="checkout" onclick="checkout()">Proceed to Checkout</button>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1588444650700-6fdb63f8a4e9?auto=format&fit=crop&w=400&q=80">
+<h3>Pure Silver Ring</h3>
+<p>$1.7</p>
+<button onclick="addToCart('Pure Silver Ring',1.7)">Add to Cart</button>
+</div>
+
+</div>
+
+<button class="checkout" onclick="checkout()">Proceed to WhatsApp Checkout</button>
 </section>
 
-<!-- SUSTAINABILITY / CANVA -->
-<section id="sustainability">
-<h2>Our Promise</h2>
-<p>Environmental impact matters to us. Mining silver can be destructive to ecosystems. We use recycled or responsibly mined silver under Fairmined or Fairtrade standards. Our materials are sustainably sourced and ethically crafted.</p>
-<p>✔ Free worldwide shipping & returns</p>
-<p>✔ Ethically sourced and crafted</p>
-<p>✔ Recycled post-consumer gold</p>
-<p>✔ Sustainable lab-grown diamonds</p>
-</section>
-
-<!-- CONTACT -->
 <section id="contact">
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 <p>Phone: +91 9742789800</p>
 <p>Email: akviagemsandjewellery@gmail.com</p>
-<p>Instagram: @akviagemsandjewellery</p>
+<p>Instagram:
+<a href="https://instagram.com/akvia_gems" target="_blank" style="color:gold;">
+@akvia_gems
+</a>
+</p>
 </section>
 
-<!-- ADD TO CART + WHATSAPP SCRIPT -->
+<footer>
+© 2026 Akvia Gems and Jewellery | Crafted with Elegance
+</footer>
+
 <script>
 let cart = [];
-
-function addToCart(product, price) {
-    cart.push({ product, price });
-    alert(product + " added to cart!");
+function addToCart(product, price){
+cart.push({product,price});
+alert(product + " added to cart!");
 }
-
-function checkout() {
-    if(cart.length === 0) {
-        alert("Your cart is empty!");
-        return;
-    }
-    let phoneNumber = "919742789800";
-    let message = "Hello Akvia Gems,%0A%0AI would like to order:%0A";
-    let total = 0;
-    cart.forEach(item => {
-        message += "- " + item.product + " ($" + item.price + ")%0A";
-        total += item.price;
-    });
-    message += "%0ATotal: $" + total + "%0A%0APlease confirm availability.";
-    window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
+function checkout(){
+if(cart.length===0){alert("Cart is empty!");return;}
+let phoneNumber="919742789800";
+let message="Hello Akvia Gems,%0AOrder:%0A";
+cart.forEach(item=>{
+message+="- "+item.product+" ($"+item.price+")%0A";
+});
+window.open("https://wa.me/"+phoneNumber+"?text="+message,"_blank");
 }
+window.addEventListener("load",function(){
+setTimeout(function(){
+document.getElementById("loader").style.display="none";
+},4500);
+});
 </script>
 
 </body>
