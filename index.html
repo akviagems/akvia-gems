@@ -9,14 +9,13 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 
 body{
-background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
-url('https://images.unsplash.com/photo-1611599537845-1c3c8b4a9b3b');
+background:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1605100804763-247f67b3557e');
 background-size:cover;
 background-attachment:fixed;
 color:white;
 }
 
-/* HEADER */
 header{
 background:#000;
 padding:15px 40px;
@@ -28,34 +27,30 @@ top:0;
 z-index:1000;
 }
 
-.logo{
-font-size:24px;
-color:gold;
-font-weight:bold;
-}
+.logo{color:gold;font-size:24px;font-weight:bold;}
 
 nav a{
 color:white;
-margin:0 15px;
+margin:0 12px;
 text-decoration:none;
 }
 
-.search-box input{
+.search input{
 padding:6px;
 }
 
 .cart{
 cursor:pointer;
+font-size:18px;
 }
 
-/* HERO */
 .hero{
 text-align:center;
 padding:100px 20px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
 color:gold;
 }
 
@@ -67,12 +62,21 @@ border:none;
 cursor:pointer;
 }
 
-/* PRODUCTS */
+.section{
+padding:50px 30px;
+text-align:center;
+}
+
+.section h2{
+color:gold;
+margin-bottom:15px;
+}
+
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-padding:50px;
+padding:40px;
 }
 
 .card{
@@ -90,26 +94,41 @@ object-fit:cover;
 border-radius:10px;
 }
 
-.price{color:gold;font-size:18px;margin:10px 0;}
-.rating{color:orange;margin:5px 0;}
+.price{color:gold;margin:8px 0;font-size:18px;}
+.rating{color:orange;font-size:14px;}
 
 .card button{
-padding:8px 15px;
+padding:8px 12px;
+margin:5px;
 background:gold;
 border:none;
 cursor:pointer;
-margin:5px;
 }
 
-/* SPECIAL SECTION */
-.section{
-padding:50px;
-text-align:center;
+/* CART PANEL */
+.cart-panel{
+position:fixed;
+right:-400px;
+top:0;
+width:350px;
+height:100%;
+background:#111;
+padding:20px;
+transition:0.4s;
+overflow:auto;
+z-index:2000;
 }
 
-.section h2{
-color:gold;
-margin-bottom:20px;
+.cart-panel.active{
+right:0;
+}
+
+.cart-panel h2{color:gold;margin-bottom:15px;}
+
+.checkout-form input,select{
+width:100%;
+padding:8px;
+margin:6px 0;
 }
 
 /* FOOTER */
@@ -132,9 +151,9 @@ gap:30px;
 }
 
 .footer-grid h3{color:gold;margin-bottom:10px;}
-.footer-grid p,a{color:white;text-decoration:none;font-size:14px;}
+.footer-grid p{font-size:14px;margin-bottom:6px;}
 
-.whatsapp-float{
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -142,7 +161,6 @@ background:green;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:20px;
 cursor:pointer;
 }
 </style>
@@ -157,74 +175,63 @@ cursor:pointer;
 <a href="#">Products</a>
 <a href="#">Offers</a>
 <a href="#">Coming Soon</a>
-<a href="#">Contact</a>
 </nav>
 <div>
-<input type="text" placeholder="Search...">
-<span class="cart">🛒 0</span>
+<span class="search"><input type="text" id="searchInput" placeholder="Search products..."></span>
+<span class="cart" onclick="toggleCart()">🛒 <span id="cartCount">0</span></span>
 </div>
 </header>
 
 <section class="hero">
 <h1>Elegance Crafted in Every Gem</h1>
-<p>Luxury Jewellery for Every Occasion</p>
+<p>Luxury Jewellery Collection</p>
 <button onclick="scrollToProducts()">Shop Now</button>
 </section>
 
 <section class="section">
 <h2>🔥 Special Offers</h2>
-<p>Flat 10% OFF | Free Shipping | Festive Deals Available</p>
+<p>Flat 10% OFF | Free Shipping | Festive Deals</p>
 </section>
 
-<section class="products" id="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1588449668365-d15e397f6787">
-<h3>Diamond Ring</h3>
-<div class="rating">⭐⭐⭐⭐☆ (120)</div>
-<div class="price">₹2,999</div>
-<button onclick="addToCart()">Add to Cart</button>
-<button onclick="buyNow('Diamond Ring',2999)">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
-<h3>Gold Necklace</h3>
-<div class="rating">⭐⭐⭐⭐⭐ (210)</div>
-<div class="price">₹4,999</div>
-<button onclick="addToCart()">Add to Cart</button>
-<button onclick="buyNow('Gold Necklace',4999)">Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e">
-<h3>Emerald Earrings</h3>
-<div class="rating">⭐⭐⭐⭐☆ (98)</div>
-<div class="price">₹1,999</div>
-<button onclick="addToCart()">Add to Cart</button>
-<button onclick="buyNow('Emerald Earrings',1999)">Buy Now</button>
-</div>
-
-</section>
+<section class="products" id="productContainer"></section>
 
 <section class="section">
 <h2>📦 Coming Soon</h2>
-<p>Bridal Diamond Collection | Limited Royal Series</p>
+<p>Bridal Diamond Collection | Royal Platinum Sets</p>
 </section>
 
 <section class="section">
 <h2>🔮 Upcoming Collections</h2>
-<p>Sapphire Classics | Temple Gold Series | Platinum Range</p>
+<p>Sapphire Range | Temple Gold Series | Emerald Royal Edition</p>
 </section>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cartPanel">
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<h3>Total: ₹<span id="totalPrice">0</span></h3>
+
+<div class="checkout-form">
+<h3>Checkout</h3>
+<input type="text" id="name" placeholder="Full Name">
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="text" id="address" placeholder="Address">
+<select id="payment">
+<option>Cash on Delivery</option>
+<option>UPI</option>
+<option>Bank Transfer</option>
+</select>
+<button onclick="checkout()">Place Order</button>
+</div>
+</div>
 
 <footer>
 <div class="footer-title">AKVIA GEMS & JEWELLERY</div>
-
 <div class="footer-grid">
 
 <div>
 <h3>About Us</h3>
-<p>Akvia Gems & Jewellery offers handcrafted premium jewellery designed with elegance and perfection. We bring luxury, trust, and timeless beauty to your collection.</p>
+<p>Akvia Gems & Jewellery provides handcrafted luxury jewellery with elegance and perfection. We combine tradition and modern beauty to create timeless collections.</p>
 </div>
 
 <div>
@@ -245,33 +252,110 @@ cursor:pointer;
 </div>
 </footer>
 
-<div class="whatsapp-float" onclick="contactWhatsApp()">💬</div>
+<div class="whatsapp" onclick="contactWhatsApp()">💬</div>
 
 <script>
-let cartCount=0;
 
-function addToCart(){
-cartCount++;
-document.querySelector(".cart").innerHTML="🛒 "+cartCount;
-alert("Added to Cart!");
+const products = [
+{name:"Diamond Ring",price:2999,image:"https://images.unsplash.com/photo-1588449668365-d15e397f6787"},
+{name:"Gold Necklace",price:4999,image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f"},
+{name:"Emerald Earrings",price:1999,image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e"},
+{name:"Ruby Pendant",price:2499,image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638"},
+{name:"Sapphire Ring",price:2799,image:"https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f"},
+{name:"Gold Bangles",price:3999,image:"https://images.unsplash.com/photo-1611599537845-1c3c8b4a9b3b"},
+{name:"Diamond Necklace",price:6999,image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2"},
+{name:"Temple Jewellery",price:5999,image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638"},
+{name:"Platinum Ring",price:3499,image:"https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f"},
+{name:"Pearl Set",price:2599,image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f"},
+{name:"Bridal Set",price:8999,image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2"},
+{name:"Antique Gold Set",price:7499,image:"https://images.unsplash.com/photo-1611599537845-1c3c8b4a9b3b"},
+{name:"Minimal Pendant",price:1499,image:"https://images.unsplash.com/photo-1588449668365-d15e397f6787"},
+{name:"Luxury Bracelet",price:3299,image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e"},
+{name:"Gemstone Ring",price:2199,image:"https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f"},
+{name:"Classic Earrings",price:1899,image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f"},
+{name:"Royal Necklace",price:9999,image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2"},
+{name:"Designer Ring",price:2899,image:"https://images.unsplash.com/photo-1588449668365-d15e397f6787"},
+{name:"Festival Set",price:4599,image:"https://images.unsplash.com/photo-1611599537845-1c3c8b4a9b3b"},
+{name:"Elegant Pendant",price:1999,image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e"}
+];
+
+let cart=[];
+const container=document.getElementById("productContainer");
+
+products.forEach((p,i)=>{
+container.innerHTML+=`
+<div class="card">
+<img src="${p.image}">
+<h3>${p.name}</h3>
+<div class="rating">⭐⭐⭐⭐☆ (${Math.floor(Math.random()*200)+50})</div>
+<div class="price">₹${p.price}</div>
+<button onclick="addToCart(${i})">Add to Cart</button>
+</div>`;
+});
+
+function addToCart(index){
+cart.push(products[index]);
+updateCart();
 }
 
-function buyNow(product,price){
+function updateCart(){
+document.getElementById("cartCount").innerText=cart.length;
+let cartHTML="";
+let total=0;
+cart.forEach(item=>{
+cartHTML+=`<p>${item.name} - ₹${item.price}</p>`;
+total+=item.price;
+});
+document.getElementById("cartItems").innerHTML=cartHTML;
+document.getElementById("totalPrice").innerText=total;
+}
+
+function toggleCart(){
+document.getElementById("cartPanel").classList.toggle("active");
+}
+
+function checkout(){
+if(cart.length===0){alert("Cart is empty");return;}
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+let payment=document.getElementById("payment").value;
+
 let orderID="AKVIA"+Math.floor(Math.random()*10000);
-let message="Order ID: "+orderID+
-"%0AProduct: "+product+
-"%0APrice: ₹"+price+
-"%0APlease confirm my order.";
-window.open("https://wa.me/919742789800?text="+message);
+
+let message=`Order ID: ${orderID}
+Name: ${name}
+Phone: ${phone}
+Address: ${address}
+Payment: ${payment}
+Items:
+`;
+
+cart.forEach(item=>{
+message+=`${item.name} - ₹${item.price}
+`;
+});
+
+window.open("https://wa.me/919742789800?text="+encodeURIComponent(message));
+}
+
+function scrollToProducts(){
+document.getElementById("productContainer").scrollIntoView({behavior:"smooth"});
 }
 
 function contactWhatsApp(){
 window.open("https://wa.me/919742789800");
 }
 
-function scrollToProducts(){
-document.getElementById("products").scrollIntoView({behavior:'smooth'});
-}
+document.getElementById("searchInput").addEventListener("keyup",function(){
+let value=this.value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+cards.forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
+});
+});
+
 </script>
 
 </body>
