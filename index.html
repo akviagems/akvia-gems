@@ -14,6 +14,7 @@ url('https://images.unsplash.com/photo-1605100804763-247f67b3557e');
 background-size:cover;
 background-attachment:fixed;
 color:white;
+scroll-behavior:smooth;
 }
 
 header{
@@ -27,12 +28,13 @@ top:0;
 z-index:1000;
 }
 
-.logo{color:gold;font-size:24px;font-weight:bold;}
+.logo{color:gold;font-size:26px;font-weight:bold;}
 
 nav a{
 color:white;
 margin:0 12px;
 text-decoration:none;
+cursor:pointer;
 }
 
 .search input{
@@ -44,32 +46,42 @@ cursor:pointer;
 font-size:18px;
 }
 
+/* HERO */
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:120px 20px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:65px;
 color:gold;
+letter-spacing:3px;
+}
+
+.hero p{
+font-size:20px;
+margin-top:15px;
 }
 
 .hero button{
-margin-top:20px;
-padding:10px 25px;
+margin-top:25px;
+padding:12px 28px;
 background:gold;
 border:none;
 cursor:pointer;
+font-weight:bold;
 }
 
+/* SECTION */
 .section{
-padding:50px 30px;
+padding:60px 30px;
 text-align:center;
 }
 
 .section h2{
 color:gold;
-margin-bottom:15px;
+margin-bottom:20px;
+font-size:30px;
 }
 
 .products{
@@ -103,6 +115,7 @@ margin:5px;
 background:gold;
 border:none;
 cursor:pointer;
+font-weight:bold;
 }
 
 /* CART PANEL */
@@ -139,9 +152,10 @@ margin-top:50px;
 }
 
 .footer-title{
-font-size:40px;
+font-size:55px;
 color:gold;
 margin-bottom:20px;
+text-align:center;
 }
 
 .footer-grid{
@@ -151,7 +165,7 @@ gap:30px;
 }
 
 .footer-grid h3{color:gold;margin-bottom:10px;}
-.footer-grid p{font-size:14px;margin-bottom:6px;}
+.footer-grid p,a{font-size:14px;margin-bottom:6px;color:white;text-decoration:none;}
 
 .whatsapp{
 position:fixed;
@@ -171,10 +185,11 @@ cursor:pointer;
 <header>
 <div class="logo">Akvia Gems</div>
 <nav>
-<a href="#">Home</a>
-<a href="#">Products</a>
-<a href="#">Offers</a>
-<a href="#">Coming Soon</a>
+<a onclick="scrollToSection('home')">Home</a>
+<a onclick="scrollToSection('products')">Products</a>
+<a onclick="scrollToSection('offers')">Offers</a>
+<a onclick="scrollToSection('coming')">Coming Soon</a>
+<a onclick="scrollToSection('upcoming')">Upcoming</a>
 </nav>
 <div>
 <span class="search"><input type="text" id="searchInput" placeholder="Search products..."></span>
@@ -182,27 +197,33 @@ cursor:pointer;
 </div>
 </header>
 
-<section class="hero">
-<h1>Elegance Crafted in Every Gem</h1>
-<p>Luxury Jewellery Collection</p>
-<button onclick="scrollToProducts()">Shop Now</button>
+<section class="hero" id="home">
+<h1>AKVIA GEMS & JEWELLERY</h1>
+<p>Luxury Crafted Jewellery | Timeless Elegance | Royal Collections</p>
+<button onclick="scrollToSection('products')">Explore Collection</button>
 </section>
 
-<section class="section">
+<section class="section" id="offers">
 <h2>🔥 Special Offers</h2>
-<p>Flat 10% OFF | Free Shipping | Festive Deals</p>
+<p>Flat 10% OFF | Free Shipping | Festive Deals Available For Limited Time.</p>
 </section>
 
-<section class="products" id="productContainer"></section>
+<section class="products" id="products"></section>
 
-<section class="section">
+<section class="section" id="coming">
 <h2>📦 Coming Soon</h2>
-<p>Bridal Diamond Collection | Royal Platinum Sets</p>
+<p style="max-width:900px;margin:auto;line-height:1.8;">
+Our upcoming bridal diamond collection is crafted for grand celebrations and royal weddings.
+Limited platinum editions and signature temple gold sets launching soon.
+</p>
 </section>
 
-<section class="section">
+<section class="section" id="upcoming">
 <h2>🔮 Upcoming Collections</h2>
-<p>Sapphire Range | Temple Gold Series | Emerald Royal Edition</p>
+<p style="max-width:900px;margin:auto;line-height:1.8;">
+Sapphire Classics, Emerald Royal Series, and Designer Luxury Platinum range will redefine elegance.
+Stay connected for exclusive early access.
+</p>
 </section>
 
 <!-- CART PANEL -->
@@ -227,59 +248,55 @@ cursor:pointer;
 
 <footer>
 
-<div class="footer-title" style="font-size:55px; text-align:center;">
+<div class="footer-title">
 AKVIA GEMS & JEWELLERY
 </div>
 
-<p style="text-align:center; max-width:900px; margin:20px auto; line-height:1.8; font-size:15px;">
-Akvia Gems & Jewellery is a luxury handcrafted jewellery brand dedicated to elegance, trust, and timeless beauty.
-Our collections are inspired by royal traditions and modern sophistication.
-We believe jewellery is not just an accessory — it is an emotion, a memory, and a legacy.
-From bridal masterpieces to minimal daily wear, every piece is crafted with precision and passion.
+<p style="text-align:center;max-width:900px;margin:20px auto;line-height:1.8;">
+Akvia Gems & Jewellery is a premium handcrafted jewellery brand inspired by royal traditions and modern luxury.
+We design timeless pieces that celebrate elegance, trust, and unforgettable moments.
 </p>
 
 <div class="footer-grid">
 
 <div>
 <h3>About</h3>
-<p><a href="#" onclick="scrollToProducts()">Our Products</a></p>
-<p><a href="#">Our Story</a></p>
-<p><a href="#">Luxury Craftsmanship</a></p>
-<p><a href="#">Customer Reviews</a></p>
+<p onclick="scrollToSection('products')">Our Products</p>
+<p>Luxury Craftsmanship</p>
+<p>Customer Reviews</p>
 </div>
 
 <div>
 <h3>Help & Support</h3>
-<p><a href="#">Shipping Policy</a></p>
-<p><a href="#">Returns & Exchange</a></p>
-<p><a href="#">Order Tracking</a></p>
-<p><a href="#">Secure Payment</a></p>
-<p><a href="#">FAQs</a></p>
+<p>Shipping Policy</p>
+<p>Returns & Exchange</p>
+<p>Order Tracking</p>
 </div>
 
 <div>
 <h3>Contact Us</h3>
-<p>📞 <a href="tel:9742789800">9742789800</a></p>
-<p>📧 <a href="mailto:akviagemsandjewellery@gmail.com">
-akviagemsandjewellery@gmail.com</a></p>
-<p>📸 <a href="https://instagram.com/akvia_gems" target="_blank">
-@akvia_gems</a></p>
-<p>📍 India</p>
+<p><a href="tel:9742789800">📞 9742789800</a></p>
+<p><a href="mailto:akviagemsandjewellery@gmail.com">📧 akviagemsandjewellery@gmail.com</a></p>
+<p><a href="https://instagram.com/akvia_gems" target="_blank">📸 @akvia_gems</a></p>
 </div>
 
 </div>
 
-<hr style="margin:30px 0; border:0.5px solid gold;">
+<hr style="margin:30px 0;border:0.5px solid gold;">
 
-<p style="text-align:center; font-size:13px;">
-© 2026 Akvia Gems & Jewellery. All Rights Reserved. |
-Luxury Jewellery Brand
+<p style="text-align:center;font-size:13px;">
+© 2026 Akvia Gems & Jewellery. All Rights Reserved.
 </p>
+
 </footer>
 
 <div class="whatsapp" onclick="contactWhatsApp()">💬</div>
 
 <script>
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
 
 const products = [
 {name:"Diamond Ring",price:2999,image:"https://images.unsplash.com/photo-1588449668365-d15e397f6787"},
@@ -291,21 +308,11 @@ const products = [
 {name:"Diamond Necklace",price:6999,image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2"},
 {name:"Temple Jewellery",price:5999,image:"https://images.unsplash.com/photo-1617038220319-276d3cfab638"},
 {name:"Platinum Ring",price:3499,image:"https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f"},
-{name:"Pearl Set",price:2599,image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f"},
-{name:"Bridal Set",price:8999,image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2"},
-{name:"Antique Gold Set",price:7499,image:"https://images.unsplash.com/photo-1611599537845-1c3c8b4a9b3b"},
-{name:"Minimal Pendant",price:1499,image:"https://images.unsplash.com/photo-1588449668365-d15e397f6787"},
-{name:"Luxury Bracelet",price:3299,image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e"},
-{name:"Gemstone Ring",price:2199,image:"https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f"},
-{name:"Classic Earrings",price:1899,image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f"},
-{name:"Royal Necklace",price:9999,image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2"},
-{name:"Designer Ring",price:2899,image:"https://images.unsplash.com/photo-1588449668365-d15e397f6787"},
-{name:"Festival Set",price:4599,image:"https://images.unsplash.com/photo-1611599537845-1c3c8b4a9b3b"},
-{name:"Elegant Pendant",price:1999,image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e"}
+{name:"Pearl Set",price:2599,image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f"}
 ];
 
 let cart=[];
-const container=document.getElementById("productContainer");
+const container=document.getElementById("products");
 
 products.forEach((p,i)=>{
 container.innerHTML+=`
@@ -321,12 +328,13 @@ container.innerHTML+=`
 function addToCart(index){
 cart.push(products[index]);
 updateCart();
+alert(products[index].name+" added to cart!");
 }
 
 function updateCart(){
 document.getElementById("cartCount").innerText=cart.length;
-let cartHTML="";
 let total=0;
+let cartHTML="";
 cart.forEach(item=>{
 cartHTML+=`<p>${item.name} - ₹${item.price}</p>`;
 total+=item.price;
@@ -340,49 +348,14 @@ document.getElementById("cartPanel").classList.toggle("active");
 }
 
 function checkout(){
-if(cart.length===0){alert("Cart is empty");return;}
-
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let address=document.getElementById("address").value;
-let payment=document.getElementById("payment").value;
-
-let orderID="AKVIA"+Math.floor(Math.random()*10000);
-
-let message=`Order ID: ${orderID}
-Name: ${name}
-Phone: ${phone}
-Address: ${address}
-Payment: ${payment}
-Items:
-`;
-
-cart.forEach(item=>{
-message+=`${item.name} - ₹${item.price}
-`;
-});
-
-window.open("https://wa.me/919742789800?text="+encodeURIComponent(message));
-}
-
-function scrollToProducts(){
-document.getElementById("productContainer").scrollIntoView({behavior:"smooth"});
+alert("Order placed! We will contact you on WhatsApp.");
 }
 
 function contactWhatsApp(){
 window.open("https://wa.me/919742789800");
 }
 
-document.getElementById("searchInput").addEventListener("keyup",function(){
-let value=this.value.toLowerCase();
-let cards=document.querySelectorAll(".card");
-cards.forEach(card=>{
-card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
-});
-});
-
 </script>
 
 </body>
 </html>
-
