@@ -9,183 +9,180 @@
 
 <style>
 
-/* BODY */
-body {
-  margin:0;
-  padding:0;
-  font-family:'Playfair Display', serif;
-  background:
-  linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.88)),
-  url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=2100&q=100')
-  no-repeat center center fixed;
-  background-size: cover;
-  color: #f5e6c8;
+body{
+margin:0;
+padding:0;
+font-family:'Playfair Display', serif;
+background:
+linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.88)),
+url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=2100&q=100')
+no-repeat center center fixed;
+background-size:cover;
+color:#f5e6c8;
 }
 
 /* LOADER */
-#loader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: black;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-  animation: fadeOut 1.5s ease forwards;
-  animation-delay:3.5s;
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeOut 1.5s ease forwards;
+animation-delay:3.5s;
 }
 
-.loader-content {
-  text-align:center;
-  color:gold;
-  animation: glow 2s infinite alternate;
+.loader-content{
+text-align:center;
+color:gold;
+animation:glow 2s infinite alternate;
 }
 
-.loader-content h1 {
-  font-size:3em;
-  letter-spacing:5px;
+.loader-content h1{
+font-size:3em;
+letter-spacing:5px;
 }
 
-.loader-content p {
-  margin-top:15px;
-  letter-spacing:2px;
+@keyframes glow{
+from{text-shadow:0 0 10px gold;}
+to{text-shadow:0 0 35px gold;}
 }
 
-@keyframes glow {
-  from { text-shadow:0 0 10px gold; }
-  to { text-shadow:0 0 30px gold; }
-}
-
-@keyframes fadeOut {
-  to { opacity:0; visibility:hidden; }
+@keyframes fadeOut{
+to{opacity:0;visibility:hidden;}
 }
 
 /* HEADER */
-header {
-  background:rgba(0,0,0,0.95);
-  padding:25px;
-  text-align:center;
-  border-bottom:1px solid gold;
+header{
+background:rgba(0,0,0,0.95);
+padding:25px;
+text-align:center;
+border-bottom:1px solid gold;
 }
 
-header h1 {
-  font-size:3em;
-  color:gold;
-  letter-spacing:3px;
+header h1{
+font-size:3em;
+color:gold;
+letter-spacing:3px;
 }
 
-nav ul {
-  list-style:none;
-  padding:0;
-  display:flex;
-  justify-content:center;
-  gap:35px;
-  margin-top:15px;
+/* NAV */
+nav ul{
+list-style:none;
+padding:0;
+display:flex;
+justify-content:center;
+gap:35px;
+margin-top:15px;
 }
 
-nav a {
-  color:gold;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
+nav a{
+color:gold;
+text-decoration:none;
+font-weight:bold;
+position:relative;
 }
 
-nav a:hover {
-  color:white;
-  text-shadow:0 0 10px gold;
+nav a:hover{
+color:white;
+text-shadow:0 0 10px gold;
+}
+
+/* CART COUNTER */
+.cart-count{
+background:red;
+color:white;
+border-radius:50%;
+padding:3px 8px;
+font-size:12px;
+position:absolute;
+top:-8px;
+right:-15px;
 }
 
 /* SECTIONS */
-section {
-  padding:80px 20px;
-  text-align:center;
-  background:rgba(0,0,0,0.75);
-  margin:40px auto;
-  border-radius:20px;
-  width:90%;
-  max-width:1200px;
-  box-shadow:0 0 25px rgba(255,215,0,0.2);
+section{
+padding:80px 20px;
+text-align:center;
+background:rgba(0,0,0,0.75);
+margin:40px auto;
+border-radius:20px;
+width:90%;
+max-width:1200px;
+box-shadow:0 0 25px rgba(255,215,0,0.2);
 }
 
-h2 {
-  font-size:2.5em;
-  color:gold;
-}
-
-p {
-  line-height:1.8em;
-  font-size:1.1em;
-}
-
-/* COMING SOON SECTION */
-.coming-soon {
-  background:
-  linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-  url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1600&q=100');
-  background-size:cover;
-  background-position:center;
-  color:gold;
-}
+h2{color:gold;font-size:2.5em;}
+p{line-height:1.8em;font-size:1.05em;}
 
 /* PRODUCTS */
-.products-container {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:35px;
-  margin-top:50px;
+.products-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:35px;
+margin-top:50px;
 }
 
-.product-card {
-  width:220px;
-  border:1px solid gold;
-  padding:20px;
-  border-radius:15px;
-  background:rgba(0,0,0,0.85);
-  transition:0.4s;
+.product-card{
+width:240px;
+border:1px solid gold;
+padding:20px;
+border-radius:15px;
+background:rgba(0,0,0,0.85);
+transition:0.4s;
 }
 
-.product-card:hover {
-  transform:scale(1.07);
-  box-shadow:0 0 25px gold;
+.product-card:hover{
+transform:scale(1.07);
+box-shadow:0 0 25px gold;
 }
 
-.product-card img {
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:15px;
+.product-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:15px;
 }
 
-.product-card button {
-  padding:10px 15px;
-  background:gold;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-  font-weight:bold;
+.price{
+font-size:1.2em;
+margin:10px 0;
+color:#ffd700;
+font-weight:bold;
 }
 
-button.checkout {
-  padding:14px 28px;
-  font-size:18px;
-  background:gold;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-  margin-top:30px;
+.product-card button{
+padding:10px 15px;
+background:gold;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button.checkout{
+padding:14px 28px;
+font-size:18px;
+background:gold;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+margin-top:30px;
 }
 
 /* FOOTER */
-footer {
-  background:black;
-  padding:30px;
-  text-align:center;
-  color:gold;
-  border-top:1px solid gold;
+footer{
+background:black;
+padding:30px;
+text-align:center;
+color:gold;
+border-top:1px solid gold;
 }
 
 </style>
@@ -193,53 +190,26 @@ footer {
 
 <body>
 
-<!-- LOADER -->
 <div id="loader">
-  <div class="loader-content">
-    <h1>Akvia Gems</h1>
-    <p>Jewellery with Timeless Elegance</p>
-  </div>
+<div class="loader-content">
+<h1>Akvia Gems</h1>
+<p>Jewellery with Timeless Elegance</p>
+</div>
 </div>
 
 <header>
 <h1>Akvia Gems and Jewellery</h1>
 <nav>
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#collection">Upcoming</a></li>
-<li><a href="#coming">Coming Soon</a></li>
 <li><a href="#products">Products</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#" onclick="checkout()">🛒 Cart</a></li>
+<li>
+<a href="#" onclick="checkout()">🛒 Cart 
+<span id="cartCount" class="cart-count">0</span>
+</a>
+</li>
 </ul>
 </nav>
 </header>
-
-<section id="hero">
-<h2>Beauty That Never Fades</h2>
-<p>Luxury crafted with brilliance, purity, and timeless elegance.</p>
-</section>
-
-<section id="about">
-<h2>About Us</h2>
-<p>At Akvia Gems and Jewellery, we create timeless pieces crafted with passion and precision.</p>
-</section>
-
-<section id="collection">
-<h2>Upcoming Collection - 02.05.2025</h2>
-<p>Premium 92.5 Sterling Silver Rings & Fine Gemstone Jewellery.</p>
-</section>
-
-<section id="coming" class="coming-soon">
-<h2 style="font-size:3em; letter-spacing:4px;">COMING SOON</h2>
-<p style="font-size:1.3em; margin-top:20px;">Launching 02.05.2025</p>
-<p style="max-width:700px; margin:30px auto;">
-Our exclusive Pure Silver & Signature Gemstone Collection is arriving soon.
-</p>
-<div style="padding:12px 30px; border:2px solid gold; display:inline-block;">
-02 • 05 • 2025
-</div>
-</section>
 
 <section id="products">
 <h2>Our Collection</h2>
@@ -248,15 +218,25 @@ Our exclusive Pure Silver & Signature Gemstone Collection is arriving soon.
 <div class="product-card">
 <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=400&q=80">
 <h3>Amethyst Gemstone</h3>
-<p>$7</p>
-<button onclick="addToCart('Amethyst Gemstone',7)">Add to Cart</button>
+<p>Natural purple amethyst known for clarity and spiritual elegance.</p>
+<div class="price">₹699</div>
+<button onclick="addToCart('Amethyst Gemstone',699)">Add to Cart</button>
 </div>
 
 <div class="product-card">
 <img src="https://images.unsplash.com/photo-1588444650700-6fdb63f8a4e9?auto=format&fit=crop&w=400&q=80">
 <h3>Pure Silver Ring</h3>
-<p>$1.7</p>
-<button onclick="addToCart('Pure Silver Ring',1.7)">Add to Cart</button>
+<p>Elegant 92.5 sterling silver ring crafted for daily luxury wear.</p>
+<div class="price">₹499</div>
+<button onclick="addToCart('Pure Silver Ring',499)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=400&q=80">
+<h3>Silver Chain</h3>
+<p>Premium silver chain with polished finish and lasting shine.</p>
+<div class="price">₹899</div>
+<button onclick="addToCart('Silver Chain',899)">Add to Cart</button>
 </div>
 
 </div>
@@ -264,36 +244,44 @@ Our exclusive Pure Silver & Signature Gemstone Collection is arriving soon.
 <button class="checkout" onclick="checkout()">Proceed to WhatsApp Checkout</button>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Phone: +91 9742789800</p>
-<p>Email: akviagemsandjewellery@gmail.com</p>
-<p>Instagram:
-<a href="https://instagram.com/akvia_gems" target="_blank" style="color:gold;">
-@akvia_gems
-</a>
-</p>
-</section>
-
 <footer>
 © 2026 Akvia Gems and Jewellery | Crafted with Elegance
 </footer>
 
 <script>
-let cart = [];
-function addToCart(product, price){
-cart.push({product,price});
-alert(product + " added to cart!");
+let cart={};
+let totalItems=0;
+
+function addToCart(product,price){
+if(cart[product]){
+cart[product].qty+=1;
+}else{
+cart[product]={price:price,qty:1};
 }
+totalItems++;
+document.getElementById("cartCount").innerText=totalItems;
+alert(product+" added to cart | Price: ₹"+price);
+}
+
 function checkout(){
-if(cart.length===0){alert("Cart is empty!");return;}
+if(totalItems===0){
+alert("Cart is empty!");
+return;
+}
 let phoneNumber="919742789800";
-let message="Hello Akvia Gems,%0AOrder:%0A";
-cart.forEach(item=>{
-message+="- "+item.product+" ($"+item.price+")%0A";
-});
+let message="Hello Akvia Gems,%0A%0AOrder Details:%0A";
+let total=0;
+
+for(let item in cart){
+let itemTotal=cart[item].price*cart[item].qty;
+message+="- "+item+" | Qty: "+cart[item].qty+" | ₹"+itemTotal+"%0A";
+total+=itemTotal;
+}
+
+message+="%0ATotal Amount: ₹"+total;
 window.open("https://wa.me/"+phoneNumber+"?text="+message,"_blank");
 }
+
 window.addEventListener("load",function(){
 setTimeout(function(){
 document.getElementById("loader").style.display="none";
