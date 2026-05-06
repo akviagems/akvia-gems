@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Akvia Gems & Jewellery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Poppins;
+background:black;
+color:white;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+border-bottom:1px solid gold;
+position:sticky;
+top:0;
+background:black;
+}
+
+.logo{
+font-family:'Playfair Display';
+font-size:28px;
+color:gold;
+}
+
+/* NAV */
+nav a{
+color:gold;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338');
+background-size:cover;
+}
+
+.hero h1{
+font-size:50px;
+color:gold;
+}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:#111;
+border:1px solid gold;
+padding:15px;
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+color:gold;
+margin:10px 0;
+}
+
+.btn{
+background:gold;
+border:none;
+padding:10px;
+cursor:pointer;
+margin-top:10px;
+}
+
+/* SECTION */
+.section{
+padding:40px;
+text-align:center;
+}
+
+.section h2{
+color:gold;
+margin-bottom:15px;
+}
+
+/* REVIEWS */
+.review{
+background:#111;
+border:1px solid gold;
+padding:10px;
+margin:10px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid gold;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+padding:10px 20px;
+display:inline-block;
+margin-top:10px;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">AKVIA GEMS</div>
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Luxury Jewellery</h1>
+<p>Premium Gems at Affordable Prices</p>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products"></section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>Akvia Gems & Jewellery offers premium quality gemstones and jewellery with trust, elegance, and affordable pricing.</p>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+<h2>Customer Reviews</h2>
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐  
+<p>Excellent quality and service!</p>
+</div>
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐  
+<p>Beautiful jewellery at good prices.</p>
+</div>
+
+<div class="review">
+⭐ ⭐ ⭐ ⭐ ⭐  
+<p>Highly recommended. Will buy again!</p>
+</div>
+
+</section>
+
+<!-- UPCOMING -->
+<section class="section">
+<h2>Upcoming Collections</h2>
+<p>💎 Diamond Luxury Series</p>
+<p>👑 Gold Royal Collection</p>
+<p>✨ Rare Gemstones</p>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<h2>Contact</h2>
+<p>📞 9742789800</p>
+<p>📧 akviagemsandjewellery@gmail.com</p>
+<p>📷 Instagram: akvia_gems</p>
+
+<a class="whatsapp" href="https://wa.me/919742789800">Order on WhatsApp</a>
+</section>
+
+<footer>
+<p>© 2026 Akvia Gems & Jewellery</p>
+</footer>
+
+<script>
+const products=[
+{name:"Ruby Ring",price:999,img:"https://source.unsplash.com/300x300/?ruby"},
+{name:"Emerald Ring",price:899,img:"https://source.unsplash.com/300x300/?emerald"},
+{name:"Blue Sapphire",price:1500,img:"https://source.unsplash.com/300x300/?sapphire"},
+{name:"Diamond Ring",price:2000,img:"https://source.unsplash.com/300x300/?diamond"},
+{name:"Opal Stone",price:700,img:"https://source.unsplash.com/300x300/?opal"},
+{name:"Gold Bracelet",price:1200,img:"https://source.unsplash.com/300x300/?bracelet"}
+];
+
+let html="";
+products.forEach(p=>{
+html+=`
+<div class="card">
+<img src="${p.img}">
+<h3>${p.name}</h3>
+<p>₹${p.price}</p>
+<button class="btn" onclick="order('${p.name}')">Order</button>
+</div>`;
+});
+
+document.getElementById("products").innerHTML=html;
+
+function order(name){
+let msg="I want to buy: "+name;
+window.open("https://wa.me/919742789800?text="+encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
