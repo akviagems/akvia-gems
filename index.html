@@ -1,230 +1,1540 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Akvia Gems & Jewellery</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+<title>AKVIA GEMS | Premium Gemstones & Jewellery</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+<meta name="description"
+content="Buy Natural Certified Gemstones & Premium Jewellery">
 
-body{
-font-family:Poppins;
-background:black;
-color:white;
-}
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-/* HEADER */
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-border-bottom:1px solid gold;
-position:sticky;
-top:0;
-background:black;
-}
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-.logo{
-font-family:'Playfair Display';
-font-size:28px;
-color:gold;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
-/* NAV */
-nav a{
-color:gold;
-margin:0 10px;
-text-decoration:none;
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-/* HERO */
-.hero{
-text-align:center;
-padding:80px 20px;
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
-url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338');
-background-size:cover;
-}
+<link rel="stylesheet"
+href="style.css">
 
-.hero h1{
-font-size:50px;
-color:gold;
-}
-
-/* PRODUCTS */
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-padding:30px;
-}
-
-.card{
-background:#111;
-border:1px solid gold;
-padding:15px;
-text-align:center;
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-.card h3{
-color:gold;
-margin:10px 0;
-}
-
-.btn{
-background:gold;
-border:none;
-padding:10px;
-cursor:pointer;
-margin-top:10px;
-}
-
-/* SECTION */
-.section{
-padding:40px;
-text-align:center;
-}
-
-.section h2{
-color:gold;
-margin-bottom:15px;
-}
-
-/* REVIEWS */
-.review{
-background:#111;
-border:1px solid gold;
-padding:10px;
-margin:10px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-border-top:1px solid gold;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
-padding:10px 20px;
-display:inline-block;
-margin-top:10px;
-text-decoration:none;
-}
-</style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">AKVIA GEMS</div>
-<nav>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
-</nav>
+<!-- ===========================
+TOP BAR
+=========================== -->
+
+<div class="top-bar">
+
+<div class="container">
+
+<div class="top-left">
+
+<p>
+<i class="fa-solid fa-gem"></i>
+
+100% Natural Certified Gemstones
+</p>
+
+</div>
+
+<div class="top-right">
+
+<a href="#">
+<i class="fa-solid fa-phone"></i>
+
++91 9876543210
+</a>
+
+<a href="#">
+<i class="fa-solid fa-envelope"></i>
+
+support@akviagems.com
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header class="header">
+
+<div class="container">
+
+<!-- Left -->
+
+<div class="header-left">
+
+<button class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<a href="#"
+class="logo">
+
+<img src="images/logo.png"
+alt="AKVIA">
+
+<div>
+
+<h2>AKVIA</h2>
+
+<span>GEMS & JEWELLERY</span>
+
+</div>
+
+</a>
+
+</div>
+
+<!-- Search -->
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search Gemstones, Rings, Pendants...">
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+<!-- Right -->
+
+<div class="header-right">
+
+<a href="#">
+
+<i class="fa-regular fa-user"></i>
+
+<span>Account</span>
+
+</a>
+
+<a href="#">
+
+<i class="fa-regular fa-heart"></i>
+
+<span>Wishlist</span>
+
+<span class="badge">
+0
+</span>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Cart</span>
+
+<span class="badge">
+0
+</span>
+
+</a>
+
+</div>
+
+</div>
+
 </header>
 
+<!-- ===========================
+NAVIGATION
+=========================== -->
+
+<nav class="navbar">
+
+<div class="container">
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Shop</a></li>
+
+<li><a href="#">Gemstones</a></li>
+
+<li><a href="#">Jewellery</a></li>
+
+<li><a href="#">Birthstones</a></li>
+
+<li><a href="#">Collections</a></li>
+
+<li><a href="#">Offers</a></li>
+
+<li><a href="#">Certificate Verify</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- HERO STARTS HERE -->
+ <!-- ===========================
+HERO SECTION
+=========================== -->
+
 <section class="hero">
-<h1>Luxury Jewellery</h1>
-<p>Premium Gems at Affordable Prices</p>
+
+<div class="container hero-container">
+
+<div class="hero-content">
+
+<span class="hero-tag">
+✨ India's Trusted Gemstone Store
+</span>
+
+<h1>
+Premium Certified
+<br>
+Gemstones &
+Luxury Jewellery
+</h1>
+
+<p>
+Discover natural, lab-certified gemstones and handcrafted jewellery.
+Perfect for astrology, fashion, gifting, and collectors.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn btn-primary">
+Shop Now
+</a>
+
+<a href="#" class="btn btn-secondary">
+Explore Collection
+</a>
+
+</div>
+
+<div class="hero-features">
+
+<div class="feature">
+
+<i class="fa-solid fa-certificate"></i>
+
+<div>
+
+<h4>Certified</h4>
+
+<p>100% Authentic</p>
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<div>
+
+<h4>Free Shipping</h4>
+
+<p>Across India</p>
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<div>
+
+<h4>Secure Payment</h4>
+
+<p>100% Safe Checkout</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img
+src="images/hero-gemstone.png"
+alt="Premium Gemstones">
+
+</div>
+
+</div>
+
 </section>
 
-<!-- PRODUCTS -->
-<section id="products" class="products"></section>
+<!-- ===========================
+FEATURED CATEGORIES
+=========================== -->
 
-<!-- ABOUT -->
-<section class="section" id="about">
-<h2>About Us</h2>
-<p>Akvia Gems & Jewellery offers premium quality gemstones and jewellery with trust, elegance, and affordable pricing.</p>
+<section class="categories">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Shop By Category</h2>
+
+<p>
+Find the perfect gemstone or jewellery for every occasion.
+</p>
+
+</div>
+
+<div class="category-grid">
+
+<div class="category-card">
+<i class="fa-solid fa-gem"></i>
+<h3>Natural Gemstones</h3>
+<p>30+ Certified Stones</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-ring"></i>
+<h3>Rings</h3>
+<p>Gold & Silver</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-gift"></i>
+<h3>Gift Collection</h3>
+<p>Luxury Gifts</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-crown"></i>
+<h3>Premium Collection</h3>
+<p>Exclusive Designs</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-star"></i>
+<h3>Birthstones</h3>
+<p>Monthly Gemstones</p>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-fire"></i>
+<h3>Best Sellers</h3>
+<p>Most Loved Products</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- REVIEWS -->
-<section class="section" id="reviews">
+<!-- ===========================
+FLASH SALE
+=========================== -->
+
+<section class="flash-sale">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🔥 Flash Sale</h2>
+
+<p>
+Limited-time offers on selected gemstones and jewellery.
+</p>
+
+</div>
+
+<div class="offer-banner">
+
+<div>
+
+<h2>UP TO 40% OFF</h2>
+
+<p>
+Ruby • Sapphire • Emerald • Diamond Jewellery
+</p>
+
+<a href="#" class="btn btn-primary">
+Shop Offers
+</a>
+
+</div>
+
+<div>
+
+<h3>Offer Ends Soon</h3>
+
+<p id="countdown">
+02 Days : 12 Hours : 30 Minutes
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FEATURED PRODUCTS STARTS HERE
+=========================== -->
+<section class="featured-products">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Featured Gemstones</h2>
+            <p>Natural, Certified & Premium Quality Gemstones</p>
+        </div>
+
+        <div class="product-grid">
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+
+                <span class="discount">-20%</span>
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img src="images/ruby.jpg" alt="Ruby">
+
+                <h3>Natural Ruby</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+
+                    <span class="new-price">₹24,999</span>
+
+                    <span class="old-price">₹31,999</span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="cart-btn">
+                        Add To Cart
+                    </button>
+
+                    <button class="buy-btn">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <span class="discount">-15%</span>
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img src="images/emerald.jpg" alt="Emerald">
+
+                <h3>Natural Emerald</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <div class="price">
+
+                    <span class="new-price">₹18,999</span>
+
+                    <span class="old-price">₹22,499</span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="cart-btn">Add To Cart</button>
+
+                    <button class="buy-btn">Buy Now</button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <span class="discount">-25%</span>
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img src="images/blue-sapphire.jpg" alt="Blue Sapphire">
+
+                <h3>Blue Sapphire</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <div class="price">
+
+                    <span class="new-price">₹42,999</span>
+
+                    <span class="old-price">₹56,999</span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="cart-btn">Add To Cart</button>
+
+                    <button class="buy-btn">Buy Now</button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <span class="discount">-18%</span>
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img src="images/yellow-sapphire.jpg" alt="Yellow Sapphire">
+
+                <h3>Yellow Sapphire</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <div class="price">
+
+                    <span class="new-price">₹28,999</span>
+
+                    <span class="old-price">₹35,999</span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="cart-btn">Add To Cart</button>
+
+                    <button class="buy-btn">Buy Now</button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product-card">
+
+                <span class="discount">-12%</span>
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img src="images/diamond.jpg" alt="Diamond">
+
+                <h3>Natural Diamond</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <div class="price">
+
+                    <span class="new-price">₹79,999</span>
+
+                    <span class="old-price">₹91,999</span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="cart-btn">Add To Cart</button>
+
+                    <button class="buy-btn">Buy Now</button>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card">
+
+                <span class="discount">-10%</span>
+
+                <div class="wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img src="images/opal.jpg" alt="Opal">
+
+                <h3>Natural Opal</h3>
+
+                <div class="rating">★★★★★</div>
+
+                <div class="price">
+
+                    <span class="new-price">₹14,999</span>
+
+                    <span class="old-price">₹16,999</span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="cart-btn">Add To Cart</button>
+
+                    <button class="buy-btn">Buy Now</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================
+PREMIUM COLLECTION
+=========================== -->
+
+<section class="premium-collection">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Premium Collections</h2>
+
+            <p>
+                Exclusive handcrafted jewellery designed for every occasion.
+            </p>
+
+        </div>
+
+        <div class="collection-grid">
+
+            <div class="collection-card">
+
+                <img src="images/rings.jpg" alt="Rings">
+
+                <div class="overlay">
+
+                    <h3>Luxury Rings</h3>
+
+                    <a href="#">Explore Collection</a>
+
+                </div>
+
+            </div>
+
+            <div class="collection-card">
+
+                <img src="images/necklace.jpg" alt="Necklace">
+
+                <div class="overlay">
+
+                    <h3>Necklaces</h3>
+
+                    <a href="#">Explore Collection</a>
+
+                </div>
+
+            </div>
+
+            <div class="collection-card">
+
+                <img src="images/bracelet.jpg" alt="Bracelets">
+
+                <div class="overlay">
+
+                    <h3>Bracelets</h3>
+
+                    <a href="#">Explore Collection</a>
+
+                </div>
+
+            </div>
+
+            <div class="collection-card">
+
+                <img src="images/earrings.jpg" alt="Earrings">
+
+                <div class="overlay">
+
+                    <h3>Earrings</h3>
+
+                    <a href="#">Explore Collection</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+SHOP BY BIRTHSTONE
+=========================== -->
+
+<section class="birthstone">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Shop By Birthstone</h2>
+
+<p>
+Choose your lucky birthstone according to your birth month.
+</p>
+
+</div>
+
+<div class="birthstone-grid">
+
+<div>January<br><strong>Garnet</strong></div>
+
+<div>February<br><strong>Amethyst</strong></div>
+
+<div>March<br><strong>Aquamarine</strong></div>
+
+<div>April<br><strong>Diamond</strong></div>
+
+<div>May<br><strong>Emerald</strong></div>
+
+<div>June<br><strong>Pearl</strong></div>
+
+<div>July<br><strong>Ruby</strong></div>
+
+<div>August<br><strong>Peridot</strong></div>
+
+<div>September<br><strong>Sapphire</strong></div>
+
+<div>October<br><strong>Opal</strong></div>
+
+<div>November<br><strong>Topaz</strong></div>
+
+<div>December<br><strong>Turquoise</strong></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+WHY CHOOSE AKVIA
+=========================== -->
+
+<section class="why-akvia">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Why Choose AKVIA GEMS?</h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<i class="fa-solid fa-certificate"></i>
+
+<h3>Certified Gemstones</h3>
+
+<p>Every gemstone comes with authenticity certification.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-shield"></i>
+
+<h3>Secure Shopping</h3>
+
+<p>Safe and secure shopping experience.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Fast Delivery</h3>
+
+<p>Express delivery across India.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-rotate-left"></i>
+
+<h3>Easy Returns</h3>
+
+<p>Simple and hassle-free return policy.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>24/7 Support</h3>
+
+<p>Our experts are always ready to help.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-gem"></i>
+
+<h3>Premium Quality</h3>
+
+<p>Only high-quality natural gemstones.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+TESTIMONIALS
+=========================== -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-title">
+
 <h2>Customer Reviews</h2>
 
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-<p>Excellent quality and service!</p>
 </div>
 
-<div class="review">
-⭐ ⭐ ⭐ ⭐  
-<p>Beautiful jewellery at good prices.</p>
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+★★★★★
+
+<p>
+
+"I purchased a Natural Ruby from AKVIA.
+Excellent quality and beautiful packaging."
+
+</p>
+
+<h4>- Rahul Sharma</h4>
+
 </div>
 
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-<p>Highly recommended. Will buy again!</p>
+<div class="testimonial">
+
+★★★★★
+
+<p>
+
+"The jewellery quality exceeded my expectations.
+Highly recommended."
+
+</p>
+
+<h4>- Priya Mehta</h4>
+
+</div>
+
+<div class="testimonial">
+
+★★★★★
+
+<p>
+
+"Fast delivery, genuine gemstones and amazing customer support."
+
+</p>
+
+<h4>- Ahmed Khan</h4>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
 
-<!-- UPCOMING -->
-<section class="section">
-<h2>Upcoming Collections</h2>
-<p>💎 Diamond Luxury Series</p>
-<p>👑 Gold Royal Collection</p>
-<p>✨ Rare Gemstones</p>
+<!-- NEXT:
+Certificate Verification
+About Us
+FAQ
+Contact
+Newsletter
+Instagram Gallery
+Footer
+Login Modal
+Wishlist Sidebar
+Cart Sidebar
+-->
+<!-- ===========================
+ABOUT AKVIA GEMS
+=========================== -->
+
+<section class="about">
+
+<div class="container">
+
+<div class="about-image">
+
+<img src="images/about.jpg" alt="About AKVIA GEMS">
+
+</div>
+
+<div class="about-content">
+
+<span>ABOUT US</span>
+
+<h2>AKVIA GEMS & JEWELLERY</h2>
+
+<p>
+
+AKVIA GEMS specializes in certified natural gemstones and premium handcrafted jewellery.
+Our mission is to provide authentic, elegant, and affordable gemstone products for astrology,
+fashion, gifting, and collectors worldwide.
+
+</p>
+
+<div class="about-list">
+
+<div><i class="fa-solid fa-check"></i> Certified Natural Gemstones</div>
+
+<div><i class="fa-solid fa-check"></i> BIS Hallmarked Jewellery</div>
+
+<div><i class="fa-solid fa-check"></i> Worldwide Shipping</div>
+
+<div><i class="fa-solid fa-check"></i> Secure Payments</div>
+
+<div><i class="fa-solid fa-check"></i> Premium Customer Support</div>
+
+</div>
+
+<a href="#" class="btn btn-primary">
+
+Read More
+
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
-<h2>Contact</h2>
-<p>📞 9742789800</p>
-<p>📧 akviagemsandjewellery@gmail.com</p>
-<p>📷 Instagram: akvia_gems</p>
+<!-- ===========================
+CERTIFICATE VERIFICATION
+=========================== -->
 
-<a class="whatsapp" href="https://wa.me/919742789800">Order on WhatsApp</a>
+<section class="certificate">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Certificate Verification</h2>
+
+<p>
+
+Verify the authenticity of your gemstone certificate.
+
+</p>
+
+</div>
+
+<div class="verify-box">
+
+<input
+type="text"
+placeholder="Enter Certificate Number">
+
+<button>
+
+Verify Certificate
+
+</button>
+
+</div>
+
+</div>
+
 </section>
+
+<!-- ===========================
+OUR SERVICES
+=========================== -->
+
+<section class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Services</h2>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<i class="fa-solid fa-gem"></i>
+
+<h3>Certified Gemstones</h3>
+
+<p>
+
+100% Natural & Lab Certified Gemstones.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-ring"></i>
+
+<h3>Custom Jewellery</h3>
+
+<p>
+
+Personalized Rings & Jewellery Designs.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Free Delivery</h3>
+
+<p>
+
+Fast & Safe Shipping Across India.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>Expert Support</h3>
+
+<p>
+
+Professional Guidance Before Purchase.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FAQ
+=========================== -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Are your gemstones natural?</h3>
+
+<p>
+
+Yes. All gemstones sold by AKVIA GEMS are natural and certified.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Do you provide certificates?</h3>
+
+<p>
+
+Yes. Every certified gemstone comes with a lab certificate.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Do you deliver internationally?</h3>
+
+<p>
+
+Yes. We offer worldwide shipping.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Can I customize jewellery?</h3>
+
+<p>
+
+Absolutely! Contact us for custom jewellery designs.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+NEWSLETTER
+=========================== -->
+
+<section class="newsletter">
+
+<div class="container">
+
+<h2>
+
+Subscribe To Our Newsletter
+
+</h2>
+
+<p>
+
+Receive exclusive offers, new arrivals, and gemstone updates.
+
+</p>
+
+<div class="newsletter-box">
+
+<input
+type="email"
+placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+INSTAGRAM GALLERY
+=========================== -->
+
+<section class="instagram">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Follow Us On Instagram</h2>
+
+<p>@akvia_gems</p>
+
+</div>
+
+<div class="instagram-grid">
+
+<img src="images/insta1.jpg" alt="Instagram">
+
+<img src="images/insta2.jpg" alt="Instagram">
+
+<img src="images/insta3.jpg" alt="Instagram">
+
+<img src="images/insta4.jpg" alt="Instagram">
+
+<img src="images/insta5.jpg" alt="Instagram">
+
+<img src="images/insta6.jpg" alt="Instagram">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+NEXT:
+Footer
+WhatsApp Button
+Back To Top
+Login Modal
+Register Modal
+Wishlist Sidebar
+Cart Sidebar
+Search Popup
+-->
+<!-- ===========================
+CONTACT SECTION
+=========================== -->
+
+<section class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>We'd love to hear from you.</p>
+
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+
+                <p><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka, India</p>
+
+                <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+
+                <p><i class="fa-solid fa-envelope"></i> support@akviagems.com</p>
+
+                <p><i class="fa-solid fa-clock"></i> Mon - Sat : 9 AM - 8 PM</p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <input type="text" placeholder="Full Name">
+
+                <input type="email" placeholder="Email">
+
+                <input type="tel" placeholder="Phone Number">
+
+                <textarea rows="6" placeholder="Write your message"></textarea>
+
+                <button class="btn btn-primary">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
 
 <footer>
-<p>© 2026 Akvia Gems & Jewellery</p>
+
+<div class="container footer-grid">
+
+<div>
+
+<h2>AKVIA GEMS</h2>
+
+<p>
+
+Premium Natural Gemstones & Luxury Jewellery.
+
+</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Shop</a></li>
+
+<li><a href="#">Gemstones</a></li>
+
+<li><a href="#">Jewellery</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Customer Service</h3>
+
+<ul>
+
+<li><a href="#">FAQ</a></li>
+
+<li><a href="#">Shipping Policy</a></li>
+
+<li><a href="#">Return Policy</a></li>
+
+<li><a href="#">Privacy Policy</a></li>
+
+<li><a href="#">Terms & Conditions</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Payment Methods</h3>
+
+<p>
+
+Visa • MasterCard • UPI • Google Pay • PhonePe • Paytm
+
+</p>
+
+<img src="images/payment.png" alt="Payments">
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+<p>
+
+© 2026 AKVIA GEMS & JEWELLERY. All Rights Reserved.
+
+</p>
+
+</div>
+
 </footer>
 
-<script>
-const products=[
-{name:"Ruby Ring",price:999,img:"https://source.unsplash.com/300x300/?ruby"},
-{name:"Emerald Ring",price:899,img:"https://source.unsplash.com/300x300/?emerald"},
-{name:"Blue Sapphire",price:1500,img:"https://source.unsplash.com/300x300/?sapphire"},
-{name:"Diamond Ring",price:2000,img:"https://source.unsplash.com/300x300/?diamond"},
-{name:"Opal Stone",price:700,img:"https://source.unsplash.com/300x300/?opal"},
-{name:"Gold Bracelet",price:1200,img:"https://source.unsplash.com/300x300/?bracelet"}
-];
+<!-- Floating Buttons -->
 
-let html="";
-products.forEach(p=>{
-html+=`
-<div class="card">
-<img src="${p.img}">
-<h3>${p.name}</h3>
-<p>₹${p.price}</p>
-<button class="btn" onclick="order('${p.name}')">Order</button>
-</div>`;
-});
+<a href="#" class="whatsapp-btn">
 
-document.getElementById("products").innerHTML=html;
+<i class="fab fa-whatsapp"></i>
 
-function order(name){
-let msg="I want to buy: "+name;
-window.open("https://wa.me/919742789800?text="+encodeURIComponent(msg));
-}
-</script>
+</a>
+
+<a href="#" class="call-btn">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+<button class="back-to-top">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- Login Modal -->
+
+<div class="login-modal">
+
+<div class="modal-box">
+
+<span class="close-login">&times;</span>
+
+<h2>Login</h2>
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+<p>
+
+Don't have an account?
+
+<a href="#">Register</a>
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Register Modal -->
+
+<div class="register-modal">
+
+<div class="modal-box">
+
+<span class="close-register">&times;</span>
+
+<h2>Create Account</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<input type="password" placeholder="Confirm Password">
+
+<button>Create Account</button>
+
+</div>
+
+</div>
+
+<!-- Wishlist Sidebar -->
+
+<div class="wishlist-sidebar">
+
+<div class="sidebar-header">
+
+<h2>Wishlist</h2>
+
+<span>&times;</span>
+
+</div>
+
+<div class="wishlist-items">
+
+<p>No products added.</p>
+
+</div>
+
+</div>
+
+<!-- Cart Sidebar -->
+
+<div class="cart-sidebar">
+
+<div class="sidebar-header">
+
+<h2>Shopping Cart</h2>
+
+<span>&times;</span>
+
+</div>
+
+<div class="cart-items">
+
+<p>Your cart is empty.</p>
+
+</div>
+
+<div class="cart-footer">
+
+<h3>Total : ₹0</h3>
+
+<button class="btn btn-primary">
+
+Checkout
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
