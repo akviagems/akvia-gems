@@ -1,0 +1,440 @@
+/*==================================================
+BENGALURU GEMS
+Collections Page CSS
+==================================================*/
+
+.collection-hero{
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:110px 20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.85)
+    ),
+    url("../images/hero/collections-banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.collection-small{
+    color:#d4af37;
+    letter-spacing:5px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.collection-hero h1{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:62px;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.collection-hero h1 span{
+    display:block;
+    color:#d4af37;
+}
+
+.collection-hero-text{
+    max-width:750px;
+    margin:0 auto 35px;
+    color:#d0d0d0;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.collection-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+
+/*==========================
+INTRO
+==========================*/
+
+.collection-intro{
+    background:#080808;
+    padding:80px 0;
+}
+
+.collection-label{
+    color:#d4af37;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:500;
+    margin-bottom:12px;
+}
+
+.collection-intro h2{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:44px;
+    margin-bottom:20px;
+}
+
+.collection-intro p:not(.collection-label){
+    color:#aaa;
+    line-height:1.8;
+}
+
+
+/*==========================
+COLLECTIONS
+==========================*/
+
+.collections-section{
+    background:#0d0d0d;
+    padding:30px 0 100px;
+}
+
+.collection-card{
+    height:100%;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.18);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.collection-card:hover{
+    transform:translateY(-10px);
+    border-color:#d4af37;
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+}
+
+.collection-image{
+    width:100%;
+    height:300px;
+    overflow:hidden;
+}
+
+.collection-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.collection-card:hover .collection-image img{
+    transform:scale(1.08);
+}
+
+.collection-content{
+    padding:28px;
+}
+
+.collection-type{
+    color:#d4af37;
+    letter-spacing:3px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.collection-content h3{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:24px;
+    margin-bottom:14px;
+}
+
+.collection-content p:not(.collection-type){
+    color:#aaa;
+    line-height:1.75;
+    margin-bottom:20px;
+}
+
+.collection-link{
+    color:#d4af37;
+    font-weight:500;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+}
+
+.collection-link:hover{
+    color:#fff;
+    gap:13px;
+}
+
+
+/*==========================
+FEATURED COLLECTION
+==========================*/
+
+.featured-collection{
+    background:#080808;
+    padding:100px 0;
+}
+
+.featured-collection-image{
+    overflow:hidden;
+    border-radius:20px;
+    border:1px solid rgba(212,175,55,.18);
+}
+
+.featured-collection-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.featured-collection-image:hover img{
+    transform:scale(1.04);
+}
+
+.featured-collection-content{
+    padding-left:20px;
+}
+
+.featured-collection-content h2{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:46px;
+    line-height:1.25;
+    margin-bottom:25px;
+}
+
+.featured-collection-content > p:not(.collection-label){
+    color:#aaa;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.featured-collection-content ul{
+    list-style:none;
+    padding:0;
+    margin:0 0 30px;
+}
+
+.featured-collection-content li{
+    color:#ccc;
+    padding:9px 0;
+}
+
+.featured-collection-content li i{
+    color:#d4af37;
+    margin-right:10px;
+}
+
+
+/*==========================
+PROMISE
+==========================*/
+
+.collection-promise{
+    background:#0d0d0d;
+    padding:90px 0;
+}
+
+.collection-promise-box{
+    height:100%;
+    padding:35px 25px;
+    background:#151515;
+    border:1px solid rgba(212,175,55,.15);
+    border-radius:18px;
+    transition:.35s;
+}
+
+.collection-promise-box:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+}
+
+.collection-promise-box i{
+    color:#d4af37;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.collection-promise-box h4{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    margin-bottom:12px;
+}
+
+.collection-promise-box p{
+    color:#aaa;
+    line-height:1.7;
+    margin:0;
+}
+
+
+/*==========================
+CTA
+==========================*/
+
+.collection-cta{
+    padding:110px 20px;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.88)
+    ),
+    url("../images/hero/collections-cta.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.collection-cta > p:first-child{
+    color:#d4af37;
+    letter-spacing:5px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.collection-cta h2{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.collection-cta .cta-text{
+    color:#ccc;
+    max-width:720px;
+    margin:0 auto 30px;
+    line-height:1.8;
+}
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:991px){
+
+    .collection-hero{
+        min-height:480px;
+        padding:90px 20px;
+    }
+
+    .collection-hero h1{
+        font-size:50px;
+    }
+
+    .collection-image{
+        height:260px;
+    }
+
+    .featured-collection-image img{
+        height:420px;
+    }
+
+    .featured-collection-content{
+        padding-left:0;
+    }
+
+    .featured-collection-content h2{
+        font-size:40px;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .collection-hero{
+        min-height:440px;
+    }
+
+    .collection-hero h1{
+        font-size:40px;
+    }
+
+    .collection-hero-text{
+        font-size:15px;
+    }
+
+    .collection-intro h2{
+        font-size:36px;
+    }
+
+    .collection-image{
+        height:240px;
+    }
+
+    .featured-collection{
+        padding:70px 0;
+    }
+
+    .featured-collection-image img{
+        height:350px;
+    }
+
+    .featured-collection-content h2{
+        font-size:35px;
+    }
+
+    .collection-cta{
+        padding:80px 20px;
+    }
+
+    .collection-cta h2{
+        font-size:38px;
+    }
+}
+
+
+@media(max-width:576px){
+
+    .collection-hero{
+        min-height:400px;
+        padding:70px 15px;
+    }
+
+    .collection-small{
+        letter-spacing:3px;
+    }
+
+    .collection-hero h1{
+        font-size:32px;
+    }
+
+    .collection-intro h2{
+        font-size:30px;
+    }
+
+    .collection-image{
+        height:220px;
+    }
+
+    .collection-content{
+        padding:22px;
+    }
+
+    .featured-collection-image img{
+        height:280px;
+    }
+
+    .featured-collection-content h2{
+        font-size:30px;
+    }
+
+    .collection-promise{
+        padding:70px 0;
+    }
+
+    .collection-cta{
+        padding:70px 15px;
+    }
+
+    .collection-cta h2{
+        font-size:30px;
+    }
+}

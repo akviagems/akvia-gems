@@ -1,0 +1,548 @@
+/*==================================================
+BENGALURU GEMS
+Birthstones Page CSS
+==================================================*/
+
+/*==========================
+Birthstone Hero
+==========================*/
+
+.birthstone-hero{
+    min-height:520px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.85)
+    ),
+    url("../images/birthstones/birthstones-banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:100px 20px;
+}
+
+.birthstone-hero .hero-small{
+    color:#d4af37;
+    letter-spacing:5px;
+    font-size:14px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.birthstone-hero h1{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.birthstone-hero h1 span{
+    display:block;
+    color:#d4af37;
+}
+
+.birthstone-hero .hero-text{
+    max-width:720px;
+    margin:0 auto;
+    color:#d0d0d0;
+    line-height:1.8;
+    font-size:17px;
+}
+
+
+/*==========================
+Birthstone Collection
+==========================*/
+
+.birthstone-section{
+    background:#080808;
+    padding:90px 0;
+}
+
+.birthstone-section .section-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.birthstone-section .section-heading p{
+    color:#d4af37;
+    letter-spacing:4px;
+    font-size:13px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.birthstone-section .section-heading h2{
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.birthstone-section .section-heading .section-description{
+    color:#aaa;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+
+/*==========================
+Birthstone Cards
+==========================*/
+
+.birthstone-card{
+    height:100%;
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.18);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    position:relative;
+}
+
+.birthstone-card:hover{
+    transform:translateY(-10px);
+
+    border-color:#d4af37;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45),
+    0 0 25px rgba(212,175,55,.08);
+}
+
+
+/*==========================
+Birthstone Image
+==========================*/
+
+.birthstone-card img{
+    width:100%;
+    height:280px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+}
+
+.birthstone-card:hover img{
+    transform:scale(1.07);
+}
+
+
+/*==========================
+Birthstone Content
+==========================*/
+
+.birthstone-content{
+    padding:25px;
+}
+
+.birthstone-month{
+    color:#d4af37;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.birthstone-content h3{
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:25px;
+
+    margin-bottom:12px;
+}
+
+.birthstone-content p{
+    color:#aaa;
+
+    line-height:1.7;
+
+    margin-bottom:18px;
+}
+
+.birthstone-properties{
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 20px;
+}
+
+.birthstone-properties li{
+    color:#ccc;
+
+    padding:7px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    font-size:14px;
+}
+
+.birthstone-properties li:last-child{
+    border-bottom:none;
+}
+
+.birthstone-properties strong{
+    color:#d4af37;
+}
+
+
+/*==========================
+Birthstone Button
+==========================*/
+
+.birthstone-btn{
+    display:inline-block;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:12px 20px;
+
+    border:1px solid #d4af37;
+
+    border-radius:30px;
+
+    color:#d4af37;
+
+    transition:.3s;
+
+    font-weight:500;
+}
+
+.birthstone-btn:hover{
+    background:#d4af37;
+
+    color:#000;
+}
+
+
+/*==========================
+Buying Guide
+==========================*/
+
+.birthstone-guide{
+    background:#0d0d0d;
+
+    padding:90px 0;
+
+    border-top:1px solid rgba(212,175,55,.12);
+
+    border-bottom:1px solid rgba(212,175,55,.12);
+}
+
+.birthstone-guide .section-heading{
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.birthstone-guide .section-heading h2{
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+}
+
+.birthstone-guide .section-heading p{
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+}
+
+
+/*==========================
+Guide Boxes
+==========================*/
+
+.guide-box{
+    height:100%;
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    transition:.35s;
+}
+
+.guide-box:hover{
+    transform:translateY(-7px);
+
+    border-color:#d4af37;
+}
+
+.guide-box i{
+    color:#d4af37;
+
+    font-size:40px;
+
+    display:block;
+
+    margin-bottom:20px;
+}
+
+.guide-box h4{
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+}
+
+.guide-box p{
+    color:#aaa;
+
+    line-height:1.8;
+
+    margin-bottom:0;
+}
+
+
+/*==========================
+CTA
+==========================*/
+
+.birthstone-cta{
+    position:relative;
+
+    padding:100px 20px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.85)
+    ),
+    url("../images/birthstones/birthstones-cta.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.birthstone-cta h2{
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:48px;
+
+    margin-bottom:20px;
+}
+
+.birthstone-cta p{
+    color:#ccc;
+
+    max-width:700px;
+
+    margin:0 auto 30px;
+
+    line-height:1.8;
+}
+
+.birthstone-cta .btn-gold{
+    display:inline-block;
+}
+
+
+/*==========================
+FAQ
+==========================*/
+
+.birthstone-faq{
+    background:#080808;
+
+    padding:90px 0;
+}
+
+.birthstone-faq .section-heading{
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.birthstone-faq .section-heading h2{
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+}
+
+.birthstone-faq .accordion-item{
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    margin-bottom:12px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+}
+
+.birthstone-faq .accordion-button{
+    background:#151515;
+
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+    font-weight:500;
+
+    padding:20px;
+
+    box-shadow:none;
+}
+
+.birthstone-faq .accordion-button:not(.collapsed){
+    background:#1b1b1b;
+
+    color:#d4af37;
+
+    box-shadow:none;
+}
+
+.birthstone-faq .accordion-button::after{
+    filter:invert(1);
+}
+
+.birthstone-faq .accordion-body{
+    background:#111;
+
+    color:#aaa;
+
+    line-height:1.8;
+
+    padding:20px;
+}
+
+
+/*==========================
+Responsive
+==========================*/
+
+@media(max-width:991px){
+
+    .birthstone-hero{
+        min-height:450px;
+
+        padding:90px 20px;
+    }
+
+    .birthstone-hero h1{
+        font-size:48px;
+    }
+
+    .birthstone-card img{
+        height:250px;
+    }
+
+    .birthstone-section .section-heading h2,
+    .birthstone-guide .section-heading h2,
+    .birthstone-faq .section-heading h2{
+        font-size:36px;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .birthstone-hero{
+        min-height:420px;
+    }
+
+    .birthstone-hero h1{
+        font-size:40px;
+    }
+
+    .birthstone-hero .hero-text{
+        font-size:15px;
+    }
+
+    .birthstone-card img{
+        height:230px;
+    }
+
+    .birthstone-cta h2{
+        font-size:36px;
+    }
+}
+
+
+@media(max-width:576px){
+
+    .birthstone-hero{
+        padding:70px 15px;
+    }
+
+    .birthstone-hero h1{
+        font-size:32px;
+    }
+
+    .birthstone-hero .hero-small{
+        letter-spacing:3px;
+    }
+
+    .birthstone-section,
+    .birthstone-guide,
+    .birthstone-faq{
+        padding:65px 0;
+    }
+
+    .birthstone-section .section-heading h2,
+    .birthstone-guide .section-heading h2,
+    .birthstone-faq .section-heading h2{
+        font-size:30px;
+    }
+
+    .birthstone-card img{
+        height:220px;
+    }
+
+    .birthstone-content{
+        padding:20px;
+    }
+
+    .birthstone-cta{
+        padding:70px 20px;
+    }
+
+    .birthstone-cta h2{
+        font-size:30px;
+    }
+}

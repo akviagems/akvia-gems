@@ -2,186 +2,437 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Us | AKVIA GEMS</title>
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="css/style.css">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+About Us | Bengaluru Gems
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</title>
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<meta name="description"
+content="Learn more about Bengaluru Gems, our story, mission and premium gemstone collection.">
+
+<!-- Bootstrap -->
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Google Fonts -->
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<!-- CSS -->
+
+<link rel="stylesheet"
+href="css/variables.css">
+
+<link rel="stylesheet"
+href="css/navbar.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="css/about.css">
+
+<link rel="stylesheet"
+href="css/responsive.css">
+
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 
-<header class="header">
+
+<!--=========================
+Top Bar
+==========================-->
+
+<div class="luxury-bar">
 
 <div class="container">
 
-<div class="logo">
+<div class="row">
 
-<a href="index.html">
+<div class="col-md-6">
 
-<img src="images/logo.png" alt="AKVIA GEMS">
+<i class="bi bi-gem"></i>
 
-</a>
+Certified Natural Gemstones
 
 </div>
 
-<nav>
+<div class="col-md-6 text-md-end">
 
-<ul>
+<i class="bi bi-award"></i>
 
-<li><a href="index.html">Home</a></li>
+Trusted Luxury Jewellery
 
-<li><a href="shop.html">Shop</a></li>
+</div>
 
-<li><a href="gemstones.html">Gemstones</a></li>
+</div>
 
-<li><a href="jewellery.html">Jewellery</a></li>
+</div>
 
-<li><a href="birthstones.html">Birthstones</a></li>
+</div>
 
-<li><a href="collections.html">Collections</a></li>
 
-<li><a href="offers.html">Offers</a></li>
 
-<li><a href="certificate.html">Certificate Verify</a></li>
+<!--=========================
+Navbar
+==========================-->
 
-<li><a href="about.html" class="active">About</a></li>
+<nav class="navbar navbar-expand-lg luxury-navbar sticky-top">
 
-<li><a href="contact.html">Contact</a></li>
+<div class="container">
+
+<a class="navbar-brand"
+
+href="index.html">
+
+<span class="brand-main">
+
+BENGALURU
+
+</span>
+
+<span class="brand-sub">
+
+GEMS
+
+</span>
+
+</a>
+
+
+
+<button
+
+class="navbar-toggler"
+
+type="button"
+
+data-bs-toggle="collapse"
+
+data-bs-target="#aboutNavbar">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+
+<div
+
+class="collapse navbar-collapse"
+
+id="aboutNavbar">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+Home
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="shop.html">
+Shop
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="gemstones.html">
+Gemstones
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="jewellery.html">
+Jewellery
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="birthstones.html">
+Birthstones
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="certificate.html">
+Certificates
+</a>
+</li>
+
+
+<!-- MORE DROPDOWN -->
+
+<li class="nav-item dropdown">
+
+<a
+class="nav-link dropdown-toggle"
+href="#"
+role="button"
+data-bs-toggle="dropdown"
+aria-expanded="false">
+
+More
+
+</a>
+
+<ul class="dropdown-menu luxury-dropdown">
+
+<li>
+<a
+class="dropdown-item"
+href="collections.html">
+
+Collections
+
+</a>
+</li>
+
+<li>
+<a
+class="dropdown-item"
+href="offers.html">
+
+Offers
+
+</a>
+</li>
+
+<li>
+<a
+class="dropdown-item"
+href="about.html">
+
+About
+
+</a>
+</li>
+
+<li>
+<a
+class="dropdown-item"
+href="contact.html">
+
+Contact
+
+</a>
+</li>
 
 </ul>
 
-</nav>
+</li>
+
+</ul>
+
+<div class="luxury-icons">
+
+<a href="#" id="search.html">
+<i class="bi bi-search"></i>
+</a>
+
+<a href="wishlist.html">
+<i class="bi bi-heart"></i>
+</a>
+
+<a href="cart.html" class="position-relative">
+
+<i class="bi bi-bag"></i>
+
+<span class="cart-count">0</span>
+
+</a>
 
 </div>
 
-</header>
+Cart
 
-<!-- ================= HERO ================= -->
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!--=========================
+About Hero
+==========================-->
 
 <section class="about-hero">
 
-<div class="overlay"></div>
+<div class="container text-center">
 
-<div class="hero-content">
+<p class="hero-small">
 
-<h4>WELCOME TO AKVIA GEMS</h4>
-
-<h1>About AKVIA GEMS</h1>
-
-<p>
-
-Crafting timeless elegance with certified natural gemstones
-and premium jewellery. We combine trust, quality and luxury
-to create jewellery that lasts a lifetime.
+OUR STORY
 
 </p>
 
-<div class="hero-btns">
+<h1>
 
-<a href="shop.html" class="btn gold-btn">
+About
 
-Explore Collection
+<span>
 
-</a>
+Bengaluru Gems
 
-<a href="contact.html" class="btn outline-btn">
+</span>
 
-Contact Us
+</h1>
 
-</a>
+<p class="hero-text">
 
-</div>
+Discover our passion for certified gemstones, fine jewellery, exceptional craftsmanship, and timeless elegance.
+
+</p>
 
 </div>
 
 </section>
+<!--=========================
+Our Story
+==========================-->
 
-<!-- ================= OUR STORY ================= -->
+<section class="about-section py-5">
 
-<section class="story">
+<div class="container">
 
-<div class="container story-grid">
+<div class="row align-items-center g-5">
 
-<div class="story-image">
+<div class="col-lg-6">
 
-<img src="images/about-story.jpg" alt="About AKVIA">
+<img
+
+src="images/about/about-company.jpg"
+
+alt="About Bengaluru Gems"
+
+class="img-fluid rounded-4 shadow">
 
 </div>
 
-<div class="story-text">
 
-<h5>OUR STORY</h5>
 
-<h2>
+<div class="col-lg-6">
 
-A Passion For
-Natural Gemstones
-& Luxury Jewellery
+<p class="section-tag">
+
+OUR STORY
+
+</p>
+
+<h2 class="section-title">
+
+Crafting Luxury With Passion
 
 </h2>
 
 <p>
 
-AKVIA GEMS was founded with a simple mission —
-to make authentic gemstones and fine jewellery
-accessible to everyone.
+Bengaluru Gems is dedicated to offering premium certified
+gemstones and handcrafted jewellery. Every gemstone is carefully
+selected for its authenticity, brilliance, and quality.
 
 </p>
 
 <p>
 
-Every gemstone is carefully selected for its
-beauty, authenticity and quality. Every jewellery
-piece is crafted with precision and attention
-to detail.
+Our mission is to bring timeless elegance and trusted craftsmanship
+to customers looking for luxury jewellery and precious gemstones
+for both fashion and astrology.
 
 </p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!--=========================
+Mission & Vision
+==========================-->
+
+<section class="mission-section py-5">
+
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-lg-6">
+
+<div class="mission-card">
+
+<i class="bi bi-bullseye"></i>
+
+<h3>
+
+Our Mission
+
+</h3>
 
 <p>
 
-Whether you're buying for astrology,
-investment or gifting someone special,
-AKVIA GEMS offers trust, transparency and
-excellent customer service.
+To deliver certified gemstones and luxury jewellery while
+maintaining the highest standards of quality, trust and customer
+satisfaction.
 
 </p>
 
-<div class="story-boxes">
-
-<div class="box">
-
-<h3>100%</h3>
-
-<p>Certified Gemstones</p>
+</div>
 
 </div>
 
-<div class="box">
 
-<h3>Premium</h3>
 
-<p>Luxury Jewellery</p>
+<div class="col-lg-6">
 
-</div>
+<div class="mission-card">
 
-<div class="box">
+<i class="bi bi-eye-fill"></i>
 
-<h3>Trusted</h3>
+<h3>
 
-<p>Customer Service</p>
+Our Vision
+
+</h3>
+
+<p>
+
+To become one of India's most trusted destinations for premium
+gemstones and elegant jewellery collections.
+
+</p>
 
 </div>
 
@@ -192,527 +443,601 @@ excellent customer service.
 </div>
 
 </section>
-<!-- ================= MISSION & VISION ================= -->
 
-<section class="mission-section">
 
-    <div class="container">
 
-        <div class="section-title">
+<!--=========================
+Why Choose Us
+==========================-->
 
-            <h5>OUR PURPOSE</h5>
+<section class="why-section py-5">
 
-            <h2>Mission & Vision</h2>
+<div class="container">
 
-            <p>
-                We strive to deliver authentic gemstones and premium jewellery
-                while building long-lasting relationships through trust,
-                transparency and exceptional craftsmanship.
-            </p>
+<div class="text-center mb-5">
 
-        </div>
+<h2 class="section-title">
 
-        <div class="mission-grid">
+Why Choose Bengaluru Gems?
 
-            <div class="mission-card">
+</h2>
 
-                <i class="fa-solid fa-bullseye"></i>
+<p class="section-subtitle">
 
-                <h3>Our Mission</h3>
+Luxury, Trust & Quality in Every Purchase
 
-                <p>
+</p>
 
-                    To provide certified natural gemstones and luxury jewellery
-                    with outstanding quality, ethical sourcing and excellent
-                    customer service.
+</div>
 
-                </p>
 
-            </div>
 
-            <div class="mission-card">
+<div class="row g-4">
 
-                <i class="fa-solid fa-eye"></i>
+<div class="col-lg-3 col-md-6">
 
-                <h3>Our Vision</h3>
+<div class="feature-box">
 
-                <p>
+<i class="bi bi-patch-check-fill"></i>
 
-                    To become one of India's most trusted luxury gemstone
-                    and jewellery brands through innovation, integrity
-                    and customer satisfaction.
+<h4>
 
-                </p>
+Certified Stones
 
-            </div>
+</h4>
 
-        </div>
+<p>
 
-    </div>
+100% genuine certified gemstones.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-box">
+
+<i class="bi bi-award-fill"></i>
+
+<h4>
+
+Premium Quality
+
+</h4>
+
+<p>
+
+Luxury craftsmanship and finishing.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-box">
+
+<i class="bi bi-truck"></i>
+
+<h4>
+
+Fast Delivery
+
+</h4>
+
+<p>
+
+Secure shipping across India.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-box">
+
+<i class="bi bi-headset"></i>
+
+<h4>
+
+24/7 Support
+
+</h4>
+
+<p>
+
+Dedicated customer assistance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 
-<!-- ================= WHY CHOOSE US ================= -->
+<!--=========================
+Statistics
+==========================-->
 
-<section class="why-us">
+<section class="stats-section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="row text-center">
 
-            <h5>WHY CHOOSE AKVIA</h5>
+<div class="col-lg-3 col-6">
 
-            <h2>Experience Luxury & Trust</h2>
+<h2>
 
-            <p>
+10+
 
-                Every purchase reflects our commitment to quality,
-                authenticity and customer satisfaction.
+</h2>
 
-            </p>
+<p>
 
-        </div>
+Years Experience
 
-        <div class="why-grid">
+</p>
 
-            <div class="why-card">
+</div>
 
-                <i class="fa-solid fa-gem"></i>
 
-                <h3>Certified Gemstones</h3>
 
-                <p>
+<div class="col-lg-3 col-6">
 
-                    Every gemstone comes with quality assurance and authenticity.
+<h2>
 
-                </p>
+5000+
 
-            </div>
+</h2>
 
-            <div class="why-card">
+<p>
 
-                <i class="fa-solid fa-shield-halved"></i>
+Happy Customers
 
-                <h3>Trusted Quality</h3>
+</p>
 
-                <p>
+</div>
 
-                    Carefully inspected gemstones and premium jewellery.
 
-                </p>
 
-            </div>
+<div class="col-lg-3 col-6">
 
-            <div class="why-card">
+<h2>
 
-                <i class="fa-solid fa-earth-asia"></i>
+1000+
 
-                <h3>Ethically Sourced</h3>
+</h2>
 
-                <p>
+<p>
 
-                    Responsibly sourced gemstones from trusted suppliers.
+Premium Products
 
-                </p>
+</p>
 
-            </div>
+</div>
 
-            <div class="why-card">
 
-                <i class="fa-solid fa-truck-fast"></i>
 
-                <h3>Fast Delivery</h3>
+<div class="col-lg-3 col-6">
 
-                <p>
+<h2>
 
-                    Secure packaging and reliable delivery across India.
+100%
 
-                </p>
+</h2>
 
-            </div>
+<p>
 
-            <div class="why-card">
+Certified Gemstones
 
-                <i class="fa-solid fa-credit-card"></i>
+</p>
 
-                <h3>Secure Payments</h3>
+</div>
 
-                <p>
+</div>
 
-                    Safe online payments using trusted payment gateways.
-
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <i class="fa-solid fa-headset"></i>
-
-                <h3>24/7 Support</h3>
-
-                <p>
-
-                    Friendly customer support before and after your purchase.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
-<!-- ================= OUR JOURNEY ================= -->
+<!--=========================
+Meet Our Team
+==========================-->
 
-<section class="journey">
+<section class="team-section py-5">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="text-center mb-5">
 
-            <h5>OUR JOURNEY</h5>
+<h2 class="section-title">
 
-            <h2>Growing With Trust & Excellence</h2>
+Meet Our Team
 
-            <p>
-                Every milestone reflects our commitment to quality,
-                innovation and customer satisfaction.
-            </p>
+</h2>
 
-        </div>
+<p class="section-subtitle">
 
-        <div class="timeline">
+Passionate professionals dedicated to excellence.
 
-            <div class="timeline-item">
+</p>
 
-                <div class="year">2024</div>
+</div>
 
-                <div class="timeline-content">
+<div class="row g-4">
 
-                    <h3>Business Founded</h3>
+<div class="col-lg-4 col-md-6">
 
-                    <p>
-                        AKVIA GEMS was established with a vision to provide
-                        authentic natural gemstones and premium jewellery.
-                    </p>
+<div class="team-card">
 
-                </div>
+<img
 
-            </div>
+src="images/team/team1.jpg"
 
-            <div class="timeline-item">
+alt="Founder"
 
-                <div class="year">2025</div>
+class="img-fluid">
 
-                <div class="timeline-content">
+<div class="team-body">
 
-                    <h3>Online Store Launch</h3>
+<h4>
 
-                    <p>
-                        Successfully launched our official e-commerce website
-                        to serve customers across India.
-                    </p>
+Founder
 
-                </div>
+</h4>
 
-            </div>
+<p>
 
-            <div class="timeline-item">
+Gemstone Expert
 
-                <div class="year">2026</div>
+</p>
 
-                <div class="timeline-content">
+</div>
 
-                    <h3>Expanded Collection</h3>
+</div>
 
-                    <p>
-                        Added premium gemstone collections and handcrafted
-                        luxury jewellery.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <div class="year">Future</div>
-
-                <div class="timeline-content">
-
-                    <h3>Global Expansion</h3>
-
-                    <p>
-                        Expanding AKVIA GEMS worldwide while maintaining
-                        authenticity, trust and excellence.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- ================= STATISTICS ================= -->
 
-<section class="stats">
+<div class="col-lg-4 col-md-6">
 
-    <div class="container">
+<div class="team-card">
 
-        <div class="stats-grid">
+<img
 
-            <div class="stat-box">
+src="images/team/team2.jpg"
 
-                <h2>500+</h2>
+alt="Designer"
 
-                <p>Happy Customers</p>
+class="img-fluid">
 
-            </div>
+<div class="team-body">
 
-            <div class="stat-box">
+<h4>
 
-                <h2>1000+</h2>
+Jewellery Designer
 
-                <p>Premium Products</p>
+</h4>
 
-            </div>
+<p>
 
-            <div class="stat-box">
+Luxury Collections
 
-                <h2>50+</h2>
+</p>
 
-                <p>Gemstone Varieties</p>
+</div>
 
-            </div>
+</div>
 
-            <div class="stat-box">
+</div>
 
-                <h2>99%</h2>
 
-                <p>Customer Satisfaction</p>
 
-            </div>
+<div class="col-lg-4 col-md-6">
 
-        </div>
+<div class="team-card">
 
-    </div>
+<img
+
+src="images/team/team3.jpg"
+
+alt="Support"
+
+class="img-fluid">
+
+<div class="team-body">
+
+<h4>
+
+Customer Support
+
+</h4>
+
+<p>
+
+Always Ready To Help
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= TESTIMONIALS ================= -->
 
-<section class="testimonials">
+<!--=========================
+Testimonials
+==========================-->
 
-    <div class="container">
+<section class="testimonial-section py-5">
 
-        <div class="section-title">
+<div class="container">
 
-            <h5>TESTIMONIALS</h5>
+<div class="text-center mb-5">
 
-            <h2>What Our Customers Say</h2>
+<h2 class="section-title">
 
-        </div>
+What Our Customers Say
 
-        <div class="testimonial-grid">
+</h2>
 
-            <div class="testimonial-card">
+</div>
 
-                <div class="stars">
-                    ⭐⭐⭐⭐⭐
-                </div>
+<div class="row g-4">
 
-                <p>
+<div class="col-lg-4">
 
-                    "Beautiful gemstones, excellent quality and fast delivery.
-                    Highly recommended."
+<div class="testimonial-card">
 
-                </p>
+<p>
 
-                <h4>Rahul Sharma</h4>
+"The gemstone quality exceeded my expectations.
+Excellent craftsmanship and fast delivery."
 
-            </div>
+</p>
 
-            <div class="testimonial-card">
+<h5>
 
-                <div class="stars">
-                    ⭐⭐⭐⭐⭐
-                </div>
+★★★★★
 
-                <p>
+</h5>
 
-                    "Professional customer service and genuine certified
-                    gemstones."
+<strong>
 
-                </p>
+Rahul Sharma
 
-                <h4>Priya Mehta</h4>
+</strong>
 
-            </div>
+</div>
 
-            <div class="testimonial-card">
+</div>
 
-                <div class="stars">
-                    ⭐⭐⭐⭐⭐
-                </div>
 
-                <p>
 
-                    "Amazing jewellery collection with premium finishing.
-                    Loved the shopping experience."
+<div class="col-lg-4">
 
-                </p>
+<div class="testimonial-card">
 
-                <h4>Aman Khan</h4>
+<p>
 
-            </div>
+"Beautiful jewellery collection and genuine certified stones.
+Highly recommended."
 
-        </div>
+</p>
 
-    </div>
+<h5>
+
+★★★★★
+
+</h5>
+
+<strong>
+
+Priya Mehta
+
+</strong>
+
+</div>
+
+</div>
+
+
+
+<div class="col-lg-4">
+
+<div class="testimonial-card">
+
+<p>
+
+"Professional service and premium quality.
+Will definitely purchase again."
+
+</p>
+
+<h5>
+
+★★★★★
+
+</h5>
+
+<strong>
+
+Amit Kumar
+
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= CALL TO ACTION ================= -->
+
+<!--=========================
+Call To Action
+==========================-->
 
 <section class="about-cta">
 
-    <div class="container">
+<div class="container text-center">
 
-        <h2>Discover Your Perfect Gemstone Today</h2>
+<h2>
 
-        <p>
+Discover Luxury Like Never Before
 
-            Browse our exclusive collection of certified gemstones
-            and luxury jewellery.
+</h2>
 
-        </p>
+<p>
 
-        <div class="cta-buttons">
+Browse our exclusive collection of certified gemstones and handcrafted jewellery.
 
-            <a href="shop.html" class="gold-btn">
+</p>
 
-                Shop Now
+<a
 
-            </a>
+href="shop.html"
 
-            <a href="contact.html" class="outline-btn">
+class="btn btn-gold">
 
-                Contact Us
+Shop Now
 
-            </a>
+</a>
 
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
 
-<!-- Paste the SAME footer from your index.html here -->
-<footer>
+<!--=========================
+Footer
+==========================-->
 
-<div class="container footer-grid">
+<footer class="footer">
 
-<div>
+<div class="container">
 
-<h2>AKVIA GEMS</h2>
+<div class="row">
+
+<div class="col-lg-4">
+
+<h3 class="footer-logo">
+
+<span>
+
+BENGALURU
+
+</span>
+
+GEMS
+
+</h3>
 
 <p>
 
-Premium Natural Gemstones & Luxury Jewellery.
+Premium destination for certified gemstones,
+fine jewellery and luxury collections.
 
 </p>
 
-<div class="social">
-
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-<a href="#"><i class="fab fa-youtube"></i></a>
-
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-
 </div>
 
-</div>
 
-<div>
 
-<h3>Quick Links</h3>
+<div class="col-lg-4">
 
-<ul>
+<h5>
 
-<li><a href="#">Home</a></li>
+Quick Links
 
-<li><a href="#">Shop</a></li>
+</h5>
 
-<li><a href="#">Gemstones</a></li>
+<ul class="footer-links">
 
-<li><a href="#">Jewellery</a></li>
+<li><a href="index.html">Home</a></li>
 
-<li><a href="#">About</a></li>
+<li><a href="shop.html">Shop</a></li>
 
-<li><a href="#">Contact</a></li>
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
 
 </ul>
 
 </div>
 
-<div>
 
-<h3>Customer Service</h3>
 
-<ul>
+<div class="col-lg-4">
 
-<li><a href="#">FAQ</a></li>
+<h5>
 
-<li><a href="#">Shipping Policy</a></li>
+Contact
 
-<li><a href="#">Return Policy</a></li>
-
-<li><a href="#">Privacy Policy</a></li>
-
-<li><a href="#">Terms & Conditions</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h3>Payment Methods</h3>
+</h5>
 
 <p>
 
-Visa • MasterCard • UPI • Google Pay • PhonePe • Paytm
+Bengaluru, Karnataka
 
 </p>
 
-<img src="images/payment.png" alt="Payments">
+<p>
 
-</div>
+info@bengalurugems.com
 
-</div>
-
-<div class="copyright">
+</p>
 
 <p>
 
-© 2026 AKVIA GEMS & JEWELLERY. All Rights Reserved.
++91 98765 43210
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="text-center mb-0">
+
+© 2026 Bengaluru Gems. All Rights Reserved.
 
 </p>
 
@@ -720,7 +1045,19 @@ Visa • MasterCard • UPI • Google Pay • PhonePe • Paytm
 
 </footer>
 
+
+
+<!-- Bootstrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Main Script -->
+
 <script src="js/script.js"></script>
+
+<!-- About Script -->
+
+<script src="js/about.js"></script>
 
 </body>
 

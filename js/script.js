@@ -1,739 +1,1115 @@
-// ==========================================
-// AKVIA GEMS - SCRIPT PART 1
-// ==========================================
+/*==================================================
+BENGALURU GEMS
+script.js
+Version 2
+Main Script
+==================================================*/
 
-// Wait until page loads
-document.addEventListener("DOMContentLoaded", function () {
 
-    // ==========================
-    // STICKY HEADER
-    // ==========================
 
-    const header = document.querySelector(".header");
+/*==========================
+Global Variables
+==========================*/
 
-    window.addEventListener("scroll", function () {
+let cart = JSON.parse(
 
-        if (window.scrollY > 80) {
-            header.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
-        } else {
-            header.style.boxShadow = "0 5px 15px rgba(0,0,0,0.08)";
-        }
+    localStorage.getItem("cart")
 
-    });
+) || [];
 
-    // ==========================
-    // BACK TO TOP
-    // ==========================
 
-    const topBtn = document.querySelector(".back-to-top");
 
-    if (topBtn) {
+let wishlist = JSON.parse(
 
-        window.addEventListener("scroll", function () {
+    localStorage.getItem("wishlist")
 
-            if (window.scrollY > 300) {
+) || [];
 
-                topBtn.style.display = "flex";
 
-            } else {
 
-                topBtn.style.display = "none";
+/*==========================
+DOM Ready
+==========================*/
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    function(){
+
+        initializeWebsite();
+
+    }
+
+);
+
+
+
+/*==========================
+Initialize Website
+==========================*/
+
+function initializeWebsite(){
+
+    updateCartCounter();
+
+    updateWishlistCounter();
+
+    stickyNavbar();
+
+    smoothScrolling();
+
+    newsletterForm();
+
+    scrollTopButton();
+
+    displayBestSellers();
+
+    displayNewArrivals();
+
+}
+
+
+
+/*==========================
+Sticky Navbar
+==========================*/
+
+function stickyNavbar(){
+
+    const navbar =
+
+    document.querySelector(
+
+        ".custom-navbar"
+
+    ) ||
+
+    document.querySelector(
+
+        ".luxury-navbar"
+
+    );
+
+
+
+    if(!navbar){
+
+        return;
+
+    }
+
+
+
+    window.addEventListener(
+
+        "scroll",
+
+        function(){
+
+
+            if(window.scrollY>80){
+
+                navbar.classList.add(
+
+                    "navbar-scrolled"
+
+                );
 
             }
 
-        });
+            else{
 
-        topBtn.addEventListener("click", function () {
+                navbar.classList.remove(
+
+                    "navbar-scrolled"
+
+                );
+
+            }
+
+
+        }
+
+    );
+
+}
+
+
+
+/*==========================
+Smooth Scroll
+==========================*/
+
+function smoothScrolling(){
+
+    document
+
+    .querySelectorAll(
+
+        'a[href^="#"]'
+
+    )
+
+    .forEach(function(link){
+
+
+        link.addEventListener(
+
+            "click",
+
+            function(event){
+
+
+                const target =
+
+                document.querySelector(
+
+                    this.getAttribute(
+
+                        "href"
+
+                    )
+
+                );
+
+
+
+                if(!target){
+
+                    return;
+
+                }
+
+
+
+                event.preventDefault();
+
+
+
+                target.scrollIntoView({
+
+                    behavior:"smooth"
+
+                });
+
+
+            }
+
+        );
+
+
+    });
+
+}
+
+
+
+/*==========================
+Newsletter
+==========================*/
+
+function newsletterForm(){
+
+    const form =
+
+    document.querySelector(
+
+        ".newsletter-form"
+
+    );
+
+
+
+    if(!form){
+
+        return;
+
+    }
+
+
+
+    form.addEventListener(
+
+        "submit",
+
+        function(event){
+
+
+            event.preventDefault();
+
+
+
+            const email =
+
+            form.querySelector(
+
+                "input"
+
+            ).value.trim();
+
+
+
+            if(email===""){
+
+                alert(
+
+                    "Please enter your email."
+
+                );
+
+                return;
+
+            }
+
+
+
+            alert(
+
+                "Thank you for subscribing!"
+
+            );
+
+
+
+            form.reset();
+
+
+        }
+
+    );
+
+}
+/*==========================
+Scroll To Top Button
+==========================*/
+
+function scrollTopButton(){
+
+    let button =
+
+    document.querySelector(
+
+        ".scroll-top"
+
+    );
+
+
+
+    if(!button){
+
+        button =
+
+        document.createElement(
+
+            "button"
+
+        );
+
+
+
+        button.className =
+
+        "scroll-top";
+
+
+
+        button.innerHTML =
+
+        '<i class="bi bi-arrow-up"></i>';
+
+
+
+        document.body.appendChild(
+
+            button
+
+        );
+
+    }
+
+
+
+    window.addEventListener(
+
+        "scroll",
+
+        function(){
+
+            if(window.scrollY>300){
+
+                button.classList.add(
+
+                    "show"
+
+                );
+
+            }
+
+            else{
+
+                button.classList.remove(
+
+                    "show"
+
+                );
+
+            }
+
+        }
+
+    );
+
+
+
+    button.addEventListener(
+
+        "click",
+
+        function(){
 
             window.scrollTo({
 
-                top: 0,
-                behavior: "smooth"
+                top:0,
+
+                behavior:"smooth"
 
             });
 
-        });
+        }
+
+    );
+
+}
+
+
+
+/*==========================
+Loading Animation
+==========================*/
+
+window.addEventListener(
+
+    "load",
+
+    function(){
+
+        document.body.classList.add(
+
+            "loaded"
+
+        );
 
     }
 
-    // ==========================
-    // HAMBURGER MENU
-    // ==========================
+);
 
-    const menuBtn = document.querySelector(".menu-btn");
-    const navbar = document.querySelector(".navbar");
 
-    if (menuBtn && navbar) {
 
-        menuBtn.addEventListener("click", function () {
+/*==========================
+Utility Functions
+==========================*/
 
-            navbar.classList.toggle("mobile-menu");
+function formatPrice(price){
 
-        });
+    return "₹"+
 
-    }
+    Number(price)
 
-    // ==========================
-    // NEWSLETTER
-    // ==========================
+    .toLocaleString(
 
-    const newsletterBtn = document.querySelector(".newsletter button");
+        "en-IN"
 
-    if (newsletterBtn) {
+    );
 
-        newsletterBtn.addEventListener("click", function () {
+}
 
-            const email = document.querySelector(".newsletter input").value;
 
-            if (email === "") {
 
-                alert("Please enter your email.");
+function showMessage(message){
 
-            } else {
+    alert(message);
 
-                alert("Thank you for subscribing!");
+}
 
-            }
 
-        });
 
-    }
+/*==========================
+Wishlist
+==========================*/
 
-    // ==========================
-    // CONTACT FORM
-    // ==========================
+function addToWishlist(id){
 
-    const contactForm = document.querySelector(".contact-form");
+    if(
 
-    if (contactForm) {
+        wishlist.includes(id)
 
-        contactForm.addEventListener("submit", function (e) {
+    ){
 
-            e.preventDefault();
+        alert(
 
-            alert("Your message has been sent successfully.");
+            "Already in Wishlist ❤️"
 
-            contactForm.reset();
+        );
 
-        });
+        return;
 
     }
 
-    console.log("AKVIA GEMS JS Part 1 Loaded");
 
-});
-// ==========================================
-// AKVIA GEMS - SCRIPT PART 2
-// Search + Cart + Wishlist
-// ==========================================
 
-// CART
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    wishlist.push(id);
 
-// WISHLIST
-let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-// Update Cart Badge
-function updateCartCount(){
 
-    const badges = document.querySelectorAll(".badge");
+    localStorage.setItem(
 
-    if(badges.length >= 2){
+        "wishlist",
 
-        badges[1].innerText = cart.length;
+        JSON.stringify(
+
+            wishlist
+
+        )
+
+    );
+
+
+
+    updateWishlistCounter();
+
+
+
+    alert(
+
+        "Added to Wishlist ❤️"
+
+    );
+
+}
+
+
+
+function updateWishlistCounter(){
+
+    const counter =
+
+    document.querySelector(
+
+        ".wishlist-count"
+
+    );
+
+
+
+    if(counter){
+
+        counter.textContent =
+
+        wishlist.length;
 
     }
 
 }
 
-// Add To Cart
-document.querySelectorAll(".cart-btn").forEach(btn=>{
 
-    btn.addEventListener("click",()=>{
 
-        const card = btn.closest(".product-card");
+/*==========================
+Cart Counter
+==========================*/
 
-        const name = card.querySelector("h3").innerText;
+function updateCartCounter(){
 
-        const price = card.querySelector(".new-price").innerText;
+    cart = JSON.parse(
+
+        localStorage.getItem(
+
+            "cart"
+
+        )
+
+    ) || [];
+
+
+
+    let total = 0;
+
+
+
+    cart.forEach(function(item){
+
+        total +=
+
+        item.quantity;
+
+    });
+
+
+
+    const counter =
+
+    document.querySelector(
+
+        ".cart-count"
+
+    );
+
+
+
+    if(counter){
+
+        counter.textContent =
+
+        total;
+
+    }
+
+}
+/*==========================
+Add To Cart
+==========================*/
+
+function addToCart(id){
+
+    if(typeof products==="undefined"){
+
+        console.error(
+
+            "products.js not loaded."
+
+        );
+
+        return;
+
+    }
+
+
+
+    const product =
+
+    products.find(function(item){
+
+        return item.id===id;
+
+    });
+
+
+
+    if(!product){
+
+        alert("Product not found.");
+
+        return;
+
+    }
+
+
+
+    cart = JSON.parse(
+
+        localStorage.getItem("cart")
+
+    ) || [];
+
+
+
+    const existing =
+
+    cart.find(function(item){
+
+        return item.id===id;
+
+    });
+
+
+
+    if(existing){
+
+        existing.quantity++;
+
+    }
+
+    else{
 
         cart.push({
-            name,
-            price
+
+            ...product,
+
+            quantity:1
+
         });
 
-        localStorage.setItem("cart",JSON.stringify(cart));
+    }
 
-        updateCartCount();
 
-        alert(name + " added to cart!");
+
+    localStorage.setItem(
+
+        "cart",
+
+        JSON.stringify(cart)
+
+    );
+
+
+
+    updateCartCounter();
+
+
+
+    alert(
+
+        product.name +
+
+        " added to cart."
+
+    );
+
+}
+
+
+
+/*==========================
+Remove From Cart
+==========================*/
+
+function removeFromCart(id){
+
+    cart = JSON.parse(
+
+        localStorage.getItem("cart")
+
+    ) || [];
+
+
+
+    cart = cart.filter(function(item){
+
+        return item.id!==id;
 
     });
 
-});
 
-// Wishlist
-document.querySelectorAll(".wishlist").forEach(btn=>{
 
-    btn.addEventListener("click",()=>{
+    localStorage.setItem(
 
-        const card = btn.closest(".product-card");
+        "cart",
 
-        const name = card.querySelector("h3").innerText;
+        JSON.stringify(cart)
 
-        if(!wishlist.includes(name)){
+    );
 
-            wishlist.push(name);
 
-            btn.style.color="red";
 
-            localStorage.setItem("wishlist",JSON.stringify(wishlist));
+    updateCartCounter();
 
-            alert(name+" added to wishlist.");
+}
+
+
+
+/*==========================
+Clear Cart
+==========================*/
+
+function clearCart(){
+
+    localStorage.removeItem(
+
+        "cart"
+
+    );
+
+
+
+    cart=[];
+
+
+
+    updateCartCounter();
+
+
+
+    if(typeof loadCart==="function"){
+
+        loadCart();
+
+    }
+
+}
+
+
+
+/*==========================
+Get Cart
+==========================*/
+
+function getCart(){
+
+    return JSON.parse(
+
+        localStorage.getItem("cart")
+
+    ) || [];
+
+}
+
+
+
+/*==========================
+Increase Quantity
+==========================*/
+
+function increaseQuantity(id){
+
+    cart = getCart();
+
+
+
+    cart.forEach(function(item){
+
+        if(item.id===id){
+
+            item.quantity++;
 
         }
 
     });
 
-});
 
-// Search Products
-const searchInput = document.querySelector(".search-box input");
 
-if(searchInput){
+    localStorage.setItem(
 
-searchInput.addEventListener("keyup",()=>{
+        "cart",
 
-const value=searchInput.value.toLowerCase();
+        JSON.stringify(cart)
 
-document.querySelectorAll(".product-card").forEach(card=>{
+    );
 
-const text=card.innerText.toLowerCase();
 
-if(text.includes(value)){
 
-card.style.display="block";
+    updateCartCounter();
 
-}else{
 
-card.style.display="none";
 
-}
+    if(typeof loadCart==="function"){
 
-});
+        loadCart();
 
-});
+    }
 
 }
 
-// Display Cart Total
-function displayCart(){
 
-const cartItems=document.querySelector(".cart-items");
 
-const total=document.querySelector(".cart-footer h3");
+/*==========================
+Decrease Quantity
+==========================*/
 
-if(!cartItems || !total) return;
+function decreaseQuantity(id){
 
-cartItems.innerHTML="";
+    cart = getCart();
 
-let sum=0;
 
-cart.forEach((item,index)=>{
 
-const price=parseInt(item.price.replace(/[^0-9]/g,""));
+    cart.forEach(function(item){
 
-sum+=price;
+        if(
 
-cartItems.innerHTML+=`
+            item.id===id &&
 
-<div style="padding:15px;border-bottom:1px solid #ddd;">
+            item.quantity>1
 
-<h4>${item.name}</h4>
+        ){
 
-<p>${item.price}</p>
-
-<button onclick="removeCart(${index})">
-
-Remove
-
-</button>
-
-</div>
-
-`;
-
-});
-
-total.innerHTML="Total : ₹"+sum.toLocaleString();
-
-}
-
-// Remove Cart
-
-function removeCart(index){
-
-cart.splice(index,1);
-
-localStorage.setItem("cart",JSON.stringify(cart));
-
-updateCartCount();
-
-displayCart();
-
-}
-
-// Open Cart
-
-const cartIcon=document.querySelector(".header-right a:nth-child(3)");
-
-const cartSidebar=document.querySelector(".cart-sidebar");
-
-if(cartIcon){
-
-cartIcon.addEventListener("click",(e)=>{
-
-e.preventDefault();
-
-cartSidebar.classList.add("show");
-
-displayCart();
-
-});
-
-}
-
-// Close Cart
-
-document.querySelectorAll(".sidebar-header span").forEach(close=>{
-
-close.addEventListener("click",()=>{
-
-document.querySelectorAll(".cart-sidebar,.wishlist-sidebar").forEach(side=>{
-
-side.classList.remove("show");
-
-});
-
-});
-
-});
-
-// Wishlist Sidebar
-
-const wishIcon=document.querySelector(".header-right a:nth-child(2)");
-
-const wishSide=document.querySelector(".wishlist-sidebar");
-
-if(wishIcon){
-
-wishIcon.addEventListener("click",(e)=>{
-
-e.preventDefault();
-
-wishSide.classList.add("show");
-
-});
-
-}
-
-updateCartCount();
-
-console.log("AKVIA GEMS JS Part 2 Loaded");
-// ==========================================
-// AKVIA GEMS - SCRIPT PART 3
-// Hero Slider, Countdown, FAQ,
-// Login Modal, Toast Notification
-// ==========================================
-
-// ---------- HERO SLIDER ----------
-
-const heroImages = [
-    "images/hero1.jpg",
-    "images/hero2.jpg",
-    "images/hero3.jpg",
-    "images/hero4.jpg"
-];
-
-let heroIndex = 0;
-
-const heroImage = document.querySelector(".hero-image img");
-
-if(heroImage){
-
-    setInterval(()=>{
-
-        heroIndex++;
-
-        if(heroIndex >= heroImages.length){
-
-            heroIndex = 0;
+            item.quantity--;
 
         }
 
-        heroImage.src = heroImages[heroIndex];
+    });
 
-    },4000);
+
+
+    localStorage.setItem(
+
+        "cart",
+
+        JSON.stringify(cart)
+
+    );
+
+
+
+    updateCartCounter();
+
+
+
+    if(typeof loadCart==="function"){
+
+        loadCart();
+
+    }
+
+}
+/*==========================
+Create Product Card
+==========================*/
+
+function createProductCard(product){
+
+    return `
+
+    <div class="col-lg-3 col-md-6 mb-4">
+
+        <div class="product-card h-100">
+
+            <div class="product-image">
+
+                <img
+
+                src="${product.image}"
+
+                alt="${product.name}"
+
+                class="img-fluid">
+
+            </div>
+
+            <div class="product-body">
+
+                <p class="product-category">
+
+                    ${product.category}
+
+                </p>
+
+                <h5 class="product-title">
+
+                    ${product.name}
+
+                </h5>
+
+                <div class="product-rating">
+
+                    ⭐ ${product.rating}/5
+
+                </div>
+
+                <h4 class="product-price">
+
+                    ${formatPrice(product.price)}
+
+                </h4>
+
+                <div class="d-grid gap-2 mt-3">
+
+                    <a
+
+                    href="product.html?id=${product.id}"
+
+                    class="btn btn-outline-warning">
+
+                    View Details
+
+                    </a>
+
+                    <button
+
+                    class="btn btn-warning"
+
+                    onclick="addToCart(${product.id})">
+
+                    <i class="bi bi-bag-plus"></i>
+
+                    Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    `;
 
 }
 
-// ---------- FLASH SALE COUNTDOWN ----------
 
-const countdown = document.getElementById("countdown");
 
-if(countdown){
+/*==========================
+Best Sellers
+==========================*/
 
-let hours = 12;
-let minutes = 30;
-let seconds = 0;
+function displayBestSellers(){
 
-setInterval(()=>{
+    const container =
 
-seconds--;
+    document.getElementById(
 
-if(seconds<0){
+        "featuredProducts"
 
-seconds=59;
-minutes--;
+    ) ||
 
-}
+    document.getElementById(
 
-if(minutes<0){
+        "featuredproducts"
 
-minutes=59;
-hours--;
+    );
 
-}
 
-if(hours<0){
 
-hours=23;
+    if(
 
-}
+        !container ||
 
-countdown.innerHTML=
-hours.toString().padStart(2,"0")+" : "
-+minutes.toString().padStart(2,"0")+" : "
-+seconds.toString().padStart(2,"0");
+        typeof products==="undefined"
 
-},1000);
+    ){
 
-}
+        return;
 
-// ---------- FAQ ----------
+    }
 
-document.querySelectorAll(".faq-item").forEach(item=>{
 
-const answer=item.querySelector("p");
 
-answer.style.display="none";
+    container.innerHTML="";
 
-item.querySelector("h3").addEventListener("click",()=>{
 
-answer.style.display=
-answer.style.display==="block" ? "none":"block";
 
-});
+    products
 
-});
+    .slice(0,8)
 
-// ---------- LOGIN MODAL ----------
+    .forEach(function(product){
 
-const loginModal=document.querySelector(".login-modal");
+        container.innerHTML +=
 
-const accountBtn=document.querySelector(".header-right a");
+        createProductCard(product);
 
-if(accountBtn && loginModal){
-
-accountBtn.onclick=(e)=>{
-
-e.preventDefault();
-
-loginModal.style.display="flex";
+    });
 
 }
 
-}
 
-const closeLogin=document.querySelector(".close-login");
 
-if(closeLogin){
+/*==========================
+New Arrivals
+==========================*/
 
-closeLogin.onclick=()=>{
+function displayNewArrivals(){
 
-loginModal.style.display="none";
+    const container =
 
-}
+    document.getElementById(
 
-}
+        "newArrivalProducts"
 
-// ---------- REGISTER MODAL ----------
+    );
 
-const registerModal=document.querySelector(".register-modal");
 
-const registerLink=document.querySelector(".login-modal a");
 
-if(registerLink){
+    if(
 
-registerLink.onclick=(e)=>{
+        !container ||
 
-e.preventDefault();
+        typeof products==="undefined"
 
-loginModal.style.display="none";
+    ){
 
-registerModal.style.display="flex";
+        return;
 
-}
+    }
 
-}
 
-const closeRegister=document.querySelector(".close-register");
 
-if(closeRegister){
+    container.innerHTML="";
 
-closeRegister.onclick=()=>{
 
-registerModal.style.display="none";
 
-}
+    products
 
-}
+    .slice(-4)
 
-// ---------- TOAST NOTIFICATION ----------
+    .forEach(function(product){
 
-function toast(message){
+        container.innerHTML +=
 
-let toast=document.createElement("div");
+        createProductCard(product);
 
-toast.innerHTML=message;
-
-toast.style.position="fixed";
-toast.style.bottom="30px";
-toast.style.left="30px";
-toast.style.background="#111";
-toast.style.color="#fff";
-toast.style.padding="15px 25px";
-toast.style.borderRadius="10px";
-toast.style.zIndex="99999";
-toast.style.boxShadow="0 10px 20px rgba(0,0,0,.3)";
-
-document.body.appendChild(toast);
-
-setTimeout(()=>{
-
-toast.remove();
-
-},3000);
+    });
 
 }
 
-// Replace alert() with toast()
 
-document.querySelectorAll(".cart-btn").forEach(btn=>{
 
-btn.addEventListener("click",()=>{
+/*==========================
+Search Helper
+==========================*/
 
-toast("🛒 Product added to Cart");
+function searchProducts(keyword){
 
-});
+    if(typeof products==="undefined"){
 
-});
+        return [];
 
-document.querySelectorAll(".wishlist").forEach(btn=>{
+    }
 
-btn.addEventListener("click",()=>{
 
-toast("❤️ Added to Wishlist");
 
-});
+    keyword =
 
-});
+    keyword.toLowerCase();
 
-// ---------- SIMPLE FADE ANIMATION ----------
 
-const sections=document.querySelectorAll("section");
 
-window.addEventListener("scroll",()=>{
+    return products.filter(function(product){
 
-sections.forEach(section=>{
+        return(
 
-const top=section.getBoundingClientRect().top;
+            product.name
 
-if(top<window.innerHeight-120){
+            .toLowerCase()
 
-section.style.opacity="1";
-section.style.transform="translateY(0px)";
+            .includes(keyword)
 
-}
+            ||
 
-});
+            product.category
 
-});
+            .toLowerCase()
 
-sections.forEach(section=>{
+            .includes(keyword)
 
-section.style.opacity="0";
-section.style.transform="translateY(40px)";
-section.style.transition=".8s";
+        );
 
-});
-
-console.log("AKVIA GEMS JS PART 3 LOADED");
-
-// ==========================================
-// AKVIA GEMS - SCRIPT PART 4
-// Premium Features
-// ==========================================
-
-// ---------- DARK MODE ----------
-
-const darkBtn = document.createElement("button");
-
-darkBtn.innerHTML = "🌙";
-
-darkBtn.style.position = "fixed";
-darkBtn.style.left = "20px";
-darkBtn.style.bottom = "20px";
-darkBtn.style.width = "55px";
-darkBtn.style.height = "55px";
-darkBtn.style.borderRadius = "50%";
-darkBtn.style.border = "none";
-darkBtn.style.background = "#111";
-darkBtn.style.color = "#fff";
-darkBtn.style.cursor = "pointer";
-darkBtn.style.fontSize = "20px";
-darkBtn.style.zIndex = "99999";
-
-document.body.appendChild(darkBtn);
-
-darkBtn.onclick = () => {
-
-    document.body.classList.toggle("dark");
-
-};
-
-// ---------- QUICK VIEW ----------
-
-document.querySelectorAll(".product-card img").forEach(img=>{
-
-img.style.cursor="pointer";
-
-img.onclick=()=>{
-
-const popup=window.open("","_blank","width=600,height=700");
-
-popup.document.write(`
-<html>
-<head>
-<title>Product Preview</title>
-<style>
-body{
-font-family:Arial;
-padding:20px;
-text-align:center;
-background:#fafafa;
-}
-img{
-width:90%;
-border-radius:15px;
-}
-</style>
-</head>
-<body>
-
-<h2>${img.nextElementSibling.innerText}</h2>
-
-<img src="${img.src}">
-
-<p>Premium Certified Gemstone</p>
-
-</body>
-</html>
-`);
+    });
 
 }
 
-});
 
-// ---------- BUY NOW ----------
 
-document.querySelectorAll(".buy-btn").forEach(btn=>{
+/*==========================
+Console
+==========================*/
 
-btn.onclick=()=>{
+console.log(
 
-toast("Redirecting to Checkout...");
+    "%cBENGALURU GEMS",
 
-setTimeout(()=>{
+    "color:#d4af37;font-size:22px;font-weight:bold;"
 
-alert("Checkout page will be added later.");
+);
 
-},1200);
+console.log(
 
-}
+    "Website Loaded Successfully."
 
-});
+);
 
-// ---------- SEARCH SUGGESTIONS ----------
+console.log(
 
-const search=document.querySelector(".search-box input");
+    "Version 2 Ready"
 
-if(search){
-
-search.setAttribute("autocomplete","off");
-
-}
-
-// ---------- PRODUCT HOVER ----------
-
-document.querySelectorAll(".product-card").forEach(card=>{
-
-card.onmouseenter=()=>{
-
-card.style.transition=".3s";
-
-};
-
-});
-
-// ---------- LOADING ----------
-
-window.onload=()=>{
-
-const loader=document.createElement("div");
-
-loader.innerHTML="Welcome to AKVIA GEMS";
-
-loader.style.position="fixed";
-loader.style.inset="0";
-loader.style.background="#111";
-loader.style.color="#fff";
-loader.style.display="flex";
-loader.style.justifyContent="center";
-loader.style.alignItems="center";
-loader.style.fontSize="32px";
-loader.style.fontWeight="bold";
-loader.style.zIndex="999999";
-
-document.body.appendChild(loader);
-
-setTimeout(()=>{
-
-loader.remove();
-
-},1500);
-
-};
-
-// ---------- CURRENT YEAR ----------
-
-const year=document.querySelector(".copyright");
-
-if(year){
-
-year.innerHTML=year.innerHTML.replace("2026",new Date().getFullYear());
-
-}
-
-// ---------- CONSOLE ----------
-
-console.log("AKVIA GEMS PRO LOADED");
+);

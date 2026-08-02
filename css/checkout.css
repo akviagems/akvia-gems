@@ -1,0 +1,703 @@
+/*==================================================
+BENGALURU GEMS
+checkout.css
+Luxury Checkout Design
+Version 1
+==================================================*/
+
+
+
+/*==========================
+Checkout Hero
+==========================*/
+
+.checkout-hero{
+
+    padding:120px 0;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.80)
+    ),
+    url("../images/checkout-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    text-align:center;
+
+}
+
+
+
+.checkout-hero .hero-small{
+
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.checkout-hero h1{
+
+    color:#fff;
+
+    font-size:60px;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.checkout-hero h1 span{
+
+    display:block;
+
+    color:#d4af37;
+
+}
+
+
+
+.checkout-hero .hero-text{
+
+    color:#dcdcdc;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+Checkout Section
+==========================*/
+
+.checkout-section{
+
+    background:#080808;
+
+    padding:80px 0;
+
+}
+
+
+
+/*==========================
+Checkout Card
+==========================*/
+
+.checkout-card{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:15px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.checkout-title{
+
+    color:#d4af37;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:30px;
+
+    font-size:28px;
+
+}
+
+
+
+.checkout-title i{
+
+    margin-right:10px;
+
+}
+
+
+
+/*==========================
+Labels
+==========================*/
+
+.form-label{
+
+    color:#fff;
+
+    font-weight:500;
+
+}
+
+
+
+/*==========================
+Inputs
+==========================*/
+
+.form-control{
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    padding:14px;
+
+}
+
+
+
+.form-control:focus{
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    border-color:#d4af37;
+
+    box-shadow:none;
+
+}
+
+
+
+textarea.form-control{
+
+    resize:none;
+
+}
+
+
+
+/*==========================
+Select
+==========================*/
+
+.form-select{
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    border:1px solid rgba(212,175,55,.25);
+
+}
+
+
+
+.form-select:focus{
+
+    border-color:#d4af37;
+
+    box-shadow:none;
+
+}
+/*==========================
+Order Summary
+==========================*/
+
+.order-summary{
+
+    position:sticky;
+
+    top:100px;
+
+}
+
+
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:18px 0;
+
+    color:#fff;
+
+    font-size:17px;
+
+}
+
+
+
+.total-row{
+
+    color:#d4af37;
+
+    font-size:22px;
+
+}
+
+
+
+/*==========================
+Checkout Items
+==========================*/
+
+.checkout-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.checkout-item img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+
+.checkout-item h6{
+
+    color:#fff;
+
+    margin-bottom:6px;
+
+}
+
+
+
+.checkout-item p{
+
+    color:#d4af37;
+
+    margin:0;
+
+}
+
+
+
+/*==========================
+Payment Options
+==========================*/
+
+.payment-option{
+
+    background:#1b1b1b;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:10px;
+
+    padding:15px 20px;
+
+    transition:.3s;
+
+}
+
+
+
+.payment-option:hover{
+
+    border-color:#d4af37;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.form-check-label{
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+
+
+/*==========================
+Buttons
+==========================*/
+
+.btn-gold{
+
+    background:#d4af37;
+
+    color:#000;
+
+    border:none;
+
+    font-weight:600;
+
+    padding:14px 25px;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-gold:hover{
+
+    background:#f2cf63;
+
+    color:#000;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.btn-outline-light{
+
+    border:1px solid #fff;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-outline-light:hover{
+
+    background:#fff;
+
+    color:#000;
+
+}
+
+
+
+/*==========================
+Coupon
+==========================*/
+
+.input-group .btn{
+
+    border-radius:0 8px 8px 0;
+
+}
+
+
+
+/*==========================
+Horizontal Rule
+==========================*/
+
+.checkout-card hr{
+
+    border-color:rgba(212,175,55,.20);
+
+}
+/*==========================
+Footer
+==========================*/
+
+.footer{
+
+    background:#050505;
+
+    padding:70px 0 30px;
+
+    border-top:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.footer-logo{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer-logo span{
+
+    color:#d4af37;
+
+}
+
+
+
+.footer p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+}
+
+
+
+.footer h5{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+
+
+.footer-links a{
+
+    color:#dcdcdc;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.footer-links a:hover{
+
+    color:#d4af37;
+
+    padding-left:6px;
+
+}
+
+
+
+.footer hr{
+
+    border-color:rgba(212,175,55,.20);
+
+    margin:40px 0 20px;
+
+}
+
+
+
+/*==========================
+Success Message
+==========================*/
+
+.success-message{
+
+    background:#112b11;
+
+    color:#7dff7d;
+
+    border:1px solid #2e8b57;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin-top:20px;
+
+}
+
+
+
+/*==========================
+Empty Order
+==========================*/
+
+.empty-order{
+
+    text-align:center;
+
+    color:#bdbdbd;
+
+    padding:40px 20px;
+
+}
+
+
+
+.empty-order i{
+
+    font-size:70px;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*==========================
+Animation
+==========================*/
+
+.checkout-card{
+
+    transition:.35s;
+
+}
+
+
+
+.checkout-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+/*==========================
+Responsive
+==========================*/
+
+@media(max-width:991px){
+
+    .checkout-hero{
+
+        padding:90px 0;
+
+    }
+
+    .checkout-hero h1{
+
+        font-size:45px;
+
+    }
+
+    .order-summary{
+
+        position:static;
+
+        margin-top:30px;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .checkout-card{
+
+        padding:25px;
+
+    }
+
+    .checkout-title{
+
+        font-size:24px;
+
+    }
+
+    .summary-row{
+
+        font-size:16px;
+
+    }
+
+}
+
+
+
+@media(max-width:576px){
+
+    .checkout-hero{
+
+        padding:70px 0;
+
+    }
+
+    .checkout-hero h1{
+
+        font-size:34px;
+
+    }
+
+    .checkout-item{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .checkout-item img{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+    .btn-gold{
+
+        width:100%;
+
+    }
+
+}

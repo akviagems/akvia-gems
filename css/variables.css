@@ -1,0 +1,34 @@
+/* ================================
+   AKVIA GEMS
+   VARIABLES.CSS
+================================ */
+
+:root{
+
+    --primary:#C8A951;
+    --primary-dark:#a8862f;
+
+    --black:#111111;
+    --dark:#1c1c1c;
+
+    --white:#ffffff;
+
+    --light:#f8f8f8;
+
+    --gray:#777777;
+
+    --border:#e5e5e5;
+
+    --success:#2ecc71;
+
+    --danger:#e74c3c;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --radius:8px;
+
+    --transition:.35s;
+
+    --container:1400px;
+
+}

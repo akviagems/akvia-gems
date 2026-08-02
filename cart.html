@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart | Bengaluru Gems</title>
+
+    <meta name="description"
+          content="Shopping Cart - Bengaluru Gems">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+
+    <!-- Main CSS -->
+
+<link rel="stylesheet" href="css/variables.css">
+
+<link rel="stylesheet" href="css/navbar.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Cart CSS -->
+
+    <link rel="stylesheet"
+          href="css/cart.css">
+
+</head>
+
+<body>
+
+<!--=========================
+Top Header
+==========================-->
+
+<div class="top-header">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <i class="bi bi-gem"></i>
+
+                Certified Natural Gemstones
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <i class="bi bi-truck"></i>
+
+                Free Shipping
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--=========================
+Navbar
+==========================-->
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand"
+   href="index.html">
+
+<span class="logo-gold">
+
+BENGALURU
+
+</span>
+
+<span class="logo-white">
+
+GEMS
+
+</span>
+
+</a>
+
+<button class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+     id="menu">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+
+<a class="nav-link"
+   href="index.html">
+
+Home
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+   href="shop.html">
+
+Shop
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link active"
+   href="cart.html">
+
+Cart
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+   href="about.html">
+
+About
+
+</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link"
+   href="contact.html">
+
+Contact
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="nav-icons">
+
+<a href="wishlist.html">
+
+<i class="bi bi-heart"></i>
+
+</a>
+
+<a href="cart.html"
+   class="ms-3 position-relative">
+
+<i class="bi bi-cart3"></i>
+
+<span class="cart-count">
+
+0
+
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<!--=========================
+Page Banner
+==========================-->
+
+<section class="page-banner">
+
+<div class="container text-center">
+
+<h1>
+
+Shopping Cart
+
+</h1>
+
+<p>
+
+Home / Cart
+
+</p>
+
+</div>
+
+</section>
+
+<!--=========================
+Cart Section
+==========================-->
+
+<section class="cart-page py-5">
+
+<div class="container">
+
+<div class="row">
+
+<!-- Cart Items -->
+
+<div class="col-lg-8">
+
+<div class="table-responsive">
+
+<table class="table align-middle cart-table">
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+
+<th>Price</th>
+
+<th>Quantity</th>
+
+<th>Total</th>
+
+<th></th>
+
+</tr>
+
+</thead>
+
+<tbody id="cartItems">
+
+<!-- JavaScript will load cart items here -->
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+                <!--=========================
+                Order Summary
+                ==========================-->
+
+                <div class="col-lg-4">
+
+                    <div class="cart-summary">
+
+                        <h3>
+
+                            Order Summary
+
+                        </h3>
+
+                        <hr>
+
+                        <div class="summary-row">
+
+                            <span>
+
+                                Subtotal
+
+                            </span>
+
+                            <span id="subtotal">
+
+                                ₹0
+
+                            </span>
+
+                        </div>
+
+                        <div class="summary-row">
+
+                            <span>
+
+                                GST (18%)
+
+                            </span>
+
+                            <span id="gst">
+
+                                ₹0
+
+                            </span>
+
+                        </div>
+
+                        <div class="summary-row">
+
+                            <span>
+
+                                Shipping
+
+                            </span>
+
+                            <span>
+
+                                Free
+
+                            </span>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="summary-row total-row">
+
+                            <span>
+
+                                Grand Total
+
+                            </span>
+
+                            <span id="grandTotal">
+
+                                ₹0
+
+                            </span>
+
+                        </div>
+
+                        <div class="coupon-box mt-4">
+
+                            <label class="form-label">
+
+                                Coupon Code
+
+                            </label>
+
+                            <div class="input-group">
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Enter coupon">
+
+                                <button
+                                    class="btn btn-gold">
+
+                                    Apply
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-4">
+
+    <div class="col-6">
+
+        <a
+            href="checkout.html"
+            class="btn btn-gold w-100">
+
+            <i class="bi bi-credit-card"></i>
+
+            Checkout
+
+        </a>
+
+    </div>
+
+    <div class="col-6">
+
+        <button
+            onclick="orderOnWhatsApp()"
+            class="btn btn-success w-100">
+
+            <i class="bi bi-whatsapp"></i>
+
+            WhatsApp
+
+        </button>
+
+    </div>
+
+</div>
+
+                        </div>
+
+                        <div class="d-grid mt-3">
+
+                            <a
+                                href="index.html"
+                                class="btn btn-outline-light">
+
+                                Continue Shopping
+
+                            </a>
+
+                        </div>
+
+                        <div class="d-grid mt-3">
+
+                            <button
+                                class="btn btn-danger"
+                                onclick="clearCart()">
+
+                                Clear Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--=========================
+    Footer
+    ==========================-->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <h3 class="footer-logo">
+
+                        <span>BENGALURU</span> GEMS
+
+                    </h3>
+
+                    <p>
+
+                        Premium destination for certified gemstones,
+                        fine jewellery and luxury collections.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>
+
+                        Quick Links
+
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+
+                            <a href="index.html">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="shop.html">
+
+                                Shop
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="cart.html">
+
+                                Cart
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>
+
+                        Contact
+
+                    </h5>
+
+                    <p>
+
+                        Bengaluru, Karnataka
+
+                    </p>
+
+                    <p>
+
+                        info@bengalurugems.com
+
+                    </p>
+
+                    <p>
+
+                        +91 98765 43210
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="text-center mb-0">
+
+                © 2026 Bengaluru Gems. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Product Data -->
+
+    <script src="js/products.js"></script>
+
+    <!-- Main Script -->
+
+    <script src="js/script.js"></script>
+
+    <!-- Cart Script -->
+
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>

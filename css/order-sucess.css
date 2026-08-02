@@ -1,0 +1,570 @@
+/*==================================================
+BENGALURU GEMS
+order-success.css
+Version 1
+==================================================*/
+
+
+
+/*==========================
+Success Hero
+==========================*/
+
+.success-section{
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.80),
+    rgba(0,0,0,.80)
+    ),
+    url("../images/success-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:100px 0;
+
+}
+
+
+
+.success-card{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:20px;
+
+    padding:50px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+.success-icon{
+
+    font-size:90px;
+
+    color:#28a745;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.success-card h1{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.success-text{
+
+    color:#d6d6d6;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+.success-text strong{
+
+    color:#d4af37;
+
+}
+
+
+
+/*==========================
+Order Box
+==========================*/
+
+.order-box{
+
+    background:#1b1b1b;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:15px;
+
+    padding:30px;
+
+    margin-top:35px;
+
+}
+
+
+
+.order-box h4{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.order-box p{
+
+    color:#fff;
+
+    margin-bottom:12px;
+
+}
+/*==========================
+Summary Card
+==========================*/
+
+.summary-card{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:15px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    transition:.35s;
+
+}
+
+
+
+.summary-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+
+.summary-card h3{
+
+    color:#d4af37;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.summary-card p{
+
+    color:#dcdcdc;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.summary-card strong{
+
+    color:#fff;
+
+}
+
+
+
+.summary-card hr{
+
+    border-color:rgba(212,175,55,.20);
+
+}
+
+
+
+/*==========================
+Ordered Products
+==========================*/
+
+.ordered-product{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.ordered-product:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.ordered-product img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+
+.ordered-product h5{
+
+    color:#fff;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.ordered-product p{
+
+    color:#d4af37;
+
+    margin:0;
+
+}
+
+
+
+/*==========================
+Buttons
+==========================*/
+
+.btn-gold{
+
+    background:#d4af37;
+
+    color:#000;
+
+    border:none;
+
+    font-weight:600;
+
+    padding:14px;
+
+    transition:.35s;
+
+}
+
+
+
+.btn-gold:hover{
+
+    background:#f4d35e;
+
+    color:#000;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.btn-outline-light{
+
+    transition:.35s;
+
+}
+
+
+
+.btn-outline-light:hover{
+
+    background:#fff;
+
+    color:#000;
+
+}
+
+
+
+/*==========================
+Grand Total
+==========================*/
+
+#summaryTotal{
+
+    color:#d4af37;
+
+    font-weight:bold;
+
+}
+
+
+
+/*==========================
+Print Button
+==========================*/
+
+@media print{
+
+    .navbar,
+
+    .luxury-bar,
+
+    .footer,
+
+    .btn,
+
+    .btn-gold,
+
+    .btn-outline-light{
+
+        display:none !important;
+
+    }
+
+}
+/*==========================
+Summary Card
+==========================*/
+
+.summary-card{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:15px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    transition:.35s;
+
+}
+
+
+
+.summary-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+
+.summary-card h3{
+
+    color:#d4af37;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.summary-card p{
+
+    color:#dcdcdc;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.summary-card strong{
+
+    color:#fff;
+
+}
+
+
+
+.summary-card hr{
+
+    border-color:rgba(212,175,55,.20);
+
+}
+
+
+
+/*==========================
+Ordered Products
+==========================*/
+
+.ordered-product{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.ordered-product:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.ordered-product img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+
+.ordered-product h5{
+
+    color:#fff;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.ordered-product p{
+
+    color:#d4af37;
+
+    margin:0;
+
+}
+
+
+
+/*==========================
+Buttons
+==========================*/
+
+.btn-gold{
+
+    background:#d4af37;
+
+    color:#000;
+
+    border:none;
+
+    font-weight:600;
+
+    padding:14px;
+
+    transition:.35s;
+
+}
+
+
+
+.btn-gold:hover{
+
+    background:#f4d35e;
+
+    color:#000;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.btn-outline-light{
+
+    transition:.35s;
+
+}
+
+
+
+.btn-outline-light:hover{
+
+    background:#fff;
+
+    color:#000;
+
+}
+
+
+
+/*==========================
+Grand Total
+==========================*/
+
+#summaryTotal{
+
+    color:#d4af37;
+
+    font-weight:bold;
+
+}
+
+
+
+/*==========================
+Print Button
+==========================*/
+
+@media print{
+
+    .navbar,
+
+    .luxury-bar,
+
+    .footer,
+
+    .btn,
+
+    .btn-gold,
+
+    .btn-outline-light{
+
+        display:none !important;
+
+    }
+
+}

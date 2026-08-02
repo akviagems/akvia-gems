@@ -1,0 +1,258 @@
+/*==================================================
+BENGALURU GEMS
+Admin Dashboard
+==================================================*/
+
+:root{
+
+    --gold:#D4AF37;
+    --dark:#0f0f0f;
+    --card:#1b1b1b;
+    --white:#ffffff;
+    --border:rgba(212,175,55,.25);
+
+}
+
+body{
+
+    background:var(--dark);
+
+    color:var(--white);
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.admin-header{
+
+    background:#111;
+
+    padding:30px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.admin-header h1{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:38px;
+
+    margin-bottom:8px;
+
+}
+
+.admin-header p{
+
+    color:#bfbfbf;
+
+    margin:0;
+
+}
+
+.dashboard-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.25);
+
+    border-color:var(--gold);
+
+}
+
+.dashboard-card i{
+
+    font-size:50px;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.dashboard-card h5{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+.dashboard-card h2{
+
+    color:var(--gold);
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+.admin-panel{
+
+    background:var(--card);
+
+    border:none;
+
+    border-radius:16px;
+
+}
+
+.form-control,
+
+.form-select{
+
+    background:#121212;
+
+    color:#fff;
+
+    border:1px solid var(--border);
+
+}
+
+.form-control:focus,
+
+.form-select:focus{
+
+    background:#121212;
+
+    color:#fff;
+
+    border-color:var(--gold);
+
+    box-shadow:none;
+
+}
+
+.table{
+
+    margin-top:20px;
+
+}
+
+.table thead{
+
+    background:#202020;
+
+}
+
+.table th{
+
+    color:var(--gold);
+
+    border-color:#333;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+    border-color:#333;
+
+}
+
+.table img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+.btn-warning{
+
+    background:var(--gold);
+
+    border:none;
+
+    color:#111;
+
+    font-weight:600;
+
+}
+
+.btn-warning:hover{
+
+    background:#c59b22;
+
+}
+
+.modal-content{
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    border:1px solid var(--border);
+
+}
+
+.modal-header{
+
+    border-bottom:1px solid #333;
+
+}
+
+.modal-footer{
+
+    border-top:1px solid #333;
+
+}
+
+footer{
+
+    border-top:1px solid #333;
+
+    color:#aaa;
+
+}
+
+@media(max-width:768px){
+
+.dashboard-card{
+
+margin-bottom:20px;
+
+}
+
+.admin-header h1{
+
+font-size:28px;
+
+}
+
+.table img{
+
+width:55px;
+
+height:55px;
+
+}
+
+}

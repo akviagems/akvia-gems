@@ -1,0 +1,781 @@
+/*==================================================
+BENGALURU GEMS
+gemstones.css
+Version 1
+==================================================*/
+
+
+
+/*==========================
+Hero Section
+==========================*/
+
+.gem-hero{
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.78),
+    rgba(0,0,0,.82)
+    ),
+    url("../images/gemstones/gemstones-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:120px 0;
+
+    text-align:center;
+
+}
+
+
+
+.hero-small{
+
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.gem-hero h1{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.gem-hero h1 span{
+
+    display:block;
+
+    color:#d4af37;
+
+}
+
+
+
+.hero-text{
+
+    color:#d6d6d6;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+Search & Filters
+==========================*/
+
+.gem-controls{
+
+    background:#080808;
+
+}
+
+
+
+.gem-controls .form-control,
+
+.gem-controls .form-select{
+
+    background:#151515;
+
+    color:#ffffff;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    padding:14px;
+
+    border-radius:10px;
+
+}
+
+
+
+.gem-controls .form-control:focus,
+
+.gem-controls .form-select:focus{
+
+    background:#151515;
+
+    color:#ffffff;
+
+    border-color:#d4af37;
+
+    box-shadow:none;
+
+}
+
+
+
+/*==========================
+Collection Section
+==========================*/
+
+.gem-section{
+
+    background:#0d0d0d;
+
+}
+
+
+
+.section-title{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.section-subtitle{
+
+    color:#cfcfcf;
+
+    margin-bottom:40px;
+
+}
+/*==========================
+Gemstone Product Cards
+==========================*/
+
+.gem-card{
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+
+
+.gem-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    border-color:#d4af37;
+
+}
+
+
+
+.gem-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+
+
+.gem-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.gem-body{
+
+    padding:25px;
+
+}
+
+
+
+.gem-category{
+
+    color:#d4af37;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.gem-title{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.gem-description{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.gem-price{
+
+    color:#d4af37;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.gem-rating{
+
+    color:#ffc107;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.gem-actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.gem-actions .btn{
+
+    flex:1;
+
+}
+
+
+
+/*==========================
+No Products
+==========================*/
+
+#noGemstones{
+
+    padding:60px 20px;
+
+}
+
+
+
+#noGemstones h3{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:15px;
+
+}
+
+
+
+#noGemstones p{
+
+    color:#cfcfcf;
+
+}
+
+
+
+/*==========================
+Pagination
+==========================*/
+
+.pagination-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+
+
+.pagination-area button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#151515;
+
+    color:#ffffff;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    transition:.3s;
+
+}
+
+
+
+.pagination-area button:hover,
+
+.pagination-area button.active{
+
+    background:#d4af37;
+
+    color:#000;
+
+}
+/*==========================
+Footer
+==========================*/
+
+.footer{
+
+    background:#050505;
+
+    padding:70px 0 30px;
+
+    border-top:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.footer-logo{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer-logo span{
+
+    color:#d4af37;
+
+}
+
+
+
+.footer h5{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+}
+
+
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+
+
+.footer-links a{
+
+    color:#dcdcdc;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.footer-links a:hover{
+
+    color:#d4af37;
+
+    padding-left:6px;
+
+}
+
+
+
+.footer hr{
+
+    border-color:rgba(212,175,55,.20);
+
+}
+
+
+
+/*==========================
+Animations
+==========================*/
+
+.gem-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*==========================
+Responsive
+==========================*/
+
+@media(max-width:991px){
+
+    .gem-hero{
+
+        padding:90px 0;
+
+    }
+
+    .gem-hero h1{
+
+        font-size:48px;
+
+    }
+
+    .gem-card img{
+
+        height:240px;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .gem-hero h1{
+
+        font-size:40px;
+
+    }
+
+    .gem-actions{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+
+@media(max-width:576px){
+
+    .gem-hero{
+
+        padding:70px 0;
+
+    }
+
+    .gem-hero h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-text{
+
+        font-size:15px;
+
+    }
+
+    .gem-card img{
+
+        height:220px;
+
+    }
+
+    .gem-body{
+
+        padding:20px;
+
+    }
+
+    .pagination-area button{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+}
+
+
+
+/*==========================
+Smooth Scroll
+==========================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+/*=========================
+Feature Section
+==========================*/
+
+.feature-box{
+background:#151515;
+color:#fff;
+transition:.3s;
+border:1px solid rgba(212,175,55,.20);
+}
+
+.feature-box:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.feature-box i{
+
+color:#d4af37;
+
+}
+
+.feature-box h5{
+
+font-family:'Cinzel',serif;
+
+font-weight:700;
+
+margin-top:15px;
+
+}
+/*=========================
+Category Cards
+==========================*/
+
+.category-card{
+background:#151515;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+height:100%;
+
+}
+
+.category-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.category-card img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+}
+
+.category-content{
+
+padding:25px;
+
+text-align:center;
+
+}
+
+.category-content h4{
+
+font-family:'Cinzel',serif;
+
+margin-bottom:10px;
+
+}
+
+.category-content p{
+color:#d6d6d6;
+}
+.category-content h4{
+color:#fff;
+}
+/*=========================
+Featured Gemstone
+==========================*/
+.featured-gem{
+background:#0d0d0d;
+color:#fff;
+}
+.featured-gem p,
+.featured-gem li{
+color:#d6d6d6;
+}
+
+.featured-gem img{
+
+border-radius:15px;
+
+transition:.4s;
+
+}
+
+.featured-gem img:hover{
+
+transform:scale(1.03);
+
+}
+
+.featured-gem ul li{
+
+padding:8px 0;
+
+font-size:17px;
+
+}
+/*=========================
+Newsletter
+==========================*/
+
+.newsletter{
+
+background:#111;
+
+color:#fff;
+
+}
+
+.newsletter .form-control{
+
+height:55px;
+
+border-radius:8px;
+
+}
+
+.newsletter .btn{
+
+height:55px;
+
+}

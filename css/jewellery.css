@@ -1,0 +1,648 @@
+/*==================================================
+BENGALURU GEMS
+jewellery.css
+Version 1
+==================================================*/
+
+
+
+/*==========================
+Hero Section
+==========================*/
+
+.jewellery-hero{
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.78),
+    rgba(0,0,0,.82)
+    ),
+    url("../images/jewellery/jewellery-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:120px 0;
+
+    text-align:center;
+
+}
+
+
+
+.hero-small{
+
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.jewellery-hero h1{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.jewellery-hero h1 span{
+
+    display:block;
+
+    color:#d4af37;
+
+}
+
+
+
+.hero-text{
+
+    color:#d6d6d6;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+Search & Filters
+==========================*/
+
+.jewellery-controls{
+
+    background:#080808;
+
+}
+
+
+
+.jewellery-controls .form-control,
+
+.jewellery-controls .form-select{
+
+    background:#151515;
+
+    color:#ffffff;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    padding:14px;
+
+    border-radius:10px;
+
+}
+
+
+
+.jewellery-controls .form-control:focus,
+
+.jewellery-controls .form-select:focus{
+
+    background:#151515;
+
+    color:#ffffff;
+
+    border-color:#d4af37;
+
+    box-shadow:none;
+
+}
+
+
+
+/*==========================
+Collection Section
+==========================*/
+
+.jewellery-section{
+
+    background:#0d0d0d;
+
+}
+
+
+
+.section-title{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.section-subtitle{
+
+    color:#cfcfcf;
+
+    margin-bottom:40px;
+
+}
+/*==========================
+Jewellery Product Cards
+==========================*/
+
+.jewellery-card{
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+
+
+.jewellery-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    border-color:#d4af37;
+
+}
+
+
+
+.jewellery-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+
+
+.jewellery-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.jewellery-body{
+
+    padding:25px;
+
+}
+
+
+
+.jewellery-category{
+
+    color:#d4af37;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.jewellery-title{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.jewellery-description{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.jewellery-price{
+
+    color:#d4af37;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.jewellery-rating{
+
+    color:#ffc107;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.jewellery-actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.jewellery-actions .btn{
+
+    flex:1;
+
+}
+
+
+
+/*==========================
+No Products
+==========================*/
+
+#noJewellery{
+
+    padding:60px 20px;
+
+}
+
+
+
+#noJewellery h3{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:15px;
+
+}
+
+
+
+#noJewellery p{
+
+    color:#cfcfcf;
+
+}
+
+
+
+/*==========================
+Pagination
+==========================*/
+
+.pagination-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+
+
+.pagination-area button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#151515;
+
+    color:#ffffff;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    transition:.3s;
+
+}
+
+
+
+.pagination-area button:hover,
+
+.pagination-area button.active{
+
+    background:#d4af37;
+
+    color:#000;
+
+}
+/*==========================
+Footer
+==========================*/
+
+.footer{
+
+    background:#050505;
+
+    padding:70px 0 30px;
+
+    border-top:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.footer-logo{
+
+    color:#ffffff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer-logo span{
+
+    color:#d4af37;
+
+}
+
+
+
+.footer h5{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+}
+
+
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+
+
+.footer-links a{
+
+    color:#dcdcdc;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.footer-links a:hover{
+
+    color:#d4af37;
+
+    padding-left:6px;
+
+}
+
+
+
+.footer hr{
+
+    border-color:rgba(212,175,55,.20);
+
+}
+
+
+
+/*==========================
+Animations
+==========================*/
+
+.jewellery-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*==========================
+Responsive
+==========================*/
+
+@media(max-width:991px){
+
+    .jewellery-hero{
+
+        padding:90px 0;
+
+    }
+
+
+
+    .jewellery-hero h1{
+
+        font-size:48px;
+
+    }
+
+
+
+    .jewellery-card img{
+
+        height:240px;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .jewellery-hero h1{
+
+        font-size:40px;
+
+    }
+
+
+
+    .jewellery-actions{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+
+@media(max-width:576px){
+
+    .jewellery-hero{
+
+        padding:70px 0;
+
+    }
+
+
+
+    .jewellery-hero h1{
+
+        font-size:34px;
+
+    }
+
+
+
+    .hero-text{
+
+        font-size:15px;
+
+    }
+
+
+
+    .jewellery-card img{
+
+        height:220px;
+
+    }
+
+
+
+    .jewellery-body{
+
+        padding:20px;
+
+    }
+
+
+
+    .pagination-area button{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+}
+
+
+
+/*==========================
+Smooth Scroll
+==========================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}

@@ -1,0 +1,782 @@
+/*==================================================
+BENGALURU GEMS
+Offers Page CSS
+==================================================*/
+
+
+/*==========================
+OFFERS HERO
+==========================*/
+
+.offers-hero{
+
+    min-height:560px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:110px 20px;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.88)
+    ),
+
+    url("../images/hero/offers-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.offers-small{
+
+    color:#d4af37;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+.offers-hero h1{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:62px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+
+.offers-hero h1 span{
+
+    display:block;
+
+    color:#d4af37;
+
+}
+
+
+.offers-hero-text{
+
+    max-width:750px;
+
+    margin:0 auto 35px;
+
+    color:#d0d0d0;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+.offers-hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.offers-hero .btn-outline-gold{
+
+    margin-left:0;
+
+}
+
+
+/*==========================
+INTRO
+==========================*/
+
+.offers-intro{
+
+    background:#080808;
+
+}
+
+
+.offers-label{
+
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+
+}
+
+
+.offers-intro h2{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:44px;
+
+    margin-bottom:20px;
+
+}
+
+
+.offers-intro p:not(.offers-label){
+
+    color:#aaa;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+OFFERS SECTION
+==========================*/
+
+.offers-section{
+
+    background:#0d0d0d;
+
+    padding:40px 0 100px;
+
+}
+
+
+
+/*==========================
+OFFER CARD
+==========================*/
+
+.offer-card{
+
+    position:relative;
+
+    height:100%;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.18);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+
+.offer-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d4af37;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.45),
+
+    0 0 25px rgba(212,175,55,.08);
+
+}
+
+
+
+/*==========================
+OFFER BADGE
+==========================*/
+
+.offer-badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    background:#d4af37;
+
+    color:#080808;
+
+    padding:7px 15px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+
+/*==========================
+OFFER ICON
+==========================*/
+
+.offer-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:10px auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    border-radius:50%;
+
+}
+
+
+.offer-icon i{
+
+    color:#d4af37;
+
+    font-size:40px;
+
+}
+
+
+.offer-card h3{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+.offer-card p{
+
+    color:#aaa;
+
+    line-height:1.8;
+
+    min-height:58px;
+
+    margin-bottom:20px;
+
+}
+
+
+.offer-code{
+
+    display:inline-block;
+
+    padding:9px 18px;
+
+    margin-bottom:25px;
+
+    border:1px dashed rgba(212,175,55,.5);
+
+    border-radius:8px;
+
+    color:#d4af37;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/*==========================
+SPECIAL OFFER
+==========================*/
+
+.special-offer{
+
+    background:#080808;
+
+    padding:100px 0;
+
+}
+
+
+.special-offer-image{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:1px solid rgba(212,175,55,.18);
+
+}
+
+
+.special-offer-image img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+
+}
+
+
+.special-offer-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+.special-offer-content{
+
+    padding-left:20px;
+
+}
+
+
+.special-offer-content h2{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:46px;
+
+    line-height:1.3;
+
+    margin-bottom:25px;
+
+}
+
+
+.special-offer-content > p:not(.offers-label){
+
+    color:#aaa;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+
+.special-offer-content ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 30px;
+
+}
+
+
+.special-offer-content li{
+
+    color:#ccc;
+
+    padding:9px 0;
+
+}
+
+
+.special-offer-content li i{
+
+    color:#d4af37;
+
+    margin-right:10px;
+
+}
+
+
+
+/*==========================
+PROMISE
+==========================*/
+
+.offer-promise{
+
+    background:#0d0d0d;
+
+    padding:90px 0;
+
+}
+
+
+.offer-promise h2{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+}
+
+
+.offer-promise-box{
+
+    height:100%;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:18px;
+
+    transition:.35s;
+
+}
+
+
+.offer-promise-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+}
+
+
+.offer-promise-box i{
+
+    color:#d4af37;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+
+.offer-promise-box h4{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:12px;
+
+}
+
+
+.offer-promise-box p{
+
+    color:#aaa;
+
+    line-height:1.7;
+
+    margin:0;
+
+}
+
+
+
+/*==========================
+CTA
+==========================*/
+
+.offers-cta{
+
+    padding:110px 20px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.90)
+    ),
+
+    url("../images/hero/offers-cta.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.offers-cta > p:first-child{
+
+    color:#d4af37;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
+}
+
+
+.offers-cta h2{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+}
+
+
+.offers-cta .cta-text{
+
+    color:#ccc;
+
+    max-width:720px;
+
+    margin:0 auto 30px;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:991px){
+
+    .offers-hero{
+
+        min-height:480px;
+
+        padding:90px 20px;
+
+    }
+
+
+    .offers-hero h1{
+
+        font-size:50px;
+
+    }
+
+
+    .special-offer-image img{
+
+        height:420px;
+
+    }
+
+
+    .special-offer-content{
+
+        padding-left:0;
+
+    }
+
+
+    .special-offer-content h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .offers-hero{
+
+        min-height:440px;
+
+    }
+
+
+    .offers-hero h1{
+
+        font-size:40px;
+
+    }
+
+
+    .offers-hero-text{
+
+        font-size:15px;
+
+    }
+
+
+    .offers-intro h2{
+
+        font-size:36px;
+
+    }
+
+
+    .special-offer{
+
+        padding:70px 0;
+
+    }
+
+
+    .special-offer-image img{
+
+        height:350px;
+
+    }
+
+
+    .special-offer-content h2{
+
+        font-size:35px;
+
+    }
+
+
+    .offer-promise{
+
+        padding:70px 0;
+
+    }
+
+
+    .offers-cta{
+
+        padding:80px 20px;
+
+    }
+
+
+    .offers-cta h2{
+
+        font-size:38px;
+
+    }
+
+}
+
+
+@media(max-width:576px){
+
+    .offers-hero{
+
+        min-height:400px;
+
+        padding:70px 15px;
+
+    }
+
+
+    .offers-small{
+
+        letter-spacing:3px;
+
+    }
+
+
+    .offers-hero h1{
+
+        font-size:32px;
+
+    }
+
+
+    .offers-intro h2{
+
+        font-size:30px;
+
+    }
+
+
+    .offers-section{
+
+        padding-bottom:70px;
+
+    }
+
+
+    .offer-card{
+
+        padding:40px 22px;
+
+    }
+
+
+    .special-offer-image img{
+
+        height:280px;
+
+    }
+
+
+    .special-offer-content h2{
+
+        font-size:30px;
+
+    }
+
+
+    .offers-cta{
+
+        padding:70px 15px;
+
+    }
+
+
+    .offers-cta h2{
+
+        font-size:30px;
+
+    }
+
+}

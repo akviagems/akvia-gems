@@ -1,0 +1,811 @@
+/*==================================================
+BENGALURU GEMS
+about.css
+Version 1
+==================================================*/
+
+
+
+/*==========================
+About Hero
+==========================*/
+
+.about-hero{
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.82)
+    ),
+    url("../images/about/about-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:120px 0;
+
+    text-align:center;
+
+}
+
+
+
+.hero-small{
+
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.about-hero h1{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.about-hero h1 span{
+
+    display:block;
+
+    color:#d4af37;
+
+}
+
+
+
+.hero-text{
+
+    color:#d6d6d6;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+About Section
+==========================*/
+
+.about-section{
+
+    background:#080808;
+
+}
+
+
+
+.about-section img{
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+.section-tag{
+
+    color:#d4af37;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.section-title{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.about-section p{
+
+    color:#d0d0d0;
+
+    line-height:1.9;
+
+}
+
+
+
+/*==========================
+Mission Section
+==========================*/
+
+.mission-section{
+
+    background:#111;
+
+}
+
+
+
+.mission-card{
+
+    background:#1a1a1a;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+
+
+.mission-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+.mission-card i{
+
+    font-size:55px;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.mission-card h3{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+
+
+.mission-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+
+}
+/*==========================
+Why Choose Us
+==========================*/
+
+.why-section{
+
+    background:#0d0d0d;
+
+}
+
+
+
+.section-subtitle{
+
+    color:#cfcfcf;
+
+    margin-top:10px;
+
+}
+
+
+
+.feature-box{
+
+    background:#181818;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+
+
+.feature-box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+.feature-box i{
+
+    font-size:55px;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.feature-box h4{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.feature-box p{
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+Statistics
+==========================*/
+
+.stats-section{
+
+    background:#d4af37;
+
+    padding:80px 0;
+
+}
+
+
+
+.stats-section h2{
+
+    color:#000;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.stats-section p{
+
+    color:#222;
+
+    font-size:18px;
+
+    font-weight:500;
+
+}
+
+
+
+/*==========================
+Team
+==========================*/
+
+.team-section{
+
+    background:#080808;
+
+}
+
+
+
+.team-card{
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+
+.team-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+.team-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+
+
+.team-body{
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+
+.team-body h4{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.team-body p{
+
+    color:#d4af37;
+
+}
+
+
+
+/*==========================
+Testimonials
+==========================*/
+
+.testimonial-section{
+
+    background:#101010;
+
+}
+
+
+
+.testimonial-card{
+
+    background:#181818;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+
+
+.testimonial-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+.testimonial-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.testimonial-card h5{
+
+    color:#d4af37;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.testimonial-card strong{
+
+    color:#fff;
+
+}
+/*==========================
+About CTA
+==========================*/
+
+.about-cta{
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.80),
+    rgba(0,0,0,.80)
+    ),
+    url("../images/about/cta-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:100px 0;
+
+    text-align:center;
+
+}
+
+
+
+.about-cta h2{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.about-cta p{
+
+    color:#d6d6d6;
+
+    max-width:700px;
+
+    margin:0 auto 30px;
+
+    line-height:1.8;
+
+}
+
+
+
+.btn-gold{
+
+    background:#d4af37;
+
+    color:#000;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.btn-gold:hover{
+
+    background:#f2cf63;
+
+    color:#000;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/*==========================
+Footer
+==========================*/
+
+.footer{
+
+    background:#050505;
+
+    padding:70px 0 30px;
+
+    border-top:1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.footer-logo{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer-logo span{
+
+    color:#d4af37;
+
+}
+
+
+
+.footer h5{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.footer p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+}
+
+
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.footer-links li{
+
+    margin-bottom:12px;
+
+}
+
+
+
+.footer-links a{
+
+    color:#dcdcdc;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.footer-links a:hover{
+
+    color:#d4af37;
+
+    padding-left:6px;
+
+}
+
+
+
+.footer hr{
+
+    border-color:rgba(212,175,55,.20);
+
+}
+
+
+
+/*==========================
+Animations
+==========================*/
+
+.about-section,
+
+.mission-card,
+
+.feature-box,
+
+.team-card,
+
+.testimonial-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*==========================
+Responsive
+==========================*/
+
+@media(max-width:991px){
+
+    .about-hero{
+
+        padding:90px 0;
+
+    }
+
+    .about-hero h1{
+
+        font-size:48px;
+
+    }
+
+    .team-card img{
+
+        height:280px;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .about-hero h1{
+
+        font-size:40px;
+
+    }
+
+    .stats-section{
+
+        text-align:center;
+
+    }
+
+    .stats-section .col-6{
+
+        margin-bottom:30px;
+
+    }
+
+}
+
+
+
+@media(max-width:576px){
+
+    .about-hero{
+
+        padding:70px 0;
+
+    }
+
+    .about-hero h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-text{
+
+        font-size:15px;
+
+    }
+
+    .mission-card,
+
+    .feature-box,
+
+    .testimonial-card{
+
+        padding:25px;
+
+    }
+
+    .team-card img{
+
+        height:240px;
+
+    }
+
+}

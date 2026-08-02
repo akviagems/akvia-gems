@@ -1,0 +1,360 @@
+/*==================================================
+BENGALURU GEMS
+shop.css
+Version 1
+==================================================*/
+
+
+/*==========================
+Shop Area
+==========================*/
+
+.shop-area{
+
+    background:#0b0b0b;
+
+    min-height:70vh;
+
+}
+
+
+
+/*==========================
+Search Box
+==========================*/
+
+.search-box input{
+
+    background:#151515;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    color:#fff;
+
+    padding:15px 20px;
+
+    border-radius:30px;
+
+}
+
+
+.search-box input::placeholder{
+
+    color:#999;
+
+}
+
+
+.search-box input:focus{
+
+    background:#151515;
+
+    color:#fff;
+
+    border-color:#d4af37;
+
+    box-shadow:none;
+
+}
+
+
+
+/*==========================
+Filter Select
+==========================*/
+
+.form-select{
+
+    background:#151515;
+
+    color:#fff;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    padding:15px;
+
+    border-radius:30px;
+
+}
+
+
+.form-select:focus{
+
+    background:#151515;
+
+    color:#fff;
+
+    border-color:#d4af37;
+
+    box-shadow:none;
+
+}
+
+
+
+.form-select option{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+
+
+/*==========================
+Shop Product Card
+==========================*/
+
+
+.shop-product-card{
+
+    background:#151515;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    transition:.4s;
+
+    height:100%;
+
+}
+
+
+.shop-product-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 15px 35px rgba(212,175,55,.15);
+
+}
+
+
+
+.shop-product-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+
+
+.shop-product-card:hover img{
+
+    transform:scale(1.07);
+
+}
+
+
+
+/*==========================
+Product Content
+==========================*/
+
+
+.shop-product-body{
+
+    padding:22px;
+
+}
+
+
+.shop-product-body h5{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:10px;
+
+}
+
+
+.shop-category{
+
+    color:#aaa;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+}
+
+
+.shop-price{
+
+    color:#d4af37;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/*==========================
+Rating
+==========================*/
+
+
+.rating{
+
+    color:#d4af37;
+
+    margin-bottom:12px;
+
+}
+
+
+.rating i{
+
+    margin-right:3px;
+
+}
+
+
+
+/*==========================
+Buttons
+==========================*/
+
+
+.shop-product-body .btn{
+
+    border-radius:30px;
+
+    padding:12px;
+
+}
+
+
+
+/*==========================
+No Products
+==========================*/
+
+
+.no-products{
+
+    text-align:center;
+
+    padding:70px 0;
+
+}
+
+
+.no-products i{
+
+    font-size:70px;
+
+    color:#d4af37;
+
+}
+
+
+.no-products h3{
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+
+}
+
+
+
+/*==========================
+Pagination
+==========================*/
+
+
+.shop-pagination{
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+
+.shop-pagination button{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#151515;
+
+    color:#fff;
+
+    border:1px solid rgba(212,175,55,.3);
+
+    margin:5px;
+
+}
+
+
+.shop-pagination button:hover{
+
+    background:#d4af37;
+
+    color:#000;
+
+}
+
+
+
+/*==========================
+Responsive
+==========================*/
+
+
+@media(max-width:991px){
+
+
+    .shop-product-card img{
+
+        height:240px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+    .shop-product-card img{
+
+        height:220px;
+
+    }
+
+
+    .form-select,
+
+    .search-box input{
+
+        margin-bottom:15px;
+
+    }
+
+
+}
